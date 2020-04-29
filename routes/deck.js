@@ -9,8 +9,11 @@ const User = require('../models/User');
 // @desc      Get current users deck
 // @access    private
 router.get('/me', auth, async (req, res) => {
+	console.log(req.user.id);
 	try {
+		// let deck = await Deck.find({ user: req.user.id });
 		let deck = await Deck.find({ user: req.user.id });
+		// console.log(deck);
 		if (!deck) {
 			return res.status(404).json({ message: 'deck for user not found' });
 		}
@@ -46,7 +49,7 @@ router.post('/', auth, async (req, res) => {
 router.delete('/:id', auth, async (req, res) => {
 	try {
 		await Deck.findOneAndDelete({ _id: req.params.id });
-		res.json({ message: 'user successfully deleted' });
+		res.json({ message: 'deck successfully deleted' });
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server errror');
