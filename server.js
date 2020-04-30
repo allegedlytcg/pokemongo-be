@@ -10,9 +10,14 @@ const PokemonRoutes = require('./routes/pokemon');
 // initalize express
 const app = express();
 
-console.log(cors);
+// console.log(cors);
 // init middleware
-app.use(cors());
+// app.use(cors());
+app.use(function (req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*'); // for sure make this deployed frontend later
+	next();
+});
+
 app.use(express.json({ extended: false }));
 // connect database
 dbConnect();
