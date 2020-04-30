@@ -32,6 +32,7 @@ router.post('/register', async (req, res) => {
 		const payload = {
 			user: {
 				id: user.id, //mongoose knows id is _id
+				// user,
 			},
 		};
 		jwt.sign(
@@ -42,7 +43,7 @@ router.post('/register', async (req, res) => {
 			},
 			(err, token) => {
 				if (err) throw err;
-				res.status(201).json({ token });
+				res.status(201).json({ name, token });
 			},
 		);
 	} catch (error) {
@@ -56,6 +57,7 @@ router.post('/register', async (req, res) => {
 // @access    public
 router.post('/login', async (req, res) => {
 	const { name, password } = req.body;
+	// console.log(name);
 	try {
 		// check if user exists
 		let user = await User.findOne({ name });
@@ -84,7 +86,7 @@ router.post('/login', async (req, res) => {
 			},
 			(err, token) => {
 				if (err) throw err;
-				res.status(201).json({ token });
+				res.status(201).json({ name, token });
 			},
 		);
 	} catch (error) {
