@@ -1,6 +1,5 @@
 const express = require('express');
 require('dotenv').config();
-const cors = require('cors');
 // database connection file
 const dbConnect = require('./dbConnect');
 // route files
@@ -12,7 +11,10 @@ const app = express();
 
 // init middleware
 app.use(express.json({ extended: false }));
-app.use(cors());
+app.use((req, res, next) => {
+	res.header('Access-Control-Allow-Origin', '*'); // change this to deployed url later
+	next();
+});
 // connect database
 dbConnect();
 
