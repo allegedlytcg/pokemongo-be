@@ -12,7 +12,13 @@ const app = express();
 
 // console.log(cors);
 // init middleware
-app.use(cors());
+
+var corsOptions = {
+	origin: '*', // change to deployed frontend link later
+	methods: 'GET, POST, PUT, DELETE',
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json({ extended: false }));
 // connect database
