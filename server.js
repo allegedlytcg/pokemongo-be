@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const cors = require('cors');
 // database connection file
 const dbConnect = require('./dbConnect');
 // route files
@@ -9,8 +10,9 @@ const PokemonRoutes = require('./routes/pokemon');
 // initalize express
 const app = express();
 
-app.use(cors());
+console.log(cors);
 // init middleware
+app.use(cors());
 app.use(express.json({ extended: false }));
 // connect database
 dbConnect();
