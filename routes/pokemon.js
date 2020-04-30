@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
 
 		let allPokemon = base1Pokemon.concat(base2Pokemon);
 
+		// console.log(allPokemon);
+
 		if (!allPokemon) {
 			res.status(400).send('error getting pokemon');
 		}
