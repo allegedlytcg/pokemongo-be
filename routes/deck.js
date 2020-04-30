@@ -9,11 +9,8 @@ const User = require('../models/User');
 // @desc      Get current users deck
 // @access    private
 router.get('/me', auth, async (req, res) => {
-	console.log(req.user.id);
 	try {
-		// let deck = await Deck.find({ user: req.user.id });
 		let deck = await Deck.find({ user: req.user.id });
-		// console.log(deck);
 		if (!deck) {
 			return res.status(404).json({ message: 'deck for user not found' });
 		}
@@ -60,7 +57,6 @@ router.delete('/:id', auth, async (req, res) => {
 // @desc      edit deck by id
 // @access    private
 router.put('/:id', auth, async (req, res) => {
-	// const { name, cards } = req.body;
 	try {
 		let deck = await Deck.findOneAndUpdate(
 			{ _id: req.params.id },
