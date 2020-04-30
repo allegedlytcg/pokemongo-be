@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 			setCode: 'base2',
 		});
 
-		let allPokemon = [base1Pokemon, base2Pokemon];
+		let allPokemon = base1Pokemon.concat(base2Pokemon);
 
 		if (!allPokemon) {
 			res.status(400).send('error getting pokemon');
