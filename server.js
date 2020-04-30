@@ -1,7 +1,8 @@
 const express = require('express');
+require('dotenv').config();
+const cors = require('cors');
 // database connection file
 const dbConnect = require('./dbConnect');
-require('dotenv').config();
 // route files
 const userRoutes = require('./routes/user');
 const deckRoutes = require('./routes/deck');
@@ -11,7 +12,7 @@ const app = express();
 
 // init middleware
 app.use(express.json({ extended: false }));
-
+app.use(cors());
 // connect database
 dbConnect();
 
