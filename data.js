@@ -1,4235 +1,9028 @@
 const cardData = [
-    {
-    "id": "base1-1",
-    "name": "Alakazam",
-    "imageUrl": "https://images.pokemontcg.io/base1/1.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "42",
-    "evolvesFrom": "Kadabra",
-    "ability": {
-    "name": "Damage Swap",
-    "text": "As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to another as long as you don't Knock Out that Pokémon. This power can't be used if Alakazam is Asleep, Confused, or Paralyzed.",
-    "type": "Pokémon Power"
-    },
-    "hp": "80",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "1",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Confuse Ray",
-    "cost": [
-    "Psychic",
-    "Psychic",
-    "Psychic"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Confused."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/1_hires.png",
-    "nationalPokedexNumber": 65
-    },
-    {
-    "id": "base1-2",
-    "name": "Blastoise",
-    "imageUrl": "https://images.pokemontcg.io/base1/2.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "52",
-    "evolvesFrom": "Wartortle",
-    "ability": {
-    "name": "Rain Dance",
-    "text": "As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed.",
-    "type": "Pokémon Power"
-    },
-    "hp": "100",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "2",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Hydro Pump",
-    "cost": [
-    "Water",
-    "Water",
-    "Water"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40+",
-    "text": "Does 40 damage plus 10 more damage for each Water energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/2_hires.png",
-    "nationalPokedexNumber": 9
-    },
-    {
-    "id": "base1-3",
-    "name": "Chansey",
-    "imageUrl": "https://images.pokemontcg.io/base1/3.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "55",
-    "hp": "120",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "3",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Scrunch",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
-    },
-    {
-    "name": "Double-edge",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "80",
-    "text": "Chansey does 80 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/3_hires.png",
-    "nationalPokedexNumber": 113,
-    "evolvesTo": [
-    "Blissey"
-    ]
-    },
-    {
-    "id": "base1-4",
-    "name": "Charizard",
-    "imageUrl": "https://images.pokemontcg.io/base1/4.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "76",
-    "evolvesFrom": "Charmeleon",
-    "ability": {
-    "name": "Energy Burn",
-    "text": "As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Charizard is Asleep, Confused, or Paralyzed.",
-    "type": "Pokémon Power"
-    },
-    "hp": "120",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "4",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Fire Spin",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Fire",
-    "Fire"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "100",
-    "text": "Discard 2 Energy cards attached to Charizard in order to use this attack."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/4_hires.png",
-    "nationalPokedexNumber": 6
-    },
-    {
-    "id": "base1-5",
-    "name": "Clefairy",
-    "imageUrl": "https://images.pokemontcg.io/base1/5.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "14",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "5",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Sing",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
-    },
-    {
-    "name": "Metronome",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "",
-    "text": "Choose 1 of Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding energy cards. (No matter what type the defender is, Clefairy's type is still Colorless.)"
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/5_hires.png",
-    "nationalPokedexNumber": 35,
-    "evolvesTo": [
-    "Clefable"
-    ]
-    },
-    {
-    "id": "base1-6",
-    "name": "Gyarados",
-    "imageUrl": "https://images.pokemontcg.io/base1/6.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "41",
-    "evolvesFrom": "Magikarp",
-    "hp": "100",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "6",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Dragon Rage",
-    "cost": [
-    "Water",
-    "Water",
-    "Water"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": ""
-    },
-    {
-    "name": "Bubblebeam",
-    "cost": [
-    "Water",
-    "Water",
-    "Water",
-    "Water"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "40",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/6_hires.png",
-    "nationalPokedexNumber": 130
-    },
-    {
-    "id": "base1-7",
-    "name": "Hitmonchan",
-    "imageUrl": "https://images.pokemontcg.io/base1/7.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "33",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "7",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Jab",
-    "cost": [
-    "Fighting"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "20",
-    "text": ""
-    },
-    {
-    "name": "Special Punch",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/7_hires.png",
-    "nationalPokedexNumber": 107
-    },
-    {
-    "id": "base1-8",
-    "name": "Machamp",
-    "imageUrl": "https://images.pokemontcg.io/base1/8.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "67",
-    "evolvesFrom": "Machoke",
-    "ability": {
-    "name": "Strikes Back",
-    "text": "Whenever your opponent's attack damages Machamp (even if Machamp is Knoced Out), this power does 10 damage to attacking Pokémon. (Don't apply Weakness and Resistance.) This power can't be used if Machamp is already Asleep, Confused, or Paralyzed when your opponent attacks.",
-    "type": "Pokémon Power"
-    },
-    "hp": "100",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "8",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Seismic Toss",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Fighting",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "60",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/8_hires.png",
-    "nationalPokedexNumber": 68
-    },
-    {
-    "id": "base1-9",
-    "name": "Magneton",
-    "imageUrl": "https://images.pokemontcg.io/base1/9.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "28",
-    "evolvesFrom": "Magnemite",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "9",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Thunder Wave",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    },
-    {
-    "name": "Selfdestruct",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "80",
-    "text": "Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 80 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/9_hires.png",
-    "nationalPokedexNumber": 82,
-    "evolvesTo": [
-    "Magnezone"
-    ]
-    },
-    {
-    "id": "base1-10",
-    "name": "Mewtwo",
-    "imageUrl": "https://images.pokemontcg.io/base1/10.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "53",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "10",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Psychic",
-    "cost": [
-    "Psychic",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "10+",
-    "text": "Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon."
-    },
-    {
-    "name": "Barrier",
-    "cost": [
-    "Psychic",
-    "Psychic"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Discard 1 Energy card attached to Mewtwo in order to use this attack. During your opponent's next turn, prevent all effects of attacks, including damage, done to Mewtwo."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/10_hires.png",
-    "nationalPokedexNumber": 150
-    },
-    {
-    "id": "base1-11",
-    "name": "Nidoking",
-    "imageUrl": "https://images.pokemontcg.io/base1/11.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "23",
-    "evolvesFrom": "Nidorino",
-    "hp": "90",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "11",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Thrash",
-    "cost": [
-    "Grass",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30+",
-    "text": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Nidoking does 10 damage to itself."
-    },
-    {
-    "name": "Toxic",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40",
-    "text": "The Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned)."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/11_hires.png",
-    "nationalPokedexNumber": 34
-    },
-    {
-    "id": "base1-12",
-    "name": "Ninetales",
-    "imageUrl": "https://images.pokemontcg.io/base1/12.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "32",
-    "evolvesFrom": "Vulpix",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "12",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Lure",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon."
-    },
-    {
-    "name": "Fire Blast",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Fire",
-    "Fire"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "80",
-    "text": "Discard 1 Energy card attached to Ninetales in order to use this attack."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/12_hires.png",
-    "nationalPokedexNumber": 38
-    },
-    {
-    "id": "base1-13",
-    "name": "Poliwrath",
-    "imageUrl": "https://images.pokemontcg.io/base1/13.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "48",
-    "evolvesFrom": "Poliwhirl",
-    "hp": "90",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "13",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Water Gun",
-    "cost": [
-    "Water",
-    "Water",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30+",
-    "text": "Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count."
-    },
-    {
-    "name": "Whirlpool",
-    "cost": [
-    "Water",
-    "Water",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "40",
-    "text": "If the Defending Pokémon has any Energy cards attached to it, choose 1 and discard it."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/13_hires.png",
-    "nationalPokedexNumber": 62
-    },
-    {
-    "id": "base1-14",
-    "name": "Raichu",
-    "imageUrl": "https://images.pokemontcg.io/base1/14.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "40",
-    "evolvesFrom": "Pikachu",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "14",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Agility",
-    "cost": [
-    "Lightning",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "20",
-    "text": "Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Raichu."
-    },
-    {
-    "name": "Thunder",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "60",
-    "text": "Flip a coin. If tails, Raichu does 30 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/14_hires.png",
-    "nationalPokedexNumber": 26
-    },
-    {
-    "id": "base1-15",
-    "name": "Venusaur",
-    "imageUrl": "https://images.pokemontcg.io/base1/15.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "67",
-    "evolvesFrom": "Ivysaur",
-    "ability": {
-    "name": "Energy Trans",
-    "text": "As often as you like during your turn (before your attack), you may take 1 Grass Energy card attached to 1 of your Pokémon and attach it to a different one. This power can't be used if Venusaur is Asleep, Confused, or Paralyzed.",
-    "type": "Pokémon Power"
-    },
-    "hp": "100",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "15",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Solarbeam",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "60",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/15_hires.png",
-    "nationalPokedexNumber": 3
-    },
-    {
-    "id": "base1-16",
-    "name": "Zapdos",
-    "imageUrl": "https://images.pokemontcg.io/base1/16.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "64",
-    "hp": "90",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "16",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Thunder",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "60",
-    "text": "Flip a coin. If tails, Zapdos does 30 damage to itself."
-    },
-    {
-    "name": "Thunderbolt",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Lightning",
-    "Lightning"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "100",
-    "text": "Discard all Energy cards attached to Zapdos in order to use this attack."
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/16_hires.png",
-    "nationalPokedexNumber": 145
-    },
-    {
-    "id": "base1-17",
-    "name": "Beedrill",
-    "imageUrl": "https://images.pokemontcg.io/base1/17.png",
-    "subtype": "Stage 2",
-    "supertype": "Pokémon",
-    "level": "32",
-    "evolvesFrom": "Kakuna",
-    "hp": "80",
-    "number": "17",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Twineedle",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30×",
-    "text": "Flip 2 coins. This attack does 30 damage times the number of heads."
-    },
-    {
-    "name": "Poison Sting",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/17_hires.png",
-    "nationalPokedexNumber": 15
-    },
-    {
-    "id": "base1-18",
-    "name": "Dragonair",
-    "imageUrl": "https://images.pokemontcg.io/base1/18.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "33",
-    "evolvesFrom": "Dratini",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "18",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Slam",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30×",
-    "text": "Flip 2 coins. This attack does 30 damage times the number of heads."
-    },
-    {
-    "name": "Hyper Beam",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "20",
-    "text": "If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it."
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/18_hires.png",
-    "nationalPokedexNumber": 148,
-    "evolvesTo": [
-    "Dragonite"
-    ]
-    },
-    {
-    "id": "base1-19",
-    "name": "Dugtrio",
-    "imageUrl": "https://images.pokemontcg.io/base1/19.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "36",
-    "evolvesFrom": "Diglett",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "19",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Slash",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40",
-    "text": ""
-    },
-    {
-    "name": "Earthquake",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Fighting",
-    "Fighting"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "70",
-    "text": "Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)"
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Lightning",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/19_hires.png",
-    "nationalPokedexNumber": 51
-    },
-    {
-    "id": "base1-20",
-    "name": "Electabuzz",
-    "imageUrl": "https://images.pokemontcg.io/base1/20.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "35",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "20",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Thundershock",
-    "cost": [
-    "Lightning"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    },
-    {
-    "name": "Thunderpunch",
-    "cost": [
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30+",
-    "text": "Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Electabuzz does 10 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/20_hires.png",
-    "nationalPokedexNumber": 125,
-    "evolvesTo": [
-    "Electivire"
-    ]
-    },
-    {
-    "id": "base1-21",
-    "name": "Electrode",
-    "imageUrl": "https://images.pokemontcg.io/base1/21.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "40",
-    "evolvesFrom": "Voltorb",
-    "ability": {
-    "name": "Buzzap",
-    "text": "At any time during your turn (before your attack) you may Knock Out Electrode and attach it to 1 of your other Pokémon. If you do, chose a type of Energy. Electrode is now an Energy card (instead of a Pokémon) that provides 2 energy of that type. This power can't be used if Electrode is Asleep, Confused, or Paralyzed.",
-    "type": "Pokémon Power"
-    },
-    "hp": "80",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "21",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Electric Shock",
-    "cost": [
-    "Lightning",
-    "Lightning",
-    "Lightning"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": "Flip a coin. If tails, Electrode does 10 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/21_hires.png",
-    "nationalPokedexNumber": 101
-    },
-    {
-    "id": "base1-22",
-    "name": "Pidgeotto",
-    "imageUrl": "https://images.pokemontcg.io/base1/22.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "36",
-    "evolvesFrom": "Pidgey",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "22",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Whirlwind",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-    },
-    {
-    "name": "Mirror Move",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "",
-    "text": "If Pidgeotto was attacked last turn, do the final result of that attack on Pidgeotto to the Defending Pokémon."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/22_hires.png",
-    "nationalPokedexNumber": 17,
-    "evolvesTo": [
-    "Pidgeot"
-    ]
-    },
-    {
-    "id": "base1-23",
-    "name": "Arcanine",
-    "imageUrl": "https://images.pokemontcg.io/base1/23.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "45",
-    "evolvesFrom": "Growlithe",
-    "hp": "100",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "23",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Flamethrower",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": "Discard 1 Energy card attached to Arcanine in order to use this attack."
-    },
-    {
-    "name": "Take Down",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "80",
-    "text": "Arcanine does 30 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/23_hires.png",
-    "nationalPokedexNumber": 59
-    },
-    {
-    "id": "base1-24",
-    "name": "Charmeleon",
-    "imageUrl": "https://images.pokemontcg.io/base1/24.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "32",
-    "evolvesFrom": "Charmander",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "24",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Slash",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": ""
-    },
-    {
-    "name": "Flamethrower",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": "Discard 1 Energy card attached to Charmeleon in order to use this attack."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/24_hires.png",
-    "nationalPokedexNumber": 5,
-    "evolvesTo": [
-    "Charizard"
-    ]
-    },
-    {
-    "id": "base1-25",
-    "name": "Dewgong",
-    "imageUrl": "https://images.pokemontcg.io/base1/25.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "42",
-    "evolvesFrom": "Seel",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "25",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Aurora Beam",
-    "cost": [
-    "Water",
-    "Water",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": ""
-    },
-    {
-    "name": "Ice Beam",
-    "cost": [
-    "Water",
-    "Water",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "30",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/25_hires.png",
-    "nationalPokedexNumber": 87
-    },
-    {
-    "id": "base1-26",
-    "name": "Dratini",
-    "imageUrl": "https://images.pokemontcg.io/base1/26.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "26",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Pound",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/26_hires.png",
-    "nationalPokedexNumber": 147,
-    "evolvesTo": [
-    "Dragonair"
-    ]
-    },
-    {
-    "id": "base1-27",
-    "name": "Farfetch'd",
-    "imageUrl": "https://images.pokemontcg.io/base1/27.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "20",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "27",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Leek Slap",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "30",
-    "text": "Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again.)"
-    },
-    {
-    "name": "Pot Smash",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/27_hires.png",
-    "nationalPokedexNumber": 83
-    },
-    {
-    "id": "base1-28",
-    "name": "Growlithe",
-    "imageUrl": "https://images.pokemontcg.io/base1/28.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "18",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "28",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Flare",
-    "cost": [
-    "Fire",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/28_hires.png",
-    "nationalPokedexNumber": 58,
-    "evolvesTo": [
-    "Arcanine"
-    ]
-    },
-    {
-    "id": "base1-29",
-    "name": "Haunter",
-    "imageUrl": "https://images.pokemontcg.io/base1/29.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "22",
-    "evolvesFrom": "Gastly",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "29",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Hypnosis",
-    "cost": [
-    "Psychic"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "",
-    "text": "The Defending Pokémon is now Asleep."
-    },
-    {
-    "name": "Dream Eater",
-    "cost": [
-    "Psychic",
-    "Psychic"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "50",
-    "text": "You can't this attack unless the Defending Pokémon is Asleep."
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/29_hires.png",
-    "nationalPokedexNumber": 93,
-    "evolvesTo": [
-    "Gengar"
-    ]
-    },
-    {
-    "id": "base1-30",
-    "name": "Ivysaur",
-    "imageUrl": "https://images.pokemontcg.io/base1/30.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "20",
-    "evolvesFrom": "Barboach",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "30",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Vine Whip",
-    "cost": [
-    "Grass",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": ""
-    },
-    {
-    "name": "Poisonpowder",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": "The Defending Pokémon is now Poisoned."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/30_hires.png",
-    "nationalPokedexNumber": 2,
-    "evolvesTo": [
-    "Venusaur"
-    ]
-    },
-    {
-    "id": "base1-31",
-    "name": "Jynx",
-    "imageUrl": "https://images.pokemontcg.io/base1/31.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "23",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "31",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Doubleslap",
-    "cost": [
-    "Psychic"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10×",
-    "text": "Flip 2 coins. This attack does 10 damage times the number of heads."
-    },
-    {
-    "name": "Meditate",
-    "cost": [
-    "Psychic",
-    "Psychic",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "20+",
-    "text": "Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/31_hires.png",
-    "nationalPokedexNumber": 124
-    },
-    {
-    "id": "base1-32",
-    "name": "Kadabra",
-    "imageUrl": "https://images.pokemontcg.io/base1/32.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "38",
-    "evolvesFrom": "Abra",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "32",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Recover",
-    "cost": [
-    "Psychic",
-    "Psychic"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Discard 1 Energy card attached to Kadabra in order use this attack. Remove all damage counters from Kadabra."
-    },
-    {
-    "name": "Super Psy",
-    "cost": [
-    "Psychic",
-    "Psychic",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/32_hires.png",
-    "nationalPokedexNumber": 64,
-    "evolvesTo": [
-    "Alakazam"
-    ]
-    },
-    {
-    "id": "base1-33",
-    "name": "Kakuna",
-    "imageUrl": "https://images.pokemontcg.io/base1/33.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "23",
-    "evolvesFrom": "Weedle",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "33",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Stiffen",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)"
-    },
-    {
-    "name": "Poisonpowder",
-    "cost": [
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/33_hires.png",
-    "nationalPokedexNumber": 14,
-    "evolvesTo": [
-    "Beedrill"
-    ]
-    },
-    {
-    "id": "base1-34",
-    "name": "Machoke",
-    "imageUrl": "https://images.pokemontcg.io/base1/34.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "40",
-    "evolvesFrom": "Machop",
-    "hp": "80",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "34",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Karate Chop",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50-",
-    "text": "Does 50 damage minus 10 for each damage counter on Machoke."
-    },
-    {
-    "name": "Submission",
-    "cost": [
-    "Fighting",
-    "Fighting",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "60",
-    "text": "Machoke does 20 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/34_hires.png",
-    "nationalPokedexNumber": 67,
-    "evolvesTo": [
-    "Machamp"
-    ]
-    },
-    {
-    "id": "base1-35",
-    "name": "Magikarp",
-    "imageUrl": "https://images.pokemontcg.io/base1/35.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "30",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "35",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Tackle",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Flail",
-    "cost": [
-    "Water"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10×",
-    "text": "Does 10 damage times number of damage counters on Magikarp."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/35_hires.png",
-    "nationalPokedexNumber": 129,
-    "evolvesTo": [
-    "Gyarados"
-    ]
-    },
-    {
-    "id": "base1-36",
-    "name": "Magmar",
-    "imageUrl": "https://images.pokemontcg.io/base1/36.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "24",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "36",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Fire Punch",
-    "cost": [
-    "Fire",
-    "Fire"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30",
-    "text": ""
-    },
-    {
-    "name": "Flamethrower",
-    "cost": [
-    "Fire",
-    "Fire",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "50",
-    "text": "Discard 1 Energy card attached to Magmar in order to use this attack."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/36_hires.png",
-    "nationalPokedexNumber": 126,
-    "evolvesTo": [
-    "Magmortar"
-    ]
-    },
-    {
-    "id": "base1-37",
-    "name": "Nidorino",
-    "imageUrl": "https://images.pokemontcg.io/base1/37.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "25",
-    "evolvesFrom": "Nidoran♂",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "37",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Double Kick",
-    "cost": [
-    "Grass",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30×",
-    "text": "Flip 2 coins. This attack does 30 damage times the number of heads."
-    },
-    {
-    "name": "Horn Drill",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 4,
-    "damage": "50",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/37_hires.png",
-    "nationalPokedexNumber": 33,
-    "evolvesTo": [
-    "Nidoking"
-    ]
-    },
-    {
-    "id": "base1-38",
-    "name": "Poliwhirl",
-    "imageUrl": "https://images.pokemontcg.io/base1/38.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "28",
-    "evolvesFrom": "Poliwag",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "38",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Amnesia",
-    "cost": [
-    "Water",
-    "Water"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Choose 1 of defenders attacks. Defender cannot use that attack next turn."
-    },
-    {
-    "name": "Doubleslap",
-    "cost": [
-    "Water",
-    "Water",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30×",
-    "text": "Flip 2 coins. This attack does 30 damage times number of heads."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/38_hires.png",
-    "nationalPokedexNumber": 61,
-    "evolvesTo": [
-    "Poliwrath",
-    "Politoed"
-    ]
-    },
-    {
-    "id": "base1-39",
-    "name": "Porygon",
-    "imageUrl": "https://images.pokemontcg.io/base1/39.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "30",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "39",
-    "artist": "Tomoaki Imakuni",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Conversion 1",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "",
-    "text": "If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless."
-    },
-    {
-    "name": "Conversion 2",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Change Porygon's Resistance to a type of your choice other than Colorless."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/39_hires.png",
-    "nationalPokedexNumber": 137,
-    "evolvesTo": [
-    "Porygon2"
-    ]
-    },
-    {
-    "id": "base1-40",
-    "name": "Raticate",
-    "imageUrl": "https://images.pokemontcg.io/base1/40.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "41",
-    "evolvesFrom": "Poochyena",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "40",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Bite",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "20",
-    "text": ""
-    },
-    {
-    "name": "Super Fang",
-    "cost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "?",
-    "text": "Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10)."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/40_hires.png",
-    "nationalPokedexNumber": 20
-    },
-    {
-    "id": "base1-41",
-    "name": "Seel",
-    "imageUrl": "https://images.pokemontcg.io/base1/41.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "41",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Headbutt",
-    "cost": [
-    "Water"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/41_hires.png",
-    "nationalPokedexNumber": 86,
-    "evolvesTo": [
-    "Dewgong"
-    ]
-    },
-    {
-    "id": "base1-42",
-    "name": "Wartortle",
-    "imageUrl": "https://images.pokemontcg.io/base1/42.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "22",
-    "evolvesFrom": "Squirtle",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "42",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Withdraw",
-    "cost": [
-    "Water",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)"
-    },
-    {
-    "name": "Bite",
-    "cost": [
-    "Water",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "40",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/42_hires.png",
-    "nationalPokedexNumber": 8,
-    "evolvesTo": [
-    "Blastoise"
-    ]
-    },
-    {
-    "id": "base1-43",
-    "name": "Abra",
-    "imageUrl": "https://images.pokemontcg.io/base1/43.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "30",
-    "number": "43",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Psyshock",
-    "cost": [
-    "Psychic"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/43_hires.png",
-    "nationalPokedexNumber": 63,
-    "evolvesTo": [
-    "Kadabra"
-    ]
-    },
-    {
-    "id": "base1-44",
-    "name": "Bulbasaur",
-    "imageUrl": "https://images.pokemontcg.io/base1/44.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "13",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "44",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Leech Seed",
-    "cost": [
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": "Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/44_hires.png",
-    "nationalPokedexNumber": 1,
-    "evolvesTo": [
-    "Ivysaur"
-    ]
-    },
-    {
-    "id": "base1-45",
-    "name": "Caterpie",
-    "imageUrl": "https://images.pokemontcg.io/base1/45.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "13",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "45",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "String Shot",
-    "cost": [
-    "Grass"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/45_hires.png",
-    "nationalPokedexNumber": 10,
-    "evolvesTo": [
-    "Metapod"
-    ]
-    },
-    {
-    "id": "base1-46",
-    "name": "Charmander",
-    "imageUrl": "https://images.pokemontcg.io/base1/46.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "46",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Scratch",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Ember",
-    "cost": [
-    "Fire",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30",
-    "text": "Discard 1 Energy card attached to Charmander in order to use this attack."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/46_hires.png",
-    "nationalPokedexNumber": 4,
-    "evolvesTo": [
-    "Charmeleon"
-    ]
-    },
-    {
-    "id": "base1-47",
-    "name": "Diglett",
-    "imageUrl": "https://images.pokemontcg.io/base1/47.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "30",
-    "number": "47",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Dig",
-    "cost": [
-    "Fighting"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Mud Slap",
-    "cost": [
-    "Fighting",
-    "Fighting"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Lightning",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/47_hires.png",
-    "nationalPokedexNumber": 50,
-    "evolvesTo": [
-    "Dugtrio"
-    ]
-    },
-    {
-    "id": "base1-48",
-    "name": "Doduo",
-    "imageUrl": "https://images.pokemontcg.io/base1/48.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "50",
-    "number": "48",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Fury Attack",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10×",
-    "text": "Flip 2 coins. This attack does 10 damage times the number of heads."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/48_hires.png",
-    "nationalPokedexNumber": 84,
-    "evolvesTo": [
-    "Dodrio"
-    ]
-    },
-    {
-    "id": "base1-49",
-    "name": "Drowzee",
-    "imageUrl": "https://images.pokemontcg.io/base1/49.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "50",
-    "number": "49",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Pound",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Confuse Ray",
-    "cost": [
-    "Psychic",
-    "Psychic"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Confused."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/49_hires.png",
-    "nationalPokedexNumber": 96,
-    "evolvesTo": [
-    "Hypno"
-    ]
-    },
-    {
-    "id": "base1-50",
-    "name": "Gastly",
-    "imageUrl": "https://images.pokemontcg.io/base1/50.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "30",
-    "number": "50",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Psychic"
-    ],
-    "attacks": [
-    {
-    "name": "Sleeping Gas",
-    "cost": [
-    "Psychic"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Asleep."
-    },
-    {
-    "name": "Destiny Bond",
-    "cost": [
-    "Psychic",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Discard 1 Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon."
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/50_hires.png",
-    "nationalPokedexNumber": 92,
-    "evolvesTo": [
-    "Haunter"
-    ]
-    },
-    {
-    "id": "base1-51",
-    "name": "Koffing",
-    "imageUrl": "https://images.pokemontcg.io/base1/51.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "13",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "51",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Foul Gas",
-    "cost": [
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/51_hires.png",
-    "nationalPokedexNumber": 109,
-    "evolvesTo": [
-    "Weezing"
-    ]
-    },
-    {
-    "id": "base1-52",
-    "name": "Machop",
-    "imageUrl": "https://images.pokemontcg.io/base1/52.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "20",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "52",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Low Kick",
-    "cost": [
-    "Fighting"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "20",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/52_hires.png",
-    "nationalPokedexNumber": 66,
-    "evolvesTo": [
-    "Machoke"
-    ]
-    },
-    {
-    "id": "base1-53",
-    "name": "Magnemite",
-    "imageUrl": "https://images.pokemontcg.io/base1/53.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "13",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "53",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Thunder Wave",
-    "cost": [
-    "Lightning"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    },
-    {
-    "name": "Selfdestruct",
-    "cost": [
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "40",
-    "text": "Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/53_hires.png",
-    "nationalPokedexNumber": 81,
-    "evolvesTo": [
-    "Magneton"
-    ]
-    },
-    {
-    "id": "base1-54",
-    "name": "Metapod",
-    "imageUrl": "https://images.pokemontcg.io/base1/54.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "21",
-    "evolvesFrom": "Caterpie",
-    "hp": "70",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "54",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Stiffen",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)"
-    },
-    {
-    "name": "Stun Spore",
-    "cost": [
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/54_hires.png",
-    "nationalPokedexNumber": 11,
-    "evolvesTo": [
-    "Butterfree"
-    ]
-    },
-    {
-    "id": "base1-55",
-    "name": "Nidoran♂",
-    "imageUrl": "https://images.pokemontcg.io/base1/55.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "20",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "55",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Horn Hazard",
-    "cost": [
-    "Grass"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "30",
-    "text": "Flip a coin. If tails, this attack does nothing."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Psychic",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/55_hires.png",
-    "nationalPokedexNumber": 32,
-    "evolvesTo": [
-    "Nidorino"
-    ]
-    },
-    {
-    "id": "base1-56",
-    "name": "Onix",
-    "imageUrl": "https://images.pokemontcg.io/base1/56.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "90",
-    "retreatCost": [
-    "Colorless",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 3,
-    "number": "56",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Rock Throw",
-    "cost": [
-    "Fighting"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Harden",
-    "cost": [
-    "Fighting",
-    "Fighting"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "During opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)"
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/56_hires.png",
-    "nationalPokedexNumber": 95,
-    "evolvesTo": [
-    "Steelix"
-    ]
-    },
-    {
-    "id": "base1-57",
-    "name": "Pidgey",
-    "imageUrl": "https://images.pokemontcg.io/base1/57.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "57",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Whirlwind",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "10",
-    "text": "If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)"
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Fighting",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/57_hires.png",
-    "nationalPokedexNumber": 16,
-    "evolvesTo": [
-    "Pidgeotto"
-    ]
-    },
-    {
-    "id": "base1-58",
-    "name": "Pikachu",
-    "imageUrl": "https://images.pokemontcg.io/base1/58.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "58",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Gnaw",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    },
-    {
-    "name": "Thunder Jolt",
-    "cost": [
-    "Lightning",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30",
-    "text": "Flip a coin. If tails, Pikachu does 10 damage to itself."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/58_hires.png",
-    "nationalPokedexNumber": 25,
-    "evolvesTo": [
-    "Raichu"
-    ]
-    },
-    {
-    "id": "base1-59",
-    "name": "Poliwag",
-    "imageUrl": "https://images.pokemontcg.io/base1/59.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "13",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "59",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Water Gun",
-    "cost": [
-    "Water"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10+",
-    "text": "Does 10 damage plus 10 damage for each Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Energy after the end don't count."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/59_hires.png",
-    "nationalPokedexNumber": 60,
-    "evolvesTo": [
-    "Poliwhirl"
-    ]
-    },
-    {
-    "id": "base1-60",
-    "name": "Ponyta",
-    "imageUrl": "https://images.pokemontcg.io/base1/60.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "60",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Smash Kick",
-    "cost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": ""
-    },
-    {
-    "name": "Flame Tail",
-    "cost": [
-    "Fire",
-    "Fire"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "30",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/60_hires.png",
-    "nationalPokedexNumber": 77,
-    "evolvesTo": [
-    "Rapidash"
-    ]
-    },
-    {
-    "id": "base1-61",
-    "name": "Rattata",
-    "imageUrl": "https://images.pokemontcg.io/base1/61.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "9",
-    "hp": "30",
-    "number": "61",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Colorless"
-    ],
-    "attacks": [
-    {
-    "name": "Bite",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "20",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Psychic",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/61_hires.png",
-    "nationalPokedexNumber": 19,
-    "evolvesTo": [
-    "Raticate"
-    ]
-    },
-    {
-    "id": "base1-62",
-    "name": "Sandshrew",
-    "imageUrl": "https://images.pokemontcg.io/base1/62.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "62",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fighting"
-    ],
-    "attacks": [
-    {
-    "name": "Sand-attack",
-    "cost": [
-    "Fighting"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Grass",
-    "value": "×2"
-    }
-    ],
-    "resistances": [
-    {
-    "type": "Lightning",
-    "value": "-30"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/62_hires.png",
-    "nationalPokedexNumber": 27,
-    "evolvesTo": [
-    "Sandslash"
-    ]
-    },
-    {
-    "id": "base1-63",
-    "name": "Squirtle",
-    "imageUrl": "https://images.pokemontcg.io/base1/63.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "63",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Bubble",
-    "cost": [
-    "Water"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    },
-    {
-    "name": "Withdraw",
-    "cost": [
-    "Water",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)"
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/63_hires.png",
-    "nationalPokedexNumber": 7,
-    "evolvesTo": [
-    "Wartortle"
-    ]
-    },
-    {
-    "id": "base1-64",
-    "name": "Starmie",
-    "imageUrl": "https://images.pokemontcg.io/base1/64.png",
-    "subtype": "Stage 1",
-    "supertype": "Pokémon",
-    "level": "28",
-    "evolvesFrom": "Staryu",
-    "hp": "60",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "64",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Recover",
-    "cost": [
-    "Water",
-    "Water"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "",
-    "text": "Discard 1 Energy card to Starmie in order to use this attack. Remove all damage counters from Starmie."
-    },
-    {
-    "name": "Star Freeze",
-    "cost": [
-    "Water",
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "20",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/64_hires.png",
-    "nationalPokedexNumber": 121
-    },
-    {
-    "id": "base1-65",
-    "name": "Staryu",
-    "imageUrl": "https://images.pokemontcg.io/base1/65.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "15",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "65",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Water"
-    ],
-    "attacks": [
-    {
-    "name": "Slap",
-    "cost": [
-    "Water"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "20",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Lightning",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/65_hires.png",
-    "nationalPokedexNumber": 120,
-    "evolvesTo": [
-    "Starmie"
-    ]
-    },
-    {
-    "id": "base1-66",
-    "name": "Tangela",
-    "imageUrl": "https://images.pokemontcg.io/base1/66.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "8",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless",
-    "Colorless"
-    ],
-    "convertedRetreatCost": 2,
-    "number": "66",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Bind",
-    "cost": [
-    "Grass",
-    "Colorless"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "20",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Paralyzed."
-    },
-    {
-    "name": "Poisonpowder",
-    "cost": [
-    "Grass",
-    "Grass",
-    "Grass"
-    ],
-    "convertedEnergyCost": 3,
-    "damage": "30",
-    "text": "The Defending Pokémon is now Poisoned."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/66_hires.png",
-    "nationalPokedexNumber": 114,
-    "evolvesTo": [
-    "Tangrowth"
-    ]
-    },
-    {
-    "id": "base1-67",
-    "name": "Voltorb",
-    "imageUrl": "https://images.pokemontcg.io/base1/67.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "10",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "67",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Lightning"
-    ],
-    "attacks": [
-    {
-    "name": "Tackle",
-    "cost": [
-    "Colorless"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": ""
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fighting",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/67_hires.png",
-    "nationalPokedexNumber": 100,
-    "evolvesTo": [
-    "Electrode"
-    ]
-    },
-    {
-    "id": "base1-68",
-    "name": "Vulpix",
-    "imageUrl": "https://images.pokemontcg.io/base1/68.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "11",
-    "hp": "50",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "68",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Fire"
-    ],
-    "attacks": [
-    {
-    "name": "Confuse Ray",
-    "cost": [
-    "Fire",
-    "Fire"
-    ],
-    "convertedEnergyCost": 2,
-    "damage": "10",
-    "text": "Flip a coin. If heads, the Defending Pokémon is now Confused."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Water",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/68_hires.png",
-    "nationalPokedexNumber": 37,
-    "evolvesTo": [
-    "Ninetales"
-    ]
-    },
-    {
-    "id": "base1-69",
-    "name": "Weedle",
-    "imageUrl": "https://images.pokemontcg.io/base1/69.png",
-    "subtype": "Basic",
-    "supertype": "Pokémon",
-    "level": "12",
-    "hp": "40",
-    "retreatCost": [
-    "Colorless"
-    ],
-    "convertedRetreatCost": 1,
-    "number": "69",
-    "artist": "Mitsuhiro Arita",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "types": [
-    "Grass"
-    ],
-    "attacks": [
-    {
-    "name": "Poison Sting",
-    "cost": [
-    "Grass"
-    ],
-    "convertedEnergyCost": 1,
-    "damage": "10",
-    "text": "Flip a coin. If heads, Defending Pokémon is now Poisoned."
-    }
-    ],
-    "weaknesses": [
-    {
-    "type": "Fire",
-    "value": "×2"
-    }
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/69_hires.png",
-    "nationalPokedexNumber": 13,
-    "evolvesTo": [
-    "Kakuna"
-    ]
-    },
-    {
-    "id": "base1-70",
-    "name": "Clefairy Doll",
-    "imageUrl": "https://images.pokemontcg.io/base1/70.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "hp": "10",
-    "number": "70",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Play Clefairy Doll as if it were a Basic Pokémon. While in play, Clefairy Doll counts as a Pokémon (instead of a Trainer card.) Clefairy Doll has no attacks, can't retreat, and can't be Asleep, Confused, Paralyzed, or Poisoned. If Clefairy Doll is Knocked Out, it doesn't count as a Knock Out Pokémon. At any time during tyour turn before your attack, you may discard Clefairy Doll."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/70_hires.png"
-    },
-    {
-    "id": "base1-71",
-    "name": "Computer Search",
-    "imageUrl": "https://images.pokemontcg.io/base1/71.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "71",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Discard 2 other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/71_hires.png"
-    },
-    {
-    "id": "base1-72",
-    "name": "Devolution Spray",
-    "imageUrl": "https://images.pokemontcg.io/base1/72.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "72",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Choose 1 of your own Pokémon in play and a Stage of Evolution. Discard all Evolution cards of that Stage or higher attached to that Pokémon. That Pokémon is no longer Asleep, Confused, Paralyzed, Poisoned, or anything else that might be the result of an attack (just as if you had evolved it)."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/72_hires.png"
-    },
-    {
-    "id": "base1-73",
-    "name": "Impostor Professor Oak",
-    "imageUrl": "https://images.pokemontcg.io/base1/73.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "73",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Your opponent shuffles his or her hand into his or her deck, then draws 7 cards."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/73_hires.png"
-    },
-    {
-    "id": "base1-74",
-    "name": "Item Finder",
-    "imageUrl": "https://images.pokemontcg.io/base1/74.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "74",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Discard 2 other cards from your hand in order to put a Trainer card from your discard pile into your hand."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/74_hires.png"
-    },
-    {
-    "id": "base1-75",
-    "name": "Lass",
-    "imageUrl": "https://images.pokemontcg.io/base1/75.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "75",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "You and your opponent show each other your hands, then shuffle all the trainer cards from your hands into your decks."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/75_hires.png"
-    },
-    {
-    "id": "base1-76",
-    "name": "Pokémon Breeder",
-    "imageUrl": "https://images.pokemontcg.io/base1/76.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "76",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/76_hires.png"
-    },
-    {
-    "id": "base1-77",
-    "name": "Pokémon Trader",
-    "imageUrl": "https://images.pokemontcg.io/base1/77.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "77",
-    "artist": "Ken Sugimori",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/77_hires.png"
-    },
-    {
-    "id": "base1-78",
-    "name": "Scoop Up",
-    "imageUrl": "https://images.pokemontcg.io/base1/78.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "78",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Choose 1 of your own Pokémon in play and return its Basic Pokémon card to your hand. (Discard all cards attached to that card.)"
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/78_hires.png"
-    },
-    {
-    "id": "base1-79",
-    "name": "Super Energy Removal",
-    "imageUrl": "https://images.pokemontcg.io/base1/79.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "79",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Rare",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Discard 1 Energy card attached to 1 of your own Pokémon in order to choose 1 of your opponent's Pokémon and up to 2 Energy cards attached to it. Discard those energy cards."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/79_hires.png"
-    },
-    {
-    "id": "base1-80",
-    "name": "Defender",
-    "imageUrl": "https://images.pokemontcg.io/base1/80.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "80",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance.)"
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/80_hires.png"
-    },
-    {
-    "id": "base1-81",
-    "name": "Energy Retrieval",
-    "imageUrl": "https://images.pokemontcg.io/base1/81.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "81",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Trade 1 of other cards in your hand for up to 2 basic Energy cards from your discard pile."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/81_hires.png"
-    },
-    {
-    "id": "base1-82",
-    "name": "Full Heal",
-    "imageUrl": "https://images.pokemontcg.io/base1/82.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "82",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/82_hires.png"
-    },
-    {
-    "id": "base1-83",
-    "name": "Maintenance",
-    "imageUrl": "https://images.pokemontcg.io/base1/83.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "83",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Shuffle 2 of the other cards from your hand into your deck in order to draw a card."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/83_hires.png"
-    },
-    {
-    "id": "base1-84",
-    "name": "PlusPower",
-    "imageUrl": "https://images.pokemontcg.io/base1/84.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "84",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Attach PlusPower to your Active Pokémonn. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/84_hires.png"
-    },
-    {
-    "id": "base1-85",
-    "name": "Pokémon Center",
-    "imageUrl": "https://images.pokemontcg.io/base1/85.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "85",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/85_hires.png"
-    },
-    {
-    "id": "base1-86",
-    "name": "Pokémon Flute",
-    "imageUrl": "https://images.pokemontcg.io/base1/86.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "86",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Choose 1 Basic Pokémon card from your opponent's discard pile and put it on his or her Bench. (You can't play Pokémon Flute if your opponent's Bench is full.)"
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/86_hires.png"
-    },
-    {
-    "id": "base1-87",
-    "name": "Pokédex",
-    "imageUrl": "https://images.pokemontcg.io/base1/87.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "87",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Look at up to 5 cards from the top of your deck and rearrange them as you like."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/87_hires.png"
-    },
-    {
-    "id": "base1-88",
-    "name": "Professor Oak",
-    "imageUrl": "https://images.pokemontcg.io/base1/88.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "88",
-    "artist": "Ken Sugimori",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Discard your hand, then draw 7 cards."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/88_hires.png"
-    },
-    {
-    "id": "base1-89",
-    "name": "Revive",
-    "imageUrl": "https://images.pokemontcg.io/base1/89.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "89",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its (rounded down to the nearest 10). (You can't play Revive if your Bench is full.)"
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/89_hires.png"
-    },
-    {
-    "id": "base1-90",
-    "name": "Super Potion",
-    "imageUrl": "https://images.pokemontcg.io/base1/90.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "90",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/90_hires.png"
-    },
-    {
-    "id": "base1-91",
-    "name": "Bill",
-    "imageUrl": "https://images.pokemontcg.io/base1/91.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "91",
-    "artist": "Ken Sugimori",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Draw 2 cards."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/91_hires.png"
-    },
-    {
-    "id": "base1-92",
-    "name": "Energy Removal",
-    "imageUrl": "https://images.pokemontcg.io/base1/92.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "92",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/92_hires.png"
-    },
-    {
-    "id": "base1-93",
-    "name": "Gust of Wind",
-    "imageUrl": "https://images.pokemontcg.io/base1/93.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "93",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/93_hires.png"
-    },
-    {
-    "id": "base1-94",
-    "name": "Potion",
-    "imageUrl": "https://images.pokemontcg.io/base1/94.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "94",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Remove up to 2 damage counters from 1 of your Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/94_hires.png"
-    },
-    {
-    "id": "base1-95",
-    "name": "Switch",
-    "imageUrl": "https://images.pokemontcg.io/base1/95.png",
-    "subtype": "",
-    "supertype": "Trainer",
-    "number": "95",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Switch 1 of your Benched Pokémon with your Active Pokémon."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/95_hires.png"
-    },
-    {
-    "id": "base1-96",
-    "name": "Double Colorless Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/96.png",
-    "subtype": "Special",
-    "supertype": "Energy",
-    "number": "96",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Uncommon",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "text": [
-    "Provides energy. Doesn't count as a basic energy card."
-    ],
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/96_hires.png"
-    },
-    {
-    "id": "base1-97",
-    "name": "Fighting Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/97.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "97",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/97_hires.png"
-    },
-    {
-    "id": "base1-98",
-    "name": "Fire Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/98.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "98",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/98_hires.png"
-    },
-    {
-    "id": "base1-99",
-    "name": "Grass Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/99.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "99",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/99_hires.png"
-    },
-    {
-    "id": "base1-100",
-    "name": "Lightning Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/100.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "100",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/100_hires.png"
-    },
-    {
-    "id": "base1-101",
-    "name": "Psychic Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/101.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "101",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/101_hires.png"
-    },
-    {
-    "id": "base1-102",
-    "name": "Water Energy",
-    "imageUrl": "https://images.pokemontcg.io/base1/102.png",
-    "subtype": "Basic",
-    "supertype": "Energy",
-    "number": "102",
-    "artist": "Keiji Kinebuchi",
-    "rarity": "Common",
-    "series": "Base",
-    "set": "Base",
-    "setCode": "base1",
-    "imageUrlHiRes": "https://images.pokemontcg.io/base1/102_hires.png"
-    }
-    ]
+	{
+		id: 'base1-1',
+		name: 'Alakazam',
+		imageUrl: 'https://images.pokemontcg.io/base1/1.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Kadabra',
+		ability: {
+			name: 'Damage Swap',
+			text:
+				"As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to another as long as you don't Knock Out that Pokémon. This power can't be used if Alakazam is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '1',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Confuse Ray',
+				cost: ['Psychic', 'Psychic', 'Psychic'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/1_hires.png',
+		nationalPokedexNumber: 65,
+	},
+	{
+		id: 'base1-2',
+		name: 'Blastoise',
+		imageUrl: 'https://images.pokemontcg.io/base1/2.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '52',
+		evolvesFrom: 'Wartortle',
+		ability: {
+			name: 'Rain Dance',
+			text:
+				"As often as you like during your turn (before your attack), you may attach 1 Water Energy Card to 1 of your Water Pokémon. (This doesn't use up your 1 Energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '2',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Hydro Pump',
+				cost: ['Water', 'Water', 'Water'],
+				convertedEnergyCost: 3,
+				damage: '40+',
+				text:
+					"Does 40 damage plus 10 more damage for each Water energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/2_hires.png',
+		nationalPokedexNumber: 9,
+	},
+	{
+		id: 'base1-3',
+		name: 'Chansey',
+		imageUrl: 'https://images.pokemontcg.io/base1/3.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '55',
+		hp: '120',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '3',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Scrunch',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+			{
+				name: 'Double-edge',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '80',
+				text: 'Chansey does 80 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/3_hires.png',
+		nationalPokedexNumber: 113,
+		evolvesTo: ['Blissey'],
+	},
+	{
+		id: 'base1-4',
+		name: 'Charizard',
+		imageUrl: 'https://images.pokemontcg.io/base1/4.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '76',
+		evolvesFrom: 'Charmeleon',
+		ability: {
+			name: 'Energy Burn',
+			text:
+				"As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Charizard is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '120',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '4',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Fire Spin',
+				cost: ['Fire', 'Fire', 'Fire', 'Fire'],
+				convertedEnergyCost: 4,
+				damage: '100',
+				text:
+					'Discard 2 Energy cards attached to Charizard in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/4_hires.png',
+		nationalPokedexNumber: 6,
+	},
+	{
+		id: 'base1-5',
+		name: 'Clefairy',
+		imageUrl: 'https://images.pokemontcg.io/base1/5.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '14',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '5',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Sing',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Metronome',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					"Choose 1 of Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding energy cards. (No matter what type the defender is, Clefairy's type is still Colorless.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/5_hires.png',
+		nationalPokedexNumber: 35,
+		evolvesTo: ['Clefable'],
+	},
+	{
+		id: 'base1-6',
+		name: 'Gyarados',
+		imageUrl: 'https://images.pokemontcg.io/base1/6.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '41',
+		evolvesFrom: 'Magikarp',
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '6',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Dragon Rage',
+				cost: ['Water', 'Water', 'Water'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text: '',
+			},
+			{
+				name: 'Bubblebeam',
+				cost: ['Water', 'Water', 'Water', 'Water'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/6_hires.png',
+		nationalPokedexNumber: 130,
+	},
+	{
+		id: 'base1-7',
+		name: 'Hitmonchan',
+		imageUrl: 'https://images.pokemontcg.io/base1/7.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '33',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '7',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Jab',
+				cost: ['Fighting'],
+				convertedEnergyCost: 1,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Special Punch',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/7_hires.png',
+		nationalPokedexNumber: 107,
+	},
+	{
+		id: 'base1-8',
+		name: 'Machamp',
+		imageUrl: 'https://images.pokemontcg.io/base1/8.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '67',
+		evolvesFrom: 'Machoke',
+		ability: {
+			name: 'Strikes Back',
+			text:
+				"Whenever your opponent's attack damages Machamp (even if Machamp is Knoced Out), this power does 10 damage to attacking Pokémon. (Don't apply Weakness and Resistance.) This power can't be used if Machamp is already Asleep, Confused, or Paralyzed when your opponent attacks.",
+			type: 'Pokémon Power',
+		},
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '8',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Seismic Toss',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/8_hires.png',
+		nationalPokedexNumber: 68,
+	},
+	{
+		id: 'base1-9',
+		name: 'Magneton',
+		imageUrl: 'https://images.pokemontcg.io/base1/9.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Magnemite',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '9',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thunder Wave',
+				cost: ['Lightning', 'Lightning', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Lightning', 'Lightning', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '80',
+				text:
+					"Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 80 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/9_hires.png',
+		nationalPokedexNumber: 82,
+		evolvesTo: ['Magnezone'],
+	},
+	{
+		id: 'base1-10',
+		name: 'Mewtwo',
+		imageUrl: 'https://images.pokemontcg.io/base1/10.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '53',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '10',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Psychic',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each Energy card attached to the Defending Pokémon.',
+			},
+			{
+				name: 'Barrier',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Discard 1 Energy card attached to Mewtwo in order to use this attack. During your opponent's next turn, prevent all effects of attacks, including damage, done to Mewtwo.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/10_hires.png',
+		nationalPokedexNumber: 150,
+	},
+	{
+		id: 'base1-11',
+		name: 'Nidoking',
+		imageUrl: 'https://images.pokemontcg.io/base1/11.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '23',
+		evolvesFrom: 'Nidorino',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '11',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Thrash',
+				cost: ['Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30+',
+				text:
+					'Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Nidoking does 10 damage to itself.',
+			},
+			{
+				name: 'Toxic',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text:
+					"The Defending Pokémon is now Poisoned. It now takes 20 Poison damage instead of 10 after each player's turn (even if it was already Poisoned).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/11_hires.png',
+		nationalPokedexNumber: 34,
+	},
+	{
+		id: 'base1-12',
+		name: 'Ninetales',
+		imageUrl: 'https://images.pokemontcg.io/base1/12.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '32',
+		evolvesFrom: 'Vulpix',
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '12',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Lure',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'If your opponent has any Benched Pokémon, choose 1 of them and switch it with the Defending Pokémon.',
+			},
+			{
+				name: 'Fire Blast',
+				cost: ['Fire', 'Fire', 'Fire', 'Fire'],
+				convertedEnergyCost: 4,
+				damage: '80',
+				text:
+					'Discard 1 Energy card attached to Ninetales in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/12_hires.png',
+		nationalPokedexNumber: 38,
+	},
+	{
+		id: 'base1-13',
+		name: 'Poliwrath',
+		imageUrl: 'https://images.pokemontcg.io/base1/13.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '48',
+		evolvesFrom: 'Poliwhirl',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '13',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30+',
+				text:
+					"Does 30 damage plus 10 more damage for each Water Energy attached to Poliwrath but not used to pay for this attack's Energy cost. Extra Water Energy after the 2nd doesn't count.",
+			},
+			{
+				name: 'Whirlpool',
+				cost: ['Water', 'Water', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					'If the Defending Pokémon has any Energy cards attached to it, choose 1 and discard it.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/13_hires.png',
+		nationalPokedexNumber: 62,
+	},
+	{
+		id: 'base1-14',
+		name: 'Raichu',
+		imageUrl: 'https://images.pokemontcg.io/base1/14.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '40',
+		evolvesFrom: 'Pikachu',
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '14',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Agility',
+				cost: ['Lightning', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Raichu.",
+			},
+			{
+				name: 'Thunder',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: 'Flip a coin. If tails, Raichu does 30 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/14_hires.png',
+		nationalPokedexNumber: 26,
+	},
+	{
+		id: 'base1-15',
+		name: 'Venusaur',
+		imageUrl: 'https://images.pokemontcg.io/base1/15.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '67',
+		evolvesFrom: 'Ivysaur',
+		ability: {
+			name: 'Energy Trans',
+			text:
+				"As often as you like during your turn (before your attack), you may take 1 Grass Energy card attached to 1 of your Pokémon and attach it to a different one. This power can't be used if Venusaur is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '15',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Solarbeam',
+				cost: ['Grass', 'Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/15_hires.png',
+		nationalPokedexNumber: 3,
+	},
+	{
+		id: 'base1-16',
+		name: 'Zapdos',
+		imageUrl: 'https://images.pokemontcg.io/base1/16.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '64',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '16',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thunder',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: 'Flip a coin. If tails, Zapdos does 30 damage to itself.',
+			},
+			{
+				name: 'Thunderbolt',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '100',
+				text:
+					'Discard all Energy cards attached to Zapdos in order to use this attack.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/16_hires.png',
+		nationalPokedexNumber: 145,
+	},
+	{
+		id: 'base1-17',
+		name: 'Beedrill',
+		imageUrl: 'https://images.pokemontcg.io/base1/17.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '32',
+		evolvesFrom: 'Kakuna',
+		hp: '80',
+		number: '17',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Twineedle',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+			{
+				name: 'Poison Sting',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/17_hires.png',
+		nationalPokedexNumber: 15,
+	},
+	{
+		id: 'base1-18',
+		name: 'Dragonair',
+		imageUrl: 'https://images.pokemontcg.io/base1/18.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '33',
+		evolvesFrom: 'Dratini',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '18',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Slam',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+			{
+				name: 'Hyper Beam',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '20',
+				text:
+					'If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/18_hires.png',
+		nationalPokedexNumber: 148,
+		evolvesTo: ['Dragonite'],
+	},
+	{
+		id: 'base1-19',
+		name: 'Dugtrio',
+		imageUrl: 'https://images.pokemontcg.io/base1/19.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Diglett',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '19',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Slash',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text: '',
+			},
+			{
+				name: 'Earthquake',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 4,
+				damage: '70',
+				text:
+					"Does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/19_hires.png',
+		nationalPokedexNumber: 51,
+	},
+	{
+		id: 'base1-20',
+		name: 'Electabuzz',
+		imageUrl: 'https://images.pokemontcg.io/base1/20.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '35',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '20',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thundershock',
+				cost: ['Lightning'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Thunderpunch',
+				cost: ['Lightning', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '30+',
+				text:
+					'Flip a coin. If heads, this attack does 30 damage plus 10 more damage; if tails, this attack does 30 damage and Electabuzz does 10 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/20_hires.png',
+		nationalPokedexNumber: 125,
+		evolvesTo: ['Electivire'],
+	},
+	{
+		id: 'base1-21',
+		name: 'Electrode',
+		imageUrl: 'https://images.pokemontcg.io/base1/21.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '40',
+		evolvesFrom: 'Voltorb',
+		ability: {
+			name: 'Buzzap',
+			text:
+				"At any time during your turn (before your attack) you may Knock Out Electrode and attach it to 1 of your other Pokémon. If you do, chose a type of Energy. Electrode is now an Energy card (instead of a Pokémon) that provides 2 energy of that type. This power can't be used if Electrode is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '21',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Electric Shock',
+				cost: ['Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text:
+					'Flip a coin. If tails, Electrode does 10 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/21_hires.png',
+		nationalPokedexNumber: 101,
+	},
+	{
+		id: 'base1-22',
+		name: 'Pidgeotto',
+		imageUrl: 'https://images.pokemontcg.io/base1/22.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Pidgey',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '22',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Whirlwind',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)',
+			},
+			{
+				name: 'Mirror Move',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					'If Pidgeotto was attacked last turn, do the final result of that attack on Pidgeotto to the Defending Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/22_hires.png',
+		nationalPokedexNumber: 17,
+		evolvesTo: ['Pidgeot'],
+	},
+	{
+		id: 'base1-23',
+		name: 'Arcanine',
+		imageUrl: 'https://images.pokemontcg.io/base1/23.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Growlithe',
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '23',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Flamethrower',
+				cost: ['Fire', 'Fire', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text:
+					'Discard 1 Energy card attached to Arcanine in order to use this attack.',
+			},
+			{
+				name: 'Take Down',
+				cost: ['Fire', 'Fire', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '80',
+				text: 'Arcanine does 30 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/23_hires.png',
+		nationalPokedexNumber: 59,
+	},
+	{
+		id: 'base1-24',
+		name: 'Charmeleon',
+		imageUrl: 'https://images.pokemontcg.io/base1/24.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '32',
+		evolvesFrom: 'Charmander',
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '24',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Slash',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Flamethrower',
+				cost: ['Fire', 'Fire', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text:
+					'Discard 1 Energy card attached to Charmeleon in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/24_hires.png',
+		nationalPokedexNumber: 5,
+		evolvesTo: ['Charizard'],
+	},
+	{
+		id: 'base1-25',
+		name: 'Dewgong',
+		imageUrl: 'https://images.pokemontcg.io/base1/25.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Seel',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '25',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Aurora Beam',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text: '',
+			},
+			{
+				name: 'Ice Beam',
+				cost: ['Water', 'Water', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/25_hires.png',
+		nationalPokedexNumber: 87,
+	},
+	{
+		id: 'base1-26',
+		name: 'Dratini',
+		imageUrl: 'https://images.pokemontcg.io/base1/26.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '26',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Pound',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/26_hires.png',
+		nationalPokedexNumber: 147,
+		evolvesTo: ['Dragonair'],
+	},
+	{
+		id: 'base1-27',
+		name: "Farfetch'd",
+		imageUrl: 'https://images.pokemontcg.io/base1/27.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '27',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Leek Slap',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '30',
+				text:
+					"Flip a coin. If tails, this attack does nothing. Either way, you can't use this attack again as long as Farfetch'd stays in play (even putting Farfetch'd on the Bench won't let you use it again.)",
+			},
+			{
+				name: 'Pot Smash',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/27_hires.png',
+		nationalPokedexNumber: 83,
+	},
+	{
+		id: 'base1-28',
+		name: 'Growlithe',
+		imageUrl: 'https://images.pokemontcg.io/base1/28.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '18',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '28',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Flare',
+				cost: ['Fire', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/28_hires.png',
+		nationalPokedexNumber: 58,
+		evolvesTo: ['Arcanine'],
+	},
+	{
+		id: 'base1-29',
+		name: 'Haunter',
+		imageUrl: 'https://images.pokemontcg.io/base1/29.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '22',
+		evolvesFrom: 'Gastly',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '29',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Hypnosis',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Dream Eater',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '50',
+				text:
+					"You can't this attack unless the Defending Pokémon is Asleep.",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/29_hires.png',
+		nationalPokedexNumber: 93,
+		evolvesTo: ['Gengar'],
+	},
+	{
+		id: 'base1-30',
+		name: 'Ivysaur',
+		imageUrl: 'https://images.pokemontcg.io/base1/30.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '20',
+		evolvesFrom: 'Barboach',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '30',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Vine Whip',
+				cost: ['Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Poisonpowder',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: 'The Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/30_hires.png',
+		nationalPokedexNumber: 2,
+		evolvesTo: ['Venusaur'],
+	},
+	{
+		id: 'base1-31',
+		name: 'Jynx',
+		imageUrl: 'https://images.pokemontcg.io/base1/31.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '23',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '31',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Doubleslap',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Flip 2 coins. This attack does 10 damage times the number of heads.',
+			},
+			{
+				name: 'Meditate',
+				cost: ['Psychic', 'Psychic', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20+',
+				text:
+					'Does 20 damage plus 10 more damage for each damage counter on the Defending Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/31_hires.png',
+		nationalPokedexNumber: 124,
+	},
+	{
+		id: 'base1-32',
+		name: 'Kadabra',
+		imageUrl: 'https://images.pokemontcg.io/base1/32.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '38',
+		evolvesFrom: 'Abra',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '32',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Recover',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Discard 1 Energy card attached to Kadabra in order use this attack. Remove all damage counters from Kadabra.',
+			},
+			{
+				name: 'Super Psy',
+				cost: ['Psychic', 'Psychic', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/32_hires.png',
+		nationalPokedexNumber: 64,
+		evolvesTo: ['Alakazam'],
+	},
+	{
+		id: 'base1-33',
+		name: 'Kakuna',
+		imageUrl: 'https://images.pokemontcg.io/base1/33.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '23',
+		evolvesFrom: 'Weedle',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '33',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Stiffen',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Kakuna during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+			{
+				name: 'Poisonpowder',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/33_hires.png',
+		nationalPokedexNumber: 14,
+		evolvesTo: ['Beedrill'],
+	},
+	{
+		id: 'base1-34',
+		name: 'Machoke',
+		imageUrl: 'https://images.pokemontcg.io/base1/34.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '40',
+		evolvesFrom: 'Machop',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '34',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Karate Chop',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50-',
+				text:
+					'Does 50 damage minus 10 for each damage counter on Machoke.',
+			},
+			{
+				name: 'Submission',
+				cost: ['Fighting', 'Fighting', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: 'Machoke does 20 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/34_hires.png',
+		nationalPokedexNumber: 67,
+		evolvesTo: ['Machamp'],
+	},
+	{
+		id: 'base1-35',
+		name: 'Magikarp',
+		imageUrl: 'https://images.pokemontcg.io/base1/35.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '30',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '35',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Tackle',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Flail',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Does 10 damage times number of damage counters on Magikarp.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/35_hires.png',
+		nationalPokedexNumber: 129,
+		evolvesTo: ['Gyarados'],
+	},
+	{
+		id: 'base1-36',
+		name: 'Magmar',
+		imageUrl: 'https://images.pokemontcg.io/base1/36.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '24',
+		hp: '50',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '36',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Fire Punch',
+				cost: ['Fire', 'Fire'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Flamethrower',
+				cost: ['Fire', 'Fire', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text:
+					'Discard 1 Energy card attached to Magmar in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/36_hires.png',
+		nationalPokedexNumber: 126,
+		evolvesTo: ['Magmortar'],
+	},
+	{
+		id: 'base1-37',
+		name: 'Nidorino',
+		imageUrl: 'https://images.pokemontcg.io/base1/37.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '25',
+		evolvesFrom: 'Nidoran♂',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '37',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Double Kick',
+				cost: ['Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+			{
+				name: 'Horn Drill',
+				cost: ['Grass', 'Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/37_hires.png',
+		nationalPokedexNumber: 33,
+		evolvesTo: ['Nidoking'],
+	},
+	{
+		id: 'base1-38',
+		name: 'Poliwhirl',
+		imageUrl: 'https://images.pokemontcg.io/base1/38.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Poliwag',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '38',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Amnesia',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Choose 1 of defenders attacks. Defender cannot use that attack next turn.',
+			},
+			{
+				name: 'Doubleslap',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/38_hires.png',
+		nationalPokedexNumber: 61,
+		evolvesTo: ['Poliwrath', 'Politoed'],
+	},
+	{
+		id: 'base1-39',
+		name: 'Porygon',
+		imageUrl: 'https://images.pokemontcg.io/base1/39.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '30',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '39',
+		artist: 'Tomoaki Imakuni',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Conversion 1',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'If the Defending Pokémon has a Weakness, you may change it to a type of your choice other than Colorless.',
+			},
+			{
+				name: 'Conversion 2',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Change Porygon's Resistance to a type of your choice other than Colorless.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/39_hires.png',
+		nationalPokedexNumber: 137,
+		evolvesTo: ['Porygon2'],
+	},
+	{
+		id: 'base1-40',
+		name: 'Raticate',
+		imageUrl: 'https://images.pokemontcg.io/base1/40.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '41',
+		evolvesFrom: 'Poochyena',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '40',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Bite',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Super Fang',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '?',
+				text:
+					"Does damage to the Defending Pokémon equal to half the Defending Pokémon's remaining HP (rounded up to the nearest 10).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/40_hires.png',
+		nationalPokedexNumber: 20,
+	},
+	{
+		id: 'base1-41',
+		name: 'Seel',
+		imageUrl: 'https://images.pokemontcg.io/base1/41.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '41',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Headbutt',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/41_hires.png',
+		nationalPokedexNumber: 86,
+		evolvesTo: ['Dewgong'],
+	},
+	{
+		id: 'base1-42',
+		name: 'Wartortle',
+		imageUrl: 'https://images.pokemontcg.io/base1/42.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '22',
+		evolvesFrom: 'Squirtle',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '42',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Withdraw',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Wartortle during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+			{
+				name: 'Bite',
+				cost: ['Water', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/42_hires.png',
+		nationalPokedexNumber: 8,
+		evolvesTo: ['Blastoise'],
+	},
+	{
+		id: 'base1-43',
+		name: 'Abra',
+		imageUrl: 'https://images.pokemontcg.io/base1/43.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '30',
+		number: '43',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Psyshock',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/43_hires.png',
+		nationalPokedexNumber: 63,
+		evolvesTo: ['Kadabra'],
+	},
+	{
+		id: 'base1-44',
+		name: 'Bulbasaur',
+		imageUrl: 'https://images.pokemontcg.io/base1/44.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '44',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Leech Seed',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Unless all damage from this attack is prevented, you may remove 1 damage counter from Bulbasaur.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/44_hires.png',
+		nationalPokedexNumber: 1,
+		evolvesTo: ['Ivysaur'],
+	},
+	{
+		id: 'base1-45',
+		name: 'Caterpie',
+		imageUrl: 'https://images.pokemontcg.io/base1/45.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '45',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'String Shot',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/45_hires.png',
+		nationalPokedexNumber: 10,
+		evolvesTo: ['Metapod'],
+	},
+	{
+		id: 'base1-46',
+		name: 'Charmander',
+		imageUrl: 'https://images.pokemontcg.io/base1/46.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '46',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Scratch',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Ember',
+				cost: ['Fire', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text:
+					'Discard 1 Energy card attached to Charmander in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/46_hires.png',
+		nationalPokedexNumber: 4,
+		evolvesTo: ['Charmeleon'],
+	},
+	{
+		id: 'base1-47',
+		name: 'Diglett',
+		imageUrl: 'https://images.pokemontcg.io/base1/47.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '30',
+		number: '47',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Dig',
+				cost: ['Fighting'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Mud Slap',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/47_hires.png',
+		nationalPokedexNumber: 50,
+		evolvesTo: ['Dugtrio'],
+	},
+	{
+		id: 'base1-48',
+		name: 'Doduo',
+		imageUrl: 'https://images.pokemontcg.io/base1/48.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '50',
+		number: '48',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Fury Attack',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Flip 2 coins. This attack does 10 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/48_hires.png',
+		nationalPokedexNumber: 84,
+		evolvesTo: ['Dodrio'],
+	},
+	{
+		id: 'base1-49',
+		name: 'Drowzee',
+		imageUrl: 'https://images.pokemontcg.io/base1/49.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '50',
+		number: '49',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Pound',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Confuse Ray',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/49_hires.png',
+		nationalPokedexNumber: 96,
+		evolvesTo: ['Hypno'],
+	},
+	{
+		id: 'base1-50',
+		name: 'Gastly',
+		imageUrl: 'https://images.pokemontcg.io/base1/50.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '30',
+		number: '50',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Sleeping Gas',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Destiny Bond',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Discard 1 Energy card attached to Gastly in order to use this attack. If a Pokémon Knocks Out Gastly during your opponent's next turn, Knock Out that Pokémon.",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/50_hires.png',
+		nationalPokedexNumber: 92,
+		evolvesTo: ['Haunter'],
+	},
+	{
+		id: 'base1-51',
+		name: 'Koffing',
+		imageUrl: 'https://images.pokemontcg.io/base1/51.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '51',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Foul Gas',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned; if tails, it is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/51_hires.png',
+		nationalPokedexNumber: 109,
+		evolvesTo: ['Weezing'],
+	},
+	{
+		id: 'base1-52',
+		name: 'Machop',
+		imageUrl: 'https://images.pokemontcg.io/base1/52.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '52',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Low Kick',
+				cost: ['Fighting'],
+				convertedEnergyCost: 1,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/52_hires.png',
+		nationalPokedexNumber: 66,
+		evolvesTo: ['Machoke'],
+	},
+	{
+		id: 'base1-53',
+		name: 'Magnemite',
+		imageUrl: 'https://images.pokemontcg.io/base1/53.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '53',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thunder Wave',
+				cost: ['Lightning'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Lightning', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '40',
+				text:
+					"Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magnemite does 40 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/53_hires.png',
+		nationalPokedexNumber: 81,
+		evolvesTo: ['Magneton'],
+	},
+	{
+		id: 'base1-54',
+		name: 'Metapod',
+		imageUrl: 'https://images.pokemontcg.io/base1/54.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '21',
+		evolvesFrom: 'Caterpie',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '54',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Stiffen',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Metapod during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+			{
+				name: 'Stun Spore',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/54_hires.png',
+		nationalPokedexNumber: 11,
+		evolvesTo: ['Butterfree'],
+	},
+	{
+		id: 'base1-55',
+		name: 'Nidoran♂',
+		imageUrl: 'https://images.pokemontcg.io/base1/55.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '55',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Horn Hazard',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '30',
+				text: 'Flip a coin. If tails, this attack does nothing.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/55_hires.png',
+		nationalPokedexNumber: 32,
+		evolvesTo: ['Nidorino'],
+	},
+	{
+		id: 'base1-56',
+		name: 'Onix',
+		imageUrl: 'https://images.pokemontcg.io/base1/56.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '56',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Rock Throw',
+				cost: ['Fighting'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Harden',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"During opponent's next turn, whenever 30 or less damage is done to Onix (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/56_hires.png',
+		nationalPokedexNumber: 95,
+		evolvesTo: ['Steelix'],
+	},
+	{
+		id: 'base1-57',
+		name: 'Pidgey',
+		imageUrl: 'https://images.pokemontcg.io/base1/57.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '57',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Whirlwind',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/57_hires.png',
+		nationalPokedexNumber: 16,
+		evolvesTo: ['Pidgeotto'],
+	},
+	{
+		id: 'base1-58',
+		name: 'Pikachu',
+		imageUrl: 'https://images.pokemontcg.io/base1/58.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '58',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Gnaw',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Thunder Jolt',
+				cost: ['Lightning', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text:
+					'Flip a coin. If tails, Pikachu does 10 damage to itself.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/58_hires.png',
+		nationalPokedexNumber: 25,
+		evolvesTo: ['Raichu'],
+	},
+	{
+		id: 'base1-59',
+		name: 'Poliwag',
+		imageUrl: 'https://images.pokemontcg.io/base1/59.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '59',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10+',
+				text:
+					"Does 10 damage plus 10 damage for each Energy attached to Poliwag but not used to pay for this attack's Energy cost. Extra Energy after the end don't count.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/59_hires.png',
+		nationalPokedexNumber: 60,
+		evolvesTo: ['Poliwhirl'],
+	},
+	{
+		id: 'base1-60',
+		name: 'Ponyta',
+		imageUrl: 'https://images.pokemontcg.io/base1/60.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '60',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Smash Kick',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Flame Tail',
+				cost: ['Fire', 'Fire'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/60_hires.png',
+		nationalPokedexNumber: 77,
+		evolvesTo: ['Rapidash'],
+	},
+	{
+		id: 'base1-61',
+		name: 'Rattata',
+		imageUrl: 'https://images.pokemontcg.io/base1/61.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '9',
+		hp: '30',
+		number: '61',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Bite',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/61_hires.png',
+		nationalPokedexNumber: 19,
+		evolvesTo: ['Raticate'],
+	},
+	{
+		id: 'base1-62',
+		name: 'Sandshrew',
+		imageUrl: 'https://images.pokemontcg.io/base1/62.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '62',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Sand-attack',
+				cost: ['Fighting'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/62_hires.png',
+		nationalPokedexNumber: 27,
+		evolvesTo: ['Sandslash'],
+	},
+	{
+		id: 'base1-63',
+		name: 'Squirtle',
+		imageUrl: 'https://images.pokemontcg.io/base1/63.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '63',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Bubble',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Withdraw',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Squirtle during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/63_hires.png',
+		nationalPokedexNumber: 7,
+		evolvesTo: ['Wartortle'],
+	},
+	{
+		id: 'base1-64',
+		name: 'Starmie',
+		imageUrl: 'https://images.pokemontcg.io/base1/64.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Staryu',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '64',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Recover',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Discard 1 Energy card to Starmie in order to use this attack. Remove all damage counters from Starmie.',
+			},
+			{
+				name: 'Star Freeze',
+				cost: ['Water', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/64_hires.png',
+		nationalPokedexNumber: 121,
+	},
+	{
+		id: 'base1-65',
+		name: 'Staryu',
+		imageUrl: 'https://images.pokemontcg.io/base1/65.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '15',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '65',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Slap',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/65_hires.png',
+		nationalPokedexNumber: 120,
+		evolvesTo: ['Starmie'],
+	},
+	{
+		id: 'base1-66',
+		name: 'Tangela',
+		imageUrl: 'https://images.pokemontcg.io/base1/66.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '50',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '66',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Bind',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Poisonpowder',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: 'The Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/66_hires.png',
+		nationalPokedexNumber: 114,
+		evolvesTo: ['Tangrowth'],
+	},
+	{
+		id: 'base1-67',
+		name: 'Voltorb',
+		imageUrl: 'https://images.pokemontcg.io/base1/67.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '67',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Tackle',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/67_hires.png',
+		nationalPokedexNumber: 100,
+		evolvesTo: ['Electrode'],
+	},
+	{
+		id: 'base1-68',
+		name: 'Vulpix',
+		imageUrl: 'https://images.pokemontcg.io/base1/68.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '11',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '68',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Confuse Ray',
+				cost: ['Fire', 'Fire'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/68_hires.png',
+		nationalPokedexNumber: 37,
+		evolvesTo: ['Ninetales'],
+	},
+	{
+		id: 'base1-69',
+		name: 'Weedle',
+		imageUrl: 'https://images.pokemontcg.io/base1/69.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '69',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Poison Sting',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/69_hires.png',
+		nationalPokedexNumber: 13,
+		evolvesTo: ['Kakuna'],
+	},
+	{
+		id: 'base1-70',
+		name: 'Clefairy Doll',
+		imageUrl: 'https://images.pokemontcg.io/base1/70.png',
+		subtype: '',
+		supertype: 'Trainer',
+		hp: '10',
+		number: '70',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Play Clefairy Doll as if it were a Basic Pokémon. While in play, Clefairy Doll counts as a Pokémon (instead of a Trainer card.) Clefairy Doll has no attacks, can't retreat, and can't be Asleep, Confused, Paralyzed, or Poisoned. If Clefairy Doll is Knocked Out, it doesn't count as a Knock Out Pokémon. At any time during tyour turn before your attack, you may discard Clefairy Doll.",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/70_hires.png',
+	},
+	{
+		id: 'base1-71',
+		name: 'Computer Search',
+		imageUrl: 'https://images.pokemontcg.io/base1/71.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '71',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Discard 2 other cards from your hand in order to search your deck for any card and put it into your hand. Shuffle your deck afterward.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/71_hires.png',
+	},
+	{
+		id: 'base1-72',
+		name: 'Devolution Spray',
+		imageUrl: 'https://images.pokemontcg.io/base1/72.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '72',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Choose 1 of your own Pokémon in play and a Stage of Evolution. Discard all Evolution cards of that Stage or higher attached to that Pokémon. That Pokémon is no longer Asleep, Confused, Paralyzed, Poisoned, or anything else that might be the result of an attack (just as if you had evolved it).',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/72_hires.png',
+	},
+	{
+		id: 'base1-73',
+		name: 'Impostor Professor Oak',
+		imageUrl: 'https://images.pokemontcg.io/base1/73.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '73',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Your opponent shuffles his or her hand into his or her deck, then draws 7 cards.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/73_hires.png',
+	},
+	{
+		id: 'base1-74',
+		name: 'Item Finder',
+		imageUrl: 'https://images.pokemontcg.io/base1/74.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '74',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Discard 2 other cards from your hand in order to put a Trainer card from your discard pile into your hand.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/74_hires.png',
+	},
+	{
+		id: 'base1-75',
+		name: 'Lass',
+		imageUrl: 'https://images.pokemontcg.io/base1/75.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '75',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'You and your opponent show each other your hands, then shuffle all the trainer cards from your hands into your decks.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/75_hires.png',
+	},
+	{
+		id: 'base1-76',
+		name: 'Pokémon Breeder',
+		imageUrl: 'https://images.pokemontcg.io/base1/76.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '76',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Put a Stage 2 Evolution card from your hand on the matching Basic Pokémon. You can only play this card when you would be allowed to evolve that Pokémon anyway.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/76_hires.png',
+	},
+	{
+		id: 'base1-77',
+		name: 'Pokémon Trader',
+		imageUrl: 'https://images.pokemontcg.io/base1/77.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '77',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Trade 1 of the Basic Pokémon or Evolution cards in your hand for 1 of the Basic Pokémon or Evolution cards from your deck. Show both cards to your opponent. Shuffle your deck afterward.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/77_hires.png',
+	},
+	{
+		id: 'base1-78',
+		name: 'Scoop Up',
+		imageUrl: 'https://images.pokemontcg.io/base1/78.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '78',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Choose 1 of your own Pokémon in play and return its Basic Pokémon card to your hand. (Discard all cards attached to that card.)',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/78_hires.png',
+	},
+	{
+		id: 'base1-79',
+		name: 'Super Energy Removal',
+		imageUrl: 'https://images.pokemontcg.io/base1/79.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '79',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Discard 1 Energy card attached to 1 of your own Pokémon in order to choose 1 of your opponent's Pokémon and up to 2 Energy cards attached to it. Discard those energy cards.",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/79_hires.png',
+	},
+	{
+		id: 'base1-80',
+		name: 'Defender',
+		imageUrl: 'https://images.pokemontcg.io/base1/80.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '80',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Attach Defender to 1 of your Pokémon. At the end of your opponent's next turn, discard Defender. Damage done to that Pokémon by attacks is reduced by 20 (after applying Weakness and Resistance.)",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/80_hires.png',
+	},
+	{
+		id: 'base1-81',
+		name: 'Energy Retrieval',
+		imageUrl: 'https://images.pokemontcg.io/base1/81.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '81',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Trade 1 of other cards in your hand for up to 2 basic Energy cards from your discard pile.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/81_hires.png',
+	},
+	{
+		id: 'base1-82',
+		name: 'Full Heal',
+		imageUrl: 'https://images.pokemontcg.io/base1/82.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '82',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Your Active Pokémon is no longer Asleep, Confused, Paralyzed, or Poisoned.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/82_hires.png',
+	},
+	{
+		id: 'base1-83',
+		name: 'Maintenance',
+		imageUrl: 'https://images.pokemontcg.io/base1/83.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '83',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Shuffle 2 of the other cards from your hand into your deck in order to draw a card.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/83_hires.png',
+	},
+	{
+		id: 'base1-84',
+		name: 'PlusPower',
+		imageUrl: 'https://images.pokemontcg.io/base1/84.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '84',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Attach PlusPower to your Active Pokémonn. At the end of your turn, discard PlusPower. If this Pokémon's attack does damage to the defending Pokémon (after applying Weakness and Resistance), the attack does 10 more damage to the Defending Pokémon.",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/84_hires.png',
+	},
+	{
+		id: 'base1-85',
+		name: 'Pokémon Center',
+		imageUrl: 'https://images.pokemontcg.io/base1/85.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '85',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Remove all damage counters from all of your own Pokémon with damage counters on them, then discard all Energy cards attached to those Pokémon.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/85_hires.png',
+	},
+	{
+		id: 'base1-86',
+		name: 'Pokémon Flute',
+		imageUrl: 'https://images.pokemontcg.io/base1/86.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '86',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Choose 1 Basic Pokémon card from your opponent's discard pile and put it on his or her Bench. (You can't play Pokémon Flute if your opponent's Bench is full.)",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/86_hires.png',
+	},
+	{
+		id: 'base1-87',
+		name: 'Pokédex',
+		imageUrl: 'https://images.pokemontcg.io/base1/87.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '87',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Look at up to 5 cards from the top of your deck and rearrange them as you like.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/87_hires.png',
+	},
+	{
+		id: 'base1-88',
+		name: 'Professor Oak',
+		imageUrl: 'https://images.pokemontcg.io/base1/88.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '88',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: ['Discard your hand, then draw 7 cards.'],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/88_hires.png',
+	},
+	{
+		id: 'base1-89',
+		name: 'Revive',
+		imageUrl: 'https://images.pokemontcg.io/base1/89.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '89',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Put 1 Basic Pokémon card from your discard pile onto your Bench. Put damage counters on that Pokémon equal to half its (rounded down to the nearest 10). (You can't play Revive if your Bench is full.)",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/89_hires.png',
+	},
+	{
+		id: 'base1-90',
+		name: 'Super Potion',
+		imageUrl: 'https://images.pokemontcg.io/base1/90.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '90',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			'Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/90_hires.png',
+	},
+	{
+		id: 'base1-91',
+		name: 'Bill',
+		imageUrl: 'https://images.pokemontcg.io/base1/91.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '91',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: ['Draw 2 cards.'],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/91_hires.png',
+	},
+	{
+		id: 'base1-92',
+		name: 'Energy Removal',
+		imageUrl: 'https://images.pokemontcg.io/base1/92.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '92',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Choose 1 Energy card attached to 1 of your opponent's Pokémon and discard it.",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/92_hires.png',
+	},
+	{
+		id: 'base1-93',
+		name: 'Gust of Wind',
+		imageUrl: 'https://images.pokemontcg.io/base1/93.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '93',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: [
+			"Choose 1 of your opponent's Benched Pokémon and switch it with his or her Active Pokémon.",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/93_hires.png',
+	},
+	{
+		id: 'base1-94',
+		name: 'Potion',
+		imageUrl: 'https://images.pokemontcg.io/base1/94.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '94',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: ['Remove up to 2 damage counters from 1 of your Pokémon.'],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/94_hires.png',
+	},
+	{
+		id: 'base1-95',
+		name: 'Switch',
+		imageUrl: 'https://images.pokemontcg.io/base1/95.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '95',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: ['Switch 1 of your Benched Pokémon with your Active Pokémon.'],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/95_hires.png',
+	},
+	{
+		id: 'base1-96',
+		name: 'Double Colorless Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/96.png',
+		subtype: 'Special',
+		supertype: 'Energy',
+		number: '96',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		text: ["Provides energy. Doesn't count as a basic energy card."],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/96_hires.png',
+	},
+	{
+		id: 'base1-97',
+		name: 'Fighting Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/97.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '97',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/97_hires.png',
+	},
+	{
+		id: 'base1-98',
+		name: 'Fire Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/98.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '98',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/98_hires.png',
+	},
+	{
+		id: 'base1-99',
+		name: 'Grass Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/99.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '99',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/99_hires.png',
+	},
+	{
+		id: 'base1-100',
+		name: 'Lightning Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/100.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '100',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/100_hires.png',
+	},
+	{
+		id: 'base1-101',
+		name: 'Psychic Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/101.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '101',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/101_hires.png',
+	},
+	{
+		id: 'base1-102',
+		name: 'Water Energy',
+		imageUrl: 'https://images.pokemontcg.io/base1/102.png',
+		subtype: 'Basic',
+		supertype: 'Energy',
+		number: '102',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Base',
+		setCode: 'base1',
+		imageUrlHiRes: 'https://images.pokemontcg.io/base1/102_hires.png',
+	},
 
+	{
+		id: 'base3-1',
+		name: 'Aerodactyl',
+		imageUrl: 'https://images.pokemontcg.io/base3/1.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		ability: {
+			name: 'Prehistoric Power',
+			text:
+				'No more Evolution cards can be played. This power stops working while Aerodactyl is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '1',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Wing Attack',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/1_hires.png',
+		nationalPokedexNumber: 142,
+	},
+	{
+		id: 'base3-2',
+		name: 'Articuno',
+		imageUrl: 'https://images.pokemontcg.io/base3/2.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '35',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '2',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Freeze Dry',
+				cost: ['Water', 'Water', 'Water'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Blizzard',
+				cost: ['Water', 'Water', 'Water', 'Water'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text:
+					"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/2_hires.png',
+		nationalPokedexNumber: 144,
+	},
+	{
+		id: 'base3-3',
+		name: 'Ditto',
+		imageUrl: 'https://images.pokemontcg.io/base3/3.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		ability: {
+			name: 'Transform',
+			text:
+				"If Ditto is your Active Pokémon, treat it as if it were the same card as the Defending Pokémon, including type, Hit Points, Weakness, and so on, except Ditto can't evolve, always has this Pokémon Power, and you may treat any Energy attached to Ditto as Energy of any type. Ditto isn't a copy of any other Pokémon while Ditto is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '3',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Colorless'],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/3_hires.png',
+		nationalPokedexNumber: 132,
+	},
+	{
+		id: 'base3-4',
+		name: 'Dragonite',
+		imageUrl: 'https://images.pokemontcg.io/base3/4.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Dragonair',
+		ability: {
+			name: 'Step In',
+			text:
+				'Once during your turn (before you attack) if Dragonite is on your Bench, you may switch it with your Active Pokémon.',
+			type: 'Pokémon Power',
+		},
+		hp: '100',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '4',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Slam',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '40×',
+				text:
+					'Flip 2 coins. This attack does 40 damage times the number of heads.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/4_hires.png',
+		nationalPokedexNumber: 149,
+	},
+	{
+		id: 'base3-5',
+		name: 'Gengar',
+		imageUrl: 'https://images.pokemontcg.io/base3/5.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '38',
+		evolvesFrom: 'Haunter',
+		ability: {
+			name: 'Curse',
+			text:
+				"Once during your turn (before your attack), you may move 1 damage counter from 1 of your opponent's Pokémon to another (even if it would Knock Out the other Pokémon). This power can't be used if Gengar is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '5',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Dark Mind',
+				cost: ['Psychic', 'Psychic', 'Psychic'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/5_hires.png',
+		nationalPokedexNumber: 94,
+	},
+	{
+		id: 'base3-6',
+		name: 'Haunter',
+		imageUrl: 'https://images.pokemontcg.io/base3/6.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '17',
+		evolvesFrom: 'Gastly',
+		ability: {
+			name: 'Transparency',
+			text:
+				'Whenever an attack does anything to Haunter, flip a coin. If heads, prevent all effects of that attack, including damage, done to Haunter. This power stops working while Haunter is Asleep.',
+			type: 'Pokémon Power',
+		},
+		hp: '50',
+		convertedRetreatCost: 0,
+		number: '6',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Nightmare',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/6_hires.png',
+		nationalPokedexNumber: 93,
+		evolvesTo: ['Gengar'],
+	},
+	{
+		id: 'base3-7',
+		name: 'Hitmonlee',
+		imageUrl: 'https://images.pokemontcg.io/base3/7.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '30',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '7',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Stretch Kick',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+			{
+				name: 'High Jump Kick',
+				cost: ['Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/7_hires.png',
+		nationalPokedexNumber: 106,
+	},
+	{
+		id: 'base3-8',
+		name: 'Hypno',
+		imageUrl: 'https://images.pokemontcg.io/base3/8.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Drowzee',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '8',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Prophecy',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Look at up to 3 cards from the top of either player's deck and rearrange them as you like.",
+			},
+			{
+				name: 'Dark Mind',
+				cost: ['Psychic', 'Psychic', 'Psychic'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/8_hires.png',
+		nationalPokedexNumber: 97,
+	},
+	{
+		id: 'base3-9',
+		name: 'Kabutops',
+		imageUrl: 'https://images.pokemontcg.io/base3/9.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '30',
+		evolvesFrom: 'Kabuto',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '9',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Sharp Sickle',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Absorb',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					'Remove a number of damage counters from Kabutops equal to half the damage done to Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/9_hires.png',
+		nationalPokedexNumber: 141,
+	},
+	{
+		id: 'base3-10',
+		name: 'Lapras',
+		imageUrl: 'https://images.pokemontcg.io/base3/10.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '10',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10+',
+				text:
+					"Does 10 damage plus 10 more damage for each Energy attached to Lapras but not used to pay for this attack's Energy cost. You can't add more than 20 damage this way.",
+			},
+			{
+				name: 'Confuse Ray',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/10_hires.png',
+		nationalPokedexNumber: 131,
+	},
+	{
+		id: 'base3-11',
+		name: 'Magneton',
+		imageUrl: 'https://images.pokemontcg.io/base3/11.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Magnemite',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '11',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Sonicboom',
+				cost: ['Lightning', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '100',
+				text:
+					"Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 100 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/11_hires.png',
+		nationalPokedexNumber: 82,
+		evolvesTo: ['Magnezone'],
+	},
+	{
+		id: 'base3-12',
+		name: 'Moltres',
+		imageUrl: 'https://images.pokemontcg.io/base3/12.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '35',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '12',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Wildfire',
+				cost: ['Fire'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"You may discard any number of R Energy cards attached to Moltres when you use this attack. If you do, discard that many cards from the top of your opponent's deck.",
+			},
+			{
+				name: 'Dive Bomb',
+				cost: ['Fire', 'Fire', 'Fire', 'Fire'],
+				convertedEnergyCost: 4,
+				damage: '',
+				text: 'Flip a coin. If tails, this attack does nothing.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/12_hires.png',
+		nationalPokedexNumber: 146,
+	},
+	{
+		id: 'base3-13',
+		name: 'Muk',
+		imageUrl: 'https://images.pokemontcg.io/base3/13.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '34',
+		evolvesFrom: 'Grimer',
+		ability: {
+			name: 'Toxic Gas',
+			text:
+				'Ignore all Pokémon Powers other than Toxic Gases. This power stops working while Muk is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '13',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Sludge',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/13_hires.png',
+		nationalPokedexNumber: 89,
+	},
+	{
+		id: 'base3-14',
+		name: 'Raichu',
+		imageUrl: 'https://images.pokemontcg.io/base3/14.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Pikachu',
+		hp: '90',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '14',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Gigashock',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '30',
+				text:
+					"Choose 3 of your opponent's Benched Pokémon and this attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) If your opponent has fewer than 3 Benched Pokémon, do the damage to each of them.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/14_hires.png',
+		nationalPokedexNumber: 26,
+	},
+	{
+		id: 'base3-15',
+		name: 'Zapdos',
+		imageUrl: 'https://images.pokemontcg.io/base3/15.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '40',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '15',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thunderstorm',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					"For each of your opponent's Benched Pokémon, flip a coin. If heads, this attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Then, Zapdos does 10 damage times the number of tails to itself.",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/15_hires.png',
+		nationalPokedexNumber: 145,
+	},
+	{
+		id: 'base3-16',
+		name: 'Aerodactyl',
+		imageUrl: 'https://images.pokemontcg.io/base3/16.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		ability: {
+			name: 'Prehistoric Power',
+			text:
+				'No more Evolution cards can be played. This power stops working while Aerodactyl is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '16',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Wing Attack',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/16_hires.png',
+		nationalPokedexNumber: 142,
+	},
+	{
+		id: 'base3-17',
+		name: 'Articuno',
+		imageUrl: 'https://images.pokemontcg.io/base3/17.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '35',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '17',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Freeze Dry',
+				cost: ['Water', 'Water', 'Water'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Blizzard',
+				cost: ['Water', 'Water', 'Water', 'Water'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text:
+					"Flip a coin. If heads, this attack does 10 damage to each of your opponent's Benched Pokémon. If tails, this attack does 10 damage to each of your own Benched Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/17_hires.png',
+		nationalPokedexNumber: 144,
+	},
+	{
+		id: 'base3-18',
+		name: 'Ditto',
+		imageUrl: 'https://images.pokemontcg.io/base3/18.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		ability: {
+			name: 'Transform',
+			text:
+				"If Ditto is your Active Pokémon, treat it as if it were the same card as the Defending Pokémon, including type, Hit Points, Weakness, and so on, except Ditto can't evolve, always has this Pokémon Power, and you may treat any Energy attached to Ditto as Energy of any type. Ditto isn't a copy of any other Pokémon while Ditto is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '18',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Colorless'],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/18_hires.png',
+		nationalPokedexNumber: 132,
+	},
+	{
+		id: 'base3-19',
+		name: 'Dragonite',
+		imageUrl: 'https://images.pokemontcg.io/base3/19.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Dragonair',
+		ability: {
+			name: 'Step In',
+			text:
+				'Once during your turn (before you attack) if Dragonite is on your Bench, you may switch it with your Active Pokémon.',
+			type: 'Pokémon Power',
+		},
+		hp: '100',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '19',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Slam',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '40×',
+				text:
+					'Flip 2 coins. This attack does 40 damage times the number of heads.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/19_hires.png',
+		nationalPokedexNumber: 149,
+	},
+	{
+		id: 'base3-20',
+		name: 'Gengar',
+		imageUrl: 'https://images.pokemontcg.io/base3/20.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '38',
+		evolvesFrom: 'Haunter',
+		ability: {
+			name: 'Curse',
+			text:
+				"Once during your turn (before your attack), you may move 1 damage counter from 1 of your opponent's Pokémon to another (even if it would Knock Out the other Pokémon). This power can't be used if Gengar is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '20',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Dark Mind',
+				cost: ['Psychic', 'Psychic', 'Psychic'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/20_hires.png',
+		nationalPokedexNumber: 94,
+	},
+	{
+		id: 'base3-21',
+		name: 'Haunter',
+		imageUrl: 'https://images.pokemontcg.io/base3/21.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '17',
+		evolvesFrom: 'Gastly',
+		ability: {
+			name: 'Transparency',
+			text:
+				'Whenever an attack does anything to Haunter, flip a coin. If heads, prevent all effects of that attack, including damage, done to Haunter. This power stops working while Haunter is Asleep.',
+			type: 'Pokémon Power',
+		},
+		hp: '50',
+		convertedRetreatCost: 0,
+		number: '21',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Nightmare',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/21_hires.png',
+		nationalPokedexNumber: 93,
+		evolvesTo: ['Gengar'],
+	},
+	{
+		id: 'base3-22',
+		name: 'Hitmonlee',
+		imageUrl: 'https://images.pokemontcg.io/base3/22.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '30',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '22',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Stretch Kick',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 20 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+			{
+				name: 'High Jump Kick',
+				cost: ['Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/22_hires.png',
+		nationalPokedexNumber: 106,
+	},
+	{
+		id: 'base3-23',
+		name: 'Hypno',
+		imageUrl: 'https://images.pokemontcg.io/base3/23.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Drowzee',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '23',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Prophecy',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Look at up to 3 cards from the top of either player's deck and rearrange them as you like.",
+			},
+			{
+				name: 'Dark Mind',
+				cost: ['Psychic', 'Psychic', 'Psychic'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/23_hires.png',
+		nationalPokedexNumber: 97,
+	},
+	{
+		id: 'base3-24',
+		name: 'Kabutops',
+		imageUrl: 'https://images.pokemontcg.io/base3/24.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '30',
+		evolvesFrom: 'Kabuto',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '24',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Sharp Sickle',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Absorb',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					'Remove a number of damage counters from Kabutops equal to half the damage done to Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10). If Kabutops has fewer damage counters than that, remove all of them.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/24_hires.png',
+		nationalPokedexNumber: 141,
+	},
+	{
+		id: 'base3-25',
+		name: 'Lapras',
+		imageUrl: 'https://images.pokemontcg.io/base3/25.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '31',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '25',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10+',
+				text:
+					"Does 10 damage plus 10 more damage for each Energy attached to Lapras but not used to pay for this attack's Energy cost. You can't add more than 20 damage this way.",
+			},
+			{
+				name: 'Confuse Ray',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/25_hires.png',
+		nationalPokedexNumber: 131,
+	},
+	{
+		id: 'base3-26',
+		name: 'Magneton',
+		imageUrl: 'https://images.pokemontcg.io/base3/26.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Magnemite',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '26',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Sonicboom',
+				cost: ['Lightning', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"Don't apply Weakness and Resistance for this attack. (Any other effects that would happen after applying Weakness and Resistance still happen.)",
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '100',
+				text:
+					"Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Magneton does 100 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/26_hires.png',
+		nationalPokedexNumber: 82,
+		evolvesTo: ['Magnezone'],
+	},
+	{
+		id: 'base3-27',
+		name: 'Moltres',
+		imageUrl: 'https://images.pokemontcg.io/base3/27.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '35',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '27',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Wildfire',
+				cost: ['Fire'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"You may discard any number of R Energy cards attached to Moltres when you use this attack. If you do, discard that many cards from the top of your opponent's deck.",
+			},
+			{
+				name: 'Dive Bomb',
+				cost: ['Fire', 'Fire', 'Fire', 'Fire'],
+				convertedEnergyCost: 4,
+				damage: '',
+				text: 'Flip a coin. If tails, this attack does nothing.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/27_hires.png',
+		nationalPokedexNumber: 146,
+	},
+	{
+		id: 'base3-28',
+		name: 'Muk',
+		imageUrl: 'https://images.pokemontcg.io/base3/28.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '34',
+		evolvesFrom: 'Grimer',
+		ability: {
+			name: 'Toxic Gas',
+			text:
+				'Ignore all Pokémon Powers other than Toxic Gases. This power stops working while Muk is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '28',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Sludge',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/28_hires.png',
+		nationalPokedexNumber: 89,
+	},
+	{
+		id: 'base3-29',
+		name: 'Raichu',
+		imageUrl: 'https://images.pokemontcg.io/base3/29.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Pikachu',
+		hp: '90',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '29',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Gigashock',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '30',
+				text:
+					"Choose 3 of your opponent's Benched Pokémon and this attack does 10 damage to each of them. (Don't apply Weakness and Resistance for Benched Pokémon.) If your opponent has fewer than 3 Benched Pokémon, do the damage to each of them.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/29_hires.png',
+		nationalPokedexNumber: 26,
+	},
+	{
+		id: 'base3-30',
+		name: 'Zapdos',
+		imageUrl: 'https://images.pokemontcg.io/base3/30.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '40',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '30',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Thunderstorm',
+				cost: ['Lightning', 'Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					"For each of your opponent's Benched Pokémon, flip a coin. If heads, this attack does 20 damage to that Pokémon. (Don't apply Weakness and Resistance for Benched Pokémon.) Then, Zapdos does 10 damage times the number of tails to itself.",
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/30_hires.png',
+		nationalPokedexNumber: 145,
+	},
+	{
+		id: 'base3-31',
+		name: 'Arbok',
+		imageUrl: 'https://images.pokemontcg.io/base3/31.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '27',
+		evolvesFrom: 'Ekans',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '31',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Terror Strike',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads and if your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)',
+			},
+			{
+				name: 'Poison Fang',
+				cost: ['Grass', 'Grass', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: 'The Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/31_hires.png',
+		nationalPokedexNumber: 24,
+	},
+	{
+		id: 'base3-32',
+		name: 'Cloyster',
+		imageUrl: 'https://images.pokemontcg.io/base3/32.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '25',
+		evolvesFrom: 'Shellder',
+		hp: '50',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '32',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Clamp',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed. If tails, this attack does nothing (not even damage).',
+			},
+			{
+				name: 'Spike Cannon',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/32_hires.png',
+		nationalPokedexNumber: 91,
+	},
+	{
+		id: 'base3-33',
+		name: 'Gastly',
+		imageUrl: 'https://images.pokemontcg.io/base3/33.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '17',
+		hp: '50',
+		convertedRetreatCost: 0,
+		number: '33',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Lick',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Energy Conversion',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Put up to 2 Energy cards from your discard pile into your hand. Gastly does 10 damage to itself.',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/33_hires.png',
+		nationalPokedexNumber: 92,
+		evolvesTo: ['Haunter'],
+	},
+	{
+		id: 'base3-34',
+		name: 'Golbat',
+		imageUrl: 'https://images.pokemontcg.io/base3/34.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '29',
+		evolvesFrom: 'Zubat',
+		hp: '60',
+		convertedRetreatCost: 0,
+		number: '34',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Wing Attack',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Leech Life',
+				cost: ['Grass', 'Grass', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					'Remove a number of damage counters from Golbat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Golbat has fewer damage counters than that, remove all of them.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/34_hires.png',
+		nationalPokedexNumber: 42,
+		evolvesTo: ['Crobat'],
+	},
+	{
+		id: 'base3-35',
+		name: 'Golduck',
+		imageUrl: 'https://images.pokemontcg.io/base3/35.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '27',
+		evolvesFrom: 'Psyduck',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '35',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Psyshock',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Hyper Beam',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					'If the Defending Pokémon has any Energy cards attached to it, choose 1 of them and discard it.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/35_hires.png',
+		nationalPokedexNumber: 55,
+	},
+	{
+		id: 'base3-36',
+		name: 'Golem',
+		imageUrl: 'https://images.pokemontcg.io/base3/36.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Graveler',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 4,
+		number: '36',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Avalanche',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text: '',
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 4,
+				damage: '100',
+				text:
+					"Does 20 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Golem does 100 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/36_hires.png',
+		nationalPokedexNumber: 76,
+	},
+	{
+		id: 'base3-37',
+		name: 'Graveler',
+		imageUrl: 'https://images.pokemontcg.io/base3/37.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '29',
+		evolvesFrom: 'Geodude',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '37',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Harden',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"During your opponent's next turn, whenever 30 or less damage is done to Graveler (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.)",
+			},
+			{
+				name: 'Rock Throw',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/37_hires.png',
+		nationalPokedexNumber: 75,
+		evolvesTo: ['Golem'],
+	},
+	{
+		id: 'base3-38',
+		name: 'Kingler',
+		imageUrl: 'https://images.pokemontcg.io/base3/38.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '27',
+		evolvesFrom: 'Krabby',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '38',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Flail',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Does 10 damage times the number of damage counters on Kingler.',
+			},
+			{
+				name: 'Crabhammer',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '40',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/38_hires.png',
+		nationalPokedexNumber: 99,
+	},
+	{
+		id: 'base3-39',
+		name: 'Magmar',
+		imageUrl: 'https://images.pokemontcg.io/base3/39.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '31',
+		evolvesFrom: 'Magby',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '39',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Smokescreen',
+				cost: ['Fire'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+			},
+			{
+				name: 'Smog',
+				cost: ['Fire', 'Fire'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/39_hires.png',
+		nationalPokedexNumber: 126,
+		evolvesTo: ['Magmortar'],
+	},
+	{
+		id: 'base3-40',
+		name: 'Omastar',
+		imageUrl: 'https://images.pokemontcg.io/base3/40.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '32',
+		evolvesFrom: 'Omanyte',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '40',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					"Does 20 damage plus 10 more damage for each Energy attached to Omastar but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+			},
+			{
+				name: 'Spike Cannon',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/40_hires.png',
+		nationalPokedexNumber: 139,
+	},
+	{
+		id: 'base3-41',
+		name: 'Sandslash',
+		imageUrl: 'https://images.pokemontcg.io/base3/41.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '33',
+		evolvesFrom: 'Sandshrew',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '41',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Slash',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Fury Swipes',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '20×',
+				text:
+					'Flip 3 coins. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/41_hires.png',
+		nationalPokedexNumber: 28,
+	},
+	{
+		id: 'base3-42',
+		name: 'Seadra',
+		imageUrl: 'https://images.pokemontcg.io/base3/42.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '23',
+		evolvesFrom: 'Horsea',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '42',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					"Does 20 damage plus 10 more damage for each Energy attached to Seadra but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+			},
+			{
+				name: 'Agility',
+				cost: ['Water', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Seadra.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/42_hires.png',
+		nationalPokedexNumber: 117,
+		evolvesTo: ['Kingdra'],
+	},
+	{
+		id: 'base3-43',
+		name: 'Slowbro',
+		imageUrl: 'https://images.pokemontcg.io/base3/43.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '26',
+		evolvesFrom: 'Slowpoke',
+		ability: {
+			name: 'Strange Behavior',
+			text:
+				"As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokémon to Slowbro as long as you don't Knock Out Slowbro. This power can't be used if Slowbro is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '43',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Psyshock',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/43_hires.png',
+		nationalPokedexNumber: 80,
+	},
+	{
+		id: 'base3-44',
+		name: 'Tentacruel',
+		imageUrl: 'https://images.pokemontcg.io/base3/44.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '21',
+		evolvesFrom: 'Tentacool',
+		hp: '60',
+		convertedRetreatCost: 0,
+		number: '44',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Supersonic',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+			{
+				name: 'Jellyfish Sting',
+				cost: ['Water', 'Water'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text: 'The Defending Pokémon is now Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/44_hires.png',
+		nationalPokedexNumber: 73,
+	},
+	{
+		id: 'base3-45',
+		name: 'Weezing',
+		imageUrl: 'https://images.pokemontcg.io/base3/45.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '27',
+		evolvesFrom: 'Koffing',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '45',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Smog',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+			{
+				name: 'Selfdestruct',
+				cost: ['Grass', 'Grass', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '60',
+				text:
+					"Does 10 damage to each Pokémon on each player's Bench. (Don't apply Weakness and Resistance for Benched Pokémon.) Weezing does 60 damage to itself.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/45_hires.png',
+		nationalPokedexNumber: 110,
+	},
+	{
+		id: 'base3-46',
+		name: 'Ekans',
+		imageUrl: 'https://images.pokemontcg.io/base3/46.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '46',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Spit Poison',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+			{
+				name: 'Wrap',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/46_hires.png',
+		nationalPokedexNumber: 23,
+		evolvesTo: ['Arbok'],
+	},
+	{
+		id: 'base3-47',
+		name: 'Geodude',
+		imageUrl: 'https://images.pokemontcg.io/base3/47.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '16',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '47',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Stone Barrage',
+				cost: ['Fighting', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10×',
+				text:
+					'Flip a coin until you get tails. This attack does 10 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/47_hires.png',
+		nationalPokedexNumber: 74,
+		evolvesTo: ['Graveler'],
+	},
+	{
+		id: 'base3-48',
+		name: 'Grimer',
+		imageUrl: 'https://images.pokemontcg.io/base3/48.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '17',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '48',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Nasty Goo',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Minimize',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"All damage done by attacks to Grimer during your opponent's next turn is reduced by 20 (after applying Weakness and Resistance).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/48_hires.png',
+		nationalPokedexNumber: 88,
+		evolvesTo: ['Muk'],
+	},
+	{
+		id: 'base3-49',
+		name: 'Horsea',
+		imageUrl: 'https://images.pokemontcg.io/base3/49.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '19',
+		hp: '40',
+		convertedRetreatCost: 0,
+		number: '49',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Smokescreen',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					"If the Defending Pokémon tries to attack during your opponent's next turn, your opponent flips a coin. If tails, that attack does nothing.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/49_hires.png',
+		nationalPokedexNumber: 116,
+		evolvesTo: ['Seadra'],
+	},
+	{
+		id: 'base3-50',
+		name: 'Kabuto',
+		imageUrl: 'https://images.pokemontcg.io/base3/50.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '9',
+		ability: {
+			name: 'Kabuto Armor',
+			text:
+				'Whenever an attack (even your own) does damage to Kabuto (after applying Weakness and Resistance), that attack only does half the damage to Kabuto (rounded down to nearest 10). (Any other effects of attacks still happen.) This power stops working while Kabuto is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '30',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '50',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Scratch',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/50_hires.png',
+		nationalPokedexNumber: 140,
+		evolvesTo: ['Kabutops'],
+	},
+	{
+		id: 'base3-51',
+		name: 'Krabby',
+		imageUrl: 'https://images.pokemontcg.io/base3/51.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		hp: '50',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '51',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Call for Family',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Search your deck for a Basic Pokémon named Krabby and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+			},
+			{
+				name: 'Irongrip',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/51_hires.png',
+		nationalPokedexNumber: 98,
+		evolvesTo: ['Kingler'],
+	},
+	{
+		id: 'base3-52',
+		name: 'Omanyte',
+		imageUrl: 'https://images.pokemontcg.io/base3/52.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '19',
+		ability: {
+			name: 'Clairvoyance',
+			text:
+				'Your opponent plays with his or her hand face up. This power stops working while Omanyte is Asleep, Confused, or Paralyzed.',
+			type: 'Pokémon Power',
+		},
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '52',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Water Gun',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10+',
+				text:
+					"Does 10 damage plus 10 more damage for each Energy attached to Omanyte but not used to pay for this attack's Energy cost. You can't add more than 20 damage in this way.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/52_hires.png',
+		nationalPokedexNumber: 138,
+		evolvesTo: ['Omastar'],
+	},
+	{
+		id: 'base3-53',
+		name: 'Psyduck',
+		imageUrl: 'https://images.pokemontcg.io/base3/53.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '15',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '53',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Headache',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Your opponent can't play Trainer cards during his or her next turn.",
+			},
+			{
+				name: 'Fury Swipes',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Flip 3 coins. This attack does 10 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/53_hires.png',
+		nationalPokedexNumber: 54,
+		evolvesTo: ['Golduck'],
+	},
+	{
+		id: 'base3-54',
+		name: 'Shellder',
+		imageUrl: 'https://images.pokemontcg.io/base3/54.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '30',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '54',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Supersonic',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+			{
+				name: 'Hide in Shell',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Flip a coin. If heads, prevent all damage done to Shellder during your opponent's next turn. (Any other effects of attacks still happen.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/54_hires.png',
+		nationalPokedexNumber: 90,
+		evolvesTo: ['Cloyster'],
+	},
+	{
+		id: 'base3-55',
+		name: 'Slowpoke',
+		imageUrl: 'https://images.pokemontcg.io/base3/55.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '18',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '55',
+		artist: 'Miki Tanaka',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Spacing Out',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Flip a coin. If heads, remove a damage counter from Slowpoke. This attack can't be used if Slowpoke has no damage counters on it.",
+			},
+			{
+				name: 'Scavenge',
+				cost: ['Psychic', 'Psychic'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Discard 1 Energy card attached to Slowpoke in order to use this attack. Put a Trainer card from your discard pile into your hand.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/55_hires.png',
+		nationalPokedexNumber: 79,
+		evolvesTo: ['Slowbro', 'Slowking'],
+	},
+	{
+		id: 'base3-56',
+		name: 'Tentacool',
+		imageUrl: 'https://images.pokemontcg.io/base3/56.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		ability: {
+			name: 'Cowardice',
+			text:
+				"At any time during your turn (before your attack), you may return Tentacool to your hand. (Discard all cards attached to Tentacool.) This power can't be used the turn you put Tentacool into play or if Tentacool is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '30',
+		convertedRetreatCost: 0,
+		number: '56',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Acid',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/56_hires.png',
+		nationalPokedexNumber: 72,
+		evolvesTo: ['Tentacruel'],
+	},
+	{
+		id: 'base3-57',
+		name: 'Zubat',
+		imageUrl: 'https://images.pokemontcg.io/base3/57.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '40',
+		convertedRetreatCost: 0,
+		number: '57',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Supersonic',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+			{
+				name: 'Leech Life',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Remove a number of damage counters from Zubat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance). If Zubat has fewer damage counters than that, remove all of them.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/57_hires.png',
+		nationalPokedexNumber: 41,
+		evolvesTo: ['Golbat'],
+	},
+	{
+		id: 'base3-58',
+		name: 'Mr. Fuji',
+		imageUrl: 'https://images.pokemontcg.io/base3/58.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '58',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		text: [
+			'Choose a Pokémon on your Bench. Shuffle it and any cards attached to it into your deck.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/58_hires.png',
+	},
+	{
+		id: 'base3-59',
+		name: 'Energy Search',
+		imageUrl: 'https://images.pokemontcg.io/base3/59.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '59',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		text: [
+			'Search your deck for a basic Energy card and put it into your hand. Shuffle your deck afterward.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/59_hires.png',
+	},
+	{
+		id: 'base3-60',
+		name: 'Gambler',
+		imageUrl: 'https://images.pokemontcg.io/base3/60.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '60',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		text: [
+			'Shuffle your hand into your deck. Flip a coin. If heads, draw 8 cards. If tails, draw 1 card.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/60_hires.png',
+	},
+	{
+		id: 'base3-61',
+		name: 'Recycle',
+		imageUrl: 'https://images.pokemontcg.io/base3/61.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '61',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		text: [
+			'Flip a coin. If heads, put a card in your discard pile on top of your deck.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/61_hires.png',
+	},
+	{
+		id: 'base3-62',
+		name: 'Mysterious Fossil',
+		imageUrl: 'https://images.pokemontcg.io/base3/62.png',
+		subtype: '',
+		supertype: 'Trainer',
+		hp: '10',
+		number: '62',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Fossil',
+		setCode: 'base3',
+		text: [
+			"Play Mysterious Fossil as if it were a Basic Pokémon. While in play, Mysterious Fossil counts as a Pokémon (instead of a Trainer card). Mysterious Fossil has no attacks, can't retreat, and can't be Asleep, Confused, Paralyzed, or Poisoned. If Mysterious Fossil is Knocked Out, it doesn't count as a Knocked Out Pokémon. (Discard it anyway.) At any time during your turn before your attack, you may discard Mysterious Fossil from play. (Major text change in Legend Maker. Requires reference.)",
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base3/62_hires.png',
+	},
 
-module.exports = cardData
+	{
+		id: 'base2-1',
+		name: 'Clefable',
+		imageUrl: 'https://images.pokemontcg.io/base2/1.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '34',
+		evolvesFrom: 'Clefairy',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '1',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Metronome',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefable's type is still Colorless.)",
+			},
+			{
+				name: 'Minimize',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"All damage done by attacks to Clefable during your opponent's next turn is reduce by 20 (after applying Weakness and Resistance).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/1_hires.png',
+		nationalPokedexNumber: 36,
+	},
+	{
+		id: 'base2-2',
+		name: 'Electrode',
+		imageUrl: 'https://images.pokemontcg.io/base2/2.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Voltorb',
+		hp: '90',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '2',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Tackle',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Chain Lightning',
+				cost: ['Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					"If the Defending Pokémon isn't Colorless, this attack does 10 damage to each Benched Pokémon of the same type as the Defending Pokémon (including your own).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/2_hires.png',
+		nationalPokedexNumber: 101,
+	},
+	{
+		id: 'base2-3',
+		name: 'Flareon',
+		imageUrl: 'https://images.pokemontcg.io/base2/3.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Eevee',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '3',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Flamethrower',
+				cost: ['Fire', 'Fire', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text:
+					'Discard 1 Energy card attached to Flareon in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/3_hires.png',
+		nationalPokedexNumber: 136,
+	},
+	{
+		id: 'base2-4',
+		name: 'Jolteon',
+		imageUrl: 'https://images.pokemontcg.io/base2/4.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '29',
+		evolvesFrom: 'Eevee',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '4',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Pin Missile',
+				cost: ['Lightning', 'Lightning', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20×',
+				text:
+					'Flip 4 coins. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/4_hires.png',
+		nationalPokedexNumber: 135,
+	},
+	{
+		id: 'base2-5',
+		name: 'Kangaskhan',
+		imageUrl: 'https://images.pokemontcg.io/base2/5.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '40',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '5',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Fetch',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'Draw a card.',
+			},
+			{
+				name: 'Comet Punch',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '20×',
+				text:
+					'Flip 4 coins. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/5_hires.png',
+		nationalPokedexNumber: 115,
+	},
+	{
+		id: 'base2-6',
+		name: 'Mr. Mime',
+		imageUrl: 'https://images.pokemontcg.io/base2/6.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Mime Jr.',
+		ability: {
+			name: 'Invisible Wall',
+			text:
+				"Whenever an attack (including your own) does 30 or more damage to Mr. Mime (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.) This power can't be used if Mr. Mime is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '6',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Meditate',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each damage counter on the Defending Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/6_hires.png',
+		nationalPokedexNumber: 122,
+	},
+	{
+		id: 'base2-7',
+		name: 'Nidoqueen',
+		imageUrl: 'https://images.pokemontcg.io/base2/7.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '43',
+		evolvesFrom: 'Nidorina',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '7',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Boyfriends',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					'Does 20 damage plus 20 more damage for each Nidoking you have in play.',
+			},
+			{
+				name: 'Mega Punch',
+				cost: ['Grass', 'Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/7_hires.png',
+		nationalPokedexNumber: 31,
+	},
+	{
+		id: 'base2-8',
+		name: 'Pidgeot',
+		imageUrl: 'https://images.pokemontcg.io/base2/8.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '40',
+		evolvesFrom: 'Pidgeotto',
+		hp: '80',
+		convertedRetreatCost: 0,
+		number: '8',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Wing Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Hurricane',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"Unless this attack Knocks Out the Defending Pokémon, return the Defending Pokémon and all cards attached to it to your opponent's hand.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/8_hires.png',
+		nationalPokedexNumber: 18,
+	},
+	{
+		id: 'base2-9',
+		name: 'Pinsir',
+		imageUrl: 'https://images.pokemontcg.io/base2/9.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '24',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '9',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Irongrip',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Guillotine',
+				cost: ['Grass', 'Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/9_hires.png',
+		nationalPokedexNumber: 127,
+	},
+	{
+		id: 'base2-10',
+		name: 'Scyther',
+		imageUrl: 'https://images.pokemontcg.io/base2/10.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '25',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '10',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Swords Dance',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"During your next turn, Scyther's Slash attack's base damage is 60 instead of 30.",
+			},
+			{
+				name: 'Slash',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/10_hires.png',
+		nationalPokedexNumber: 123,
+		evolvesTo: ['Scizor'],
+	},
+	{
+		id: 'base2-11',
+		name: 'Snorlax',
+		imageUrl: 'https://images.pokemontcg.io/base2/11.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		evolvesFrom: 'Munchlax',
+		ability: {
+			name: 'Thick Skinned',
+			text:
+				"Snorlax can't become Asleep, Confused, Paralyzed, or Poisoned. This power can't be used if Snorlax is already Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 4,
+		number: '11',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Body Slam',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/11_hires.png',
+		nationalPokedexNumber: 143,
+	},
+	{
+		id: 'base2-12',
+		name: 'Vaporeon',
+		imageUrl: 'https://images.pokemontcg.io/base2/12.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Eevee',
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '12',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Water Gun',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30+',
+				text:
+					"Does 30 damage plus 10 more damage for each Energy attached to Vaporeon but not used to pay for this attack's Energy cost. Extra Energy after the 2nd doesn't count.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/12_hires.png',
+		nationalPokedexNumber: 134,
+	},
+	{
+		id: 'base2-13',
+		name: 'Venomoth',
+		imageUrl: 'https://images.pokemontcg.io/base2/13.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Venonat',
+		ability: {
+			name: 'Shift',
+			text:
+				"Once during your turn (before your attack), you may change the type of Venomoth to the type of any other Pokémon in play other than Colorless. This power can't be used if Venomoth is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '13',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Venom Powder',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/13_hires.png',
+		nationalPokedexNumber: 49,
+	},
+	{
+		id: 'base2-14',
+		name: 'Victreebel',
+		imageUrl: 'https://images.pokemontcg.io/base2/14.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Weepinbell',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '14',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Lure',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon.',
+			},
+			{
+				name: 'Acid',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"Flip a coin. If heads, the Defending Pokémon can't retreat during your opponent's next turn.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/14_hires.png',
+		nationalPokedexNumber: 71,
+	},
+	{
+		id: 'base2-15',
+		name: 'Vileplume',
+		imageUrl: 'https://images.pokemontcg.io/base2/15.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Gloom',
+		ability: {
+			name: 'Heal',
+			text:
+				"Once during your turn (before your attack), you may flip a coin. If heads, remove 1 damage counter from 1 of your Pokémon. This power can't be used if Vileplume is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '15',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Petal Dance',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '40×',
+				text:
+					'Flip 3 coins. This attack does 40 damage times the number of heads. Vileplume is now Confused (after doing damage).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/15_hires.png',
+		nationalPokedexNumber: 45,
+	},
+	{
+		id: 'base2-16',
+		name: 'Wigglytuff',
+		imageUrl: 'https://images.pokemontcg.io/base2/16.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Jigglypuff',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '16',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Lullaby',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Do the Wave',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each of your Benched Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/16_hires.png',
+		nationalPokedexNumber: 40,
+	},
+	{
+		id: 'base2-17',
+		name: 'Clefable',
+		imageUrl: 'https://images.pokemontcg.io/base2/17.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '34',
+		evolvesFrom: 'Clefairy',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '17',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Metronome',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs and anything else required in order to use that attack, such as discarding Energy cards. (No matter what type the Defending Pokémon is, Clefable's type is still Colorless.)",
+			},
+			{
+				name: 'Minimize',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"All damage done by attacks to Clefable during your opponent's next turn is reduce by 20 (after applying Weakness and Resistance).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/17_hires.png',
+		nationalPokedexNumber: 36,
+	},
+	{
+		id: 'base2-18',
+		name: 'Electrode',
+		imageUrl: 'https://images.pokemontcg.io/base2/18.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Voltorb',
+		hp: '90',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '18',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Tackle',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Chain Lightning',
+				cost: ['Lightning', 'Lightning', 'Lightning'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					"If the Defending Pokémon isn't Colorless, this attack does 10 damage to each Benched Pokémon of the same type as the Defending Pokémon (including your own).",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/18_hires.png',
+		nationalPokedexNumber: 101,
+	},
+	{
+		id: 'base2-19',
+		name: 'Flareon',
+		imageUrl: 'https://images.pokemontcg.io/base2/19.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Eevee',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '19',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Flamethrower',
+				cost: ['Fire', 'Fire', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '60',
+				text:
+					'Discard 1 Energy card attached to Flareon in order to use this attack.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/19_hires.png',
+		nationalPokedexNumber: 136,
+	},
+	{
+		id: 'base2-20',
+		name: 'Jolteon',
+		imageUrl: 'https://images.pokemontcg.io/base2/20.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '29',
+		evolvesFrom: 'Eevee',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '20',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Pin Missile',
+				cost: ['Lightning', 'Lightning', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20×',
+				text:
+					'Flip 4 coins. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/20_hires.png',
+		nationalPokedexNumber: 135,
+	},
+	{
+		id: 'base2-21',
+		name: 'Kangaskhan',
+		imageUrl: 'https://images.pokemontcg.io/base2/21.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '40',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '21',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Fetch',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'Draw a card.',
+			},
+			{
+				name: 'Comet Punch',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '20×',
+				text:
+					'Flip 4 coins. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/21_hires.png',
+		nationalPokedexNumber: 115,
+	},
+	{
+		id: 'base2-22',
+		name: 'Mr. Mime',
+		imageUrl: 'https://images.pokemontcg.io/base2/22.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Mime Jr.',
+		ability: {
+			name: 'Invisible Wall',
+			text:
+				"Whenever an attack (including your own) does 30 or more damage to Mr. Mime (after applying Weakness and Resistance), prevent that damage. (Any other effects of attacks still happen.) This power can't be used if Mr. Mime is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '22',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Psychic'],
+		attacks: [
+			{
+				name: 'Meditate',
+				cost: ['Psychic', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each damage counter on the Defending Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/22_hires.png',
+		nationalPokedexNumber: 122,
+	},
+	{
+		id: 'base2-23',
+		name: 'Nidoqueen',
+		imageUrl: 'https://images.pokemontcg.io/base2/23.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '43',
+		evolvesFrom: 'Nidorina',
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '23',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Boyfriends',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					'Does 20 damage plus 20 more damage for each Nidoking you have in play.',
+			},
+			{
+				name: 'Mega Punch',
+				cost: ['Grass', 'Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/23_hires.png',
+		nationalPokedexNumber: 31,
+	},
+	{
+		id: 'base2-24',
+		name: 'Pidgeot',
+		imageUrl: 'https://images.pokemontcg.io/base2/24.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '40',
+		evolvesFrom: 'Pidgeotto',
+		hp: '80',
+		convertedRetreatCost: 0,
+		number: '24',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Wing Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Hurricane',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"Unless this attack Knocks Out the Defending Pokémon, return the Defending Pokémon and all cards attached to it to your opponent's hand.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/24_hires.png',
+		nationalPokedexNumber: 18,
+	},
+	{
+		id: 'base2-25',
+		name: 'Pinsir',
+		imageUrl: 'https://images.pokemontcg.io/base2/25.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '24',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '25',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Irongrip',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Guillotine',
+				cost: ['Grass', 'Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/25_hires.png',
+		nationalPokedexNumber: 127,
+	},
+	{
+		id: 'base2-26',
+		name: 'Scyther',
+		imageUrl: 'https://images.pokemontcg.io/base2/26.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '25',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '26',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Swords Dance',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"During your next turn, Scyther's Slash attack's base damage is 60 instead of 30.",
+			},
+			{
+				name: 'Slash',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/26_hires.png',
+		nationalPokedexNumber: 123,
+		evolvesTo: ['Scizor'],
+	},
+	{
+		id: 'base2-27',
+		name: 'Snorlax',
+		imageUrl: 'https://images.pokemontcg.io/base2/27.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '20',
+		evolvesFrom: 'Munchlax',
+		ability: {
+			name: 'Thick Skinned',
+			text:
+				"Snorlax can't become Asleep, Confused, Paralyzed, or Poisoned. This power can't be used if Snorlax is already Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '90',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 4,
+		number: '27',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Body Slam',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '30',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/27_hires.png',
+		nationalPokedexNumber: 143,
+	},
+	{
+		id: 'base2-28',
+		name: 'Vaporeon',
+		imageUrl: 'https://images.pokemontcg.io/base2/28.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Eevee',
+		hp: '80',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '28',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+			{
+				name: 'Water Gun',
+				cost: ['Water', 'Water', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30+',
+				text:
+					"Does 30 damage plus 10 more damage for each Energy attached to Vaporeon but not used to pay for this attack's Energy cost. Extra Energy after the 2nd doesn't count.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/28_hires.png',
+		nationalPokedexNumber: 134,
+	},
+	{
+		id: 'base2-29',
+		name: 'Venomoth',
+		imageUrl: 'https://images.pokemontcg.io/base2/29.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Venonat',
+		ability: {
+			name: 'Shift',
+			text:
+				"Once during your turn (before your attack), you may change the type of Venomoth to the type of any other Pokémon in play other than Colorless. This power can't be used if Venomoth is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '29',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Venom Powder',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused and Poisoned.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/29_hires.png',
+		nationalPokedexNumber: 49,
+	},
+	{
+		id: 'base2-30',
+		name: 'Victreebel',
+		imageUrl: 'https://images.pokemontcg.io/base2/30.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '42',
+		evolvesFrom: 'Weepinbell',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '30',
+		artist: 'Ken Sugimori',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Lure',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'If your opponent has any Benched Pokémon, choose 1 of them and switch it with his or her Active Pokémon.',
+			},
+			{
+				name: 'Acid',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"Flip a coin. If heads, the Defending Pokémon can't retreat during your opponent's next turn.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/30_hires.png',
+		nationalPokedexNumber: 71,
+	},
+	{
+		id: 'base2-31',
+		name: 'Vileplume',
+		imageUrl: 'https://images.pokemontcg.io/base2/31.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Gloom',
+		ability: {
+			name: 'Heal',
+			text:
+				"Once during your turn (before your attack), you may flip a coin. If heads, remove 1 damage counter from 1 of your Pokémon. This power can't be used if Vileplume is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '31',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Petal Dance',
+				cost: ['Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 3,
+				damage: '40×',
+				text:
+					'Flip 3 coins. This attack does 40 damage times the number of heads. Vileplume is now Confused (after doing damage).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/31_hires.png',
+		nationalPokedexNumber: 45,
+	},
+	{
+		id: 'base2-32',
+		name: 'Wigglytuff',
+		imageUrl: 'https://images.pokemontcg.io/base2/32.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '36',
+		evolvesFrom: 'Jigglypuff',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '32',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Rare',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Lullaby',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Do the Wave',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each of your Benched Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/32_hires.png',
+		nationalPokedexNumber: 40,
+	},
+	{
+		id: 'base2-33',
+		name: 'Butterfree',
+		imageUrl: 'https://images.pokemontcg.io/base2/33.png',
+		subtype: 'Stage 2',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Metapod',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '33',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Whirlwind',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon.)',
+			},
+			{
+				name: 'Mega Drain',
+				cost: ['Grass', 'Grass', 'Grass', 'Grass'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text:
+					'Remove a number of damage counters from Butterfree equal to half the damage done to the Defending Pokémon (after applying Weakness and Resistance) (rounded up to the nearest 10).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/33_hires.png',
+		nationalPokedexNumber: 12,
+	},
+	{
+		id: 'base2-34',
+		name: 'Dodrio',
+		imageUrl: 'https://images.pokemontcg.io/base2/34.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Doduo',
+		ability: {
+			name: 'Retreat Aid',
+			text:
+				'As long as Dodrio is Benched, pay 1 Colorless less to retreat your Active Pokémon.',
+			type: 'Pokémon Power',
+		},
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '34',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Rage',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each damage counter on Dodrio.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/34_hires.png',
+		nationalPokedexNumber: 85,
+	},
+	{
+		id: 'base2-35',
+		name: 'Exeggutor',
+		imageUrl: 'https://images.pokemontcg.io/base2/35.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Exeggcute',
+		hp: '80',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '35',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Teleport',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'Switch Exeggutor with 1 of your Benched Pokémon.',
+			},
+			{
+				name: 'Big Eggsplosion',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '20×',
+				text:
+					'Flip a number of coins equal to the number of Energy attached to Exeggutor. This attack does 20 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/35_hires.png',
+		nationalPokedexNumber: 103,
+	},
+	{
+		id: 'base2-36',
+		name: 'Fearow',
+		imageUrl: 'https://images.pokemontcg.io/base2/36.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '27',
+		evolvesFrom: 'Spearow',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '36',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Agility',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20',
+				text:
+					"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Fearow.",
+			},
+			{
+				name: 'Drill Peck',
+				cost: ['Colorless', 'Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 4,
+				damage: '40',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/36_hires.png',
+		nationalPokedexNumber: 22,
+	},
+	{
+		id: 'base2-37',
+		name: 'Gloom',
+		imageUrl: 'https://images.pokemontcg.io/base2/37.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '35',
+		evolvesFrom: 'Oddish',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '37',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Poisonpowder',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: 'The Defending Pokémon is now Poisoned.',
+			},
+			{
+				name: 'Foul Odor',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Both the Defending Pokémon and Gloom are now Confused (after doing damage).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/37_hires.png',
+		nationalPokedexNumber: 44,
+		evolvesTo: ['Vileplume', 'Bellossom'],
+	},
+	{
+		id: 'base2-38',
+		name: 'Lickitung',
+		imageUrl: 'https://images.pokemontcg.io/base2/38.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '10',
+		hp: '90',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '38',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Tongue Wrap',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Supersonic',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/38_hires.png',
+		nationalPokedexNumber: 108,
+		evolvesTo: ['Lickilicky'],
+	},
+	{
+		id: 'base2-39',
+		name: 'Marowak',
+		imageUrl: 'https://images.pokemontcg.io/base2/39.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '26',
+		evolvesFrom: 'Cubone',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '39',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Bonemerang',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+			{
+				name: 'Call for Friend',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					"Search your deck for a Fighting Basic Pokémon card and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/39_hires.png',
+		nationalPokedexNumber: 105,
+	},
+	{
+		id: 'base2-40',
+		name: 'Nidorina',
+		imageUrl: 'https://images.pokemontcg.io/base2/40.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '24',
+		evolvesFrom: 'Nidoran♀',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '40',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Supersonic',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Confused.',
+			},
+			{
+				name: 'Double Kick',
+				cost: ['Grass', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30×',
+				text:
+					'Flip 2 coins. This attack does 30 damage times the number of heads.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/40_hires.png',
+		nationalPokedexNumber: 30,
+		evolvesTo: ['Nidoqueen'],
+	},
+	{
+		id: 'base2-41',
+		name: 'Parasect',
+		imageUrl: 'https://images.pokemontcg.io/base2/41.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Paras',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '41',
+		artist: 'Ken Sugimori',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Spore',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Slash',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/41_hires.png',
+		nationalPokedexNumber: 47,
+	},
+	{
+		id: 'base2-42',
+		name: 'Persian',
+		imageUrl: 'https://images.pokemontcg.io/base2/42.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '25',
+		evolvesFrom: 'Meowth',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '42',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Scratch',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Pounce',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"If the Defending Pokémon attacks Persian during your opponent's next turn, any damage done by the attack is reduce by 10 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/42_hires.png',
+		nationalPokedexNumber: 53,
+	},
+	{
+		id: 'base2-43',
+		name: 'Primeape',
+		imageUrl: 'https://images.pokemontcg.io/base2/43.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '45',
+		evolvesFrom: 'Mankey',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '43',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Fury Swipes',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '20×',
+				text:
+					'Flip 3 coins. This attack does 20 damage times the number of heads.',
+			},
+			{
+				name: 'Tantrum',
+				cost: ['Fighting', 'Fighting', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '50',
+				text:
+					'Flip a coin. If tails, Primeape is now Confused (after doing damage).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/43_hires.png',
+		nationalPokedexNumber: 57,
+	},
+	{
+		id: 'base2-44',
+		name: 'Rapidash',
+		imageUrl: 'https://images.pokemontcg.io/base2/44.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '33',
+		evolvesFrom: 'Ponyta',
+		hp: '70',
+		convertedRetreatCost: 0,
+		number: '44',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fire'],
+		attacks: [
+			{
+				name: 'Stomp',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					'Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage.',
+			},
+			{
+				name: 'Agility',
+				cost: ['Fire', 'Fire', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text:
+					"Flip a coin. If heads, during your opponent's next turn, prevent all effects of attacks, including damage, done to Rapidash.",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Water',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/44_hires.png',
+		nationalPokedexNumber: 78,
+	},
+	{
+		id: 'base2-45',
+		name: 'Rhydon',
+		imageUrl: 'https://images.pokemontcg.io/base2/45.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '48',
+		evolvesFrom: 'Rhyhorn',
+		hp: '100',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '45',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Horn Attack',
+				cost: ['Fighting', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+			{
+				name: 'Ram',
+				cost: ['Fighting', 'Fighting', 'Fighting', 'Fighting'],
+				convertedEnergyCost: 4,
+				damage: '50',
+				text:
+					'Rhydon does 20 damage to itself. If your opponent has any Benched Pokémon, he or she chooses 1 of them and switches it with the Defending Pokémon. (Do the damage before switching the Pokémon. Switch the Pokémon even if Rhydon is knocked out.)',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/45_hires.png',
+		nationalPokedexNumber: 112,
+		evolvesTo: ['Rhyperior'],
+	},
+	{
+		id: 'base2-46',
+		name: 'Seaking',
+		imageUrl: 'https://images.pokemontcg.io/base2/46.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Goldeen',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '46',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Horn Attack',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Waterfall',
+				cost: ['Water', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/46_hires.png',
+		nationalPokedexNumber: 119,
+	},
+	{
+		id: 'base2-47',
+		name: 'Tauros',
+		imageUrl: 'https://images.pokemontcg.io/base2/47.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '24',
+		hp: '60',
+		retreatCost: ['Colorless', 'Colorless'],
+		convertedRetreatCost: 2,
+		number: '47',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Stomp',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20+',
+				text:
+					'Flip a coin. If heads, this attack does 20 damage plus 10 more damage; if tails, this attack does 20 damage.',
+			},
+			{
+				name: 'Rampage',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '20+',
+				text:
+					'Does 20 damage plus 10 more damage for each damage counter on Tauros. Flip a coin. If tails, Tauros is now Confused (after doing damage).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/47_hires.png',
+		nationalPokedexNumber: 128,
+	},
+	{
+		id: 'base2-48',
+		name: 'Weepinbell',
+		imageUrl: 'https://images.pokemontcg.io/base2/48.png',
+		subtype: 'Stage 1',
+		supertype: 'Pokémon',
+		level: '28',
+		evolvesFrom: 'Bellsprout',
+		hp: '70',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '48',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Uncommon',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Poisonpowder',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Poisoned.',
+			},
+			{
+				name: 'Razor Leaf',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/48_hires.png',
+		nationalPokedexNumber: 70,
+		evolvesTo: ['Victreebel'],
+	},
+	{
+		id: 'base2-49',
+		name: 'Bellsprout',
+		imageUrl: 'https://images.pokemontcg.io/base2/49.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '11',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '49',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Vine Whip',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Call for Family',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Search your deck for a Basic Pokémon named Bellsprout and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/49_hires.png',
+		nationalPokedexNumber: 69,
+		evolvesTo: ['Weepinbell'],
+	},
+	{
+		id: 'base2-50',
+		name: 'Cubone',
+		imageUrl: 'https://images.pokemontcg.io/base2/50.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '50',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Snivel',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"If the Defending Pokémon attacks Cubone during your opponent's next turn, any damage done by the attack is reduced by 20 (after applying Weakness and Resistance). (Benching either Pokémon ends this effect.)",
+			},
+			{
+				name: 'Rage',
+				cost: ['Fighting', 'Fighting'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Does 10 damage plus 10 more damage for each damage counter on Cubone.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/50_hires.png',
+		nationalPokedexNumber: 104,
+		evolvesTo: ['Marowak'],
+	},
+	{
+		id: 'base2-51',
+		name: 'Eevee',
+		imageUrl: 'https://images.pokemontcg.io/base2/51.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '51',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Tail Wag',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Flip a coin. If heads, the Defending Pokémon can't attack Eevee during your opponent's next turn. (Benching either Pokémon ends this effect.)",
+			},
+			{
+				name: 'Quick Attack',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10+',
+				text:
+					'Flip a coin. If heads, this attack does 10 damage plus 20 more damage; if tails, this attack does 10 damage.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/51_hires.png',
+		nationalPokedexNumber: 133,
+		evolvesTo: [
+			'Vaporeon',
+			'Jolteon',
+			'Flareon',
+			'Sylveon',
+			'Espeon',
+			'Umbreon',
+			'Leafeon',
+			'Glaceon',
+		],
+	},
+	{
+		id: 'base2-52',
+		name: 'Exeggcute',
+		imageUrl: 'https://images.pokemontcg.io/base2/52.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '14',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '52',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Hypnosis',
+				cost: ['Psychic'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Leech Seed',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					'Unless all damage from this attack is prevented, you may remove 1 damage counter from Exeggcute.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/52_hires.png',
+		nationalPokedexNumber: 102,
+		evolvesTo: ['Exeggutor'],
+	},
+	{
+		id: 'base2-53',
+		name: 'Goldeen',
+		imageUrl: 'https://images.pokemontcg.io/base2/53.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '40',
+		convertedRetreatCost: 0,
+		number: '53',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Water'],
+		attacks: [
+			{
+				name: 'Horn Attack',
+				cost: ['Water'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/53_hires.png',
+		nationalPokedexNumber: 118,
+		evolvesTo: ['Seaking'],
+	},
+	{
+		id: 'base2-54',
+		name: 'Jigglypuff',
+		imageUrl: 'https://images.pokemontcg.io/base2/54.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '14',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '54',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Lullaby',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+			{
+				name: 'Pound',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/54_hires.png',
+		nationalPokedexNumber: 39,
+		evolvesTo: ['Wigglytuff'],
+	},
+	{
+		id: 'base2-55',
+		name: 'Mankey',
+		imageUrl: 'https://images.pokemontcg.io/base2/55.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '7',
+		ability: {
+			name: 'Peek',
+			text:
+				"Once during your turn (before your attack), you may look at one of the following: the top card of either player's deck, a random card from your opponent's hand, or one of either player's Prizes. This power can't be used if Mankey is Asleep, Confused, or Paralyzed.",
+			type: 'Pokémon Power',
+		},
+		hp: '30',
+		convertedRetreatCost: 0,
+		number: '55',
+		artist: 'Kagemaru Himeno',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Scratch',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/55_hires.png',
+		nationalPokedexNumber: 56,
+		evolvesTo: ['Primeape'],
+	},
+	{
+		id: 'base2-56',
+		name: 'Meowth',
+		imageUrl: 'https://images.pokemontcg.io/base2/56.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '15',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '56',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Pay Day',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text: 'Flip a coin. If heads, draw a card.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Psychic',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/56_hires.png',
+		nationalPokedexNumber: 52,
+		evolvesTo: ['Persian'],
+	},
+	{
+		id: 'base2-57',
+		name: 'Nidoran♀',
+		imageUrl: 'https://images.pokemontcg.io/base2/57.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '60',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '57',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Fury Swipes',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10×',
+				text:
+					'Flip 3 coins. This attack does 10 damage times the number of heads.',
+			},
+			{
+				name: 'Call for Family',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Search your deck for a Basic Pokémon named Nidoran M or Nidoran F and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Psychic',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/57_hires.png',
+		nationalPokedexNumber: 29,
+		evolvesTo: ['Nidorina'],
+	},
+	{
+		id: 'base2-58',
+		name: 'Oddish',
+		imageUrl: 'https://images.pokemontcg.io/base2/58.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '58',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Stun Spore',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Sprout',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text:
+					"Search your deck for a Basic Pokémon named Oddish and put it onto your Bench. Shuffle your deck afterward. (You can't use this attack if your Bench is full.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/58_hires.png',
+		nationalPokedexNumber: 43,
+		evolvesTo: ['Gloom'],
+	},
+	{
+		id: 'base2-59',
+		name: 'Paras',
+		imageUrl: 'https://images.pokemontcg.io/base2/59.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '8',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '59',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Scratch',
+				cost: ['Colorless', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text: '',
+			},
+			{
+				name: 'Spore',
+				cost: ['Grass', 'Grass'],
+				convertedEnergyCost: 2,
+				damage: '',
+				text: 'The Defending Pokémon is now Asleep.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/59_hires.png',
+		nationalPokedexNumber: 46,
+		evolvesTo: ['Parasect'],
+	},
+	{
+		id: 'base2-60',
+		name: 'Pikachu',
+		imageUrl: 'https://images.pokemontcg.io/base2/60.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '14',
+		evolvesFrom: 'Pichu',
+		hp: '50',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '60',
+		artist: 'Ken Sugimori',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Lightning'],
+		attacks: [
+			{
+				name: 'Spark',
+				cost: ['Lightning', 'Lightning'],
+				convertedEnergyCost: 2,
+				damage: '20',
+				text:
+					"If your opponent has any Benched Pokémon, choose 1 of them and this attack does 10 damage to it. (Don't apply Weakness and Resistance for Benched Pokémon.)",
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fighting',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/60_hires.png',
+		nationalPokedexNumber: 25,
+		evolvesTo: ['Raichu'],
+	},
+	{
+		id: 'base2-61',
+		name: 'Rhyhorn',
+		imageUrl: 'https://images.pokemontcg.io/base2/61.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '18',
+		hp: '70',
+		retreatCost: ['Colorless', 'Colorless', 'Colorless'],
+		convertedRetreatCost: 3,
+		number: '61',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Fighting'],
+		attacks: [
+			{
+				name: 'Leer',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '',
+				text:
+					"Flip a coin. If heads, the Defending Pokémon can't attack Rhyhorn during your opponent's next turn. (Benching either Pokémon ends this effect.)",
+			},
+			{
+				name: 'Horn Attack',
+				cost: ['Fighting', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '30',
+				text: '',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Grass',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Lightning',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/61_hires.png',
+		nationalPokedexNumber: 111,
+		evolvesTo: ['Rhydon'],
+	},
+	{
+		id: 'base2-62',
+		name: 'Spearow',
+		imageUrl: 'https://images.pokemontcg.io/base2/62.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '13',
+		hp: '50',
+		convertedRetreatCost: 0,
+		number: '62',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Colorless'],
+		attacks: [
+			{
+				name: 'Peck',
+				cost: ['Colorless'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text: '',
+			},
+			{
+				name: 'Mirror Move',
+				cost: ['Colorless', 'Colorless', 'Colorless'],
+				convertedEnergyCost: 3,
+				damage: '',
+				text:
+					'If Spearow was attacked last turn, do the final result of that attack on Spearow to the Defending Pokémon.',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Lightning',
+				value: '×2',
+			},
+		],
+		resistances: [
+			{
+				type: 'Fighting',
+				value: '-30',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/62_hires.png',
+		nationalPokedexNumber: 21,
+		evolvesTo: ['Fearow'],
+	},
+	{
+		id: 'base2-63',
+		name: 'Venonat',
+		imageUrl: 'https://images.pokemontcg.io/base2/63.png',
+		subtype: 'Basic',
+		supertype: 'Pokémon',
+		level: '12',
+		hp: '40',
+		retreatCost: ['Colorless'],
+		convertedRetreatCost: 1,
+		number: '63',
+		artist: 'Mitsuhiro Arita',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		types: ['Grass'],
+		attacks: [
+			{
+				name: 'Stun Spore',
+				cost: ['Grass'],
+				convertedEnergyCost: 1,
+				damage: '10',
+				text:
+					'Flip a coin. If heads, the Defending Pokémon is now Paralyzed.',
+			},
+			{
+				name: 'Leech Life',
+				cost: ['Grass', 'Colorless'],
+				convertedEnergyCost: 2,
+				damage: '10',
+				text:
+					'Remove a number of damage counters from Venonat equal to the damage done to the Defending Pokémon (after applying Weakness and Resistance).',
+			},
+		],
+		weaknesses: [
+			{
+				type: 'Fire',
+				value: '×2',
+			},
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/63_hires.png',
+		nationalPokedexNumber: 48,
+		evolvesTo: ['Venomoth'],
+	},
+	{
+		id: 'base2-64',
+		name: 'Poké Ball',
+		imageUrl: 'https://images.pokemontcg.io/base2/64.png',
+		subtype: '',
+		supertype: 'Trainer',
+		number: '64',
+		artist: 'Keiji Kinebuchi',
+		rarity: 'Common',
+		series: 'Base',
+		set: 'Jungle',
+		setCode: 'base2',
+		text: [
+			'Flip a coin. If heads, you may search your deck for any Basic Pokémon or Evolution card. Show that card to your opponent, then put it into your hand. Shuffle your deck afterward.',
+		],
+		imageUrlHiRes: 'https://images.pokemontcg.io/base2/64_hires.png',
+	},
+];
+
+module.exports = cardData;
