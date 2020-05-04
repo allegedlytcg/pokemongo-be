@@ -5,8 +5,8 @@ const auth = require('../middleware/auth');
 const Deck = require('../models/Deck');
 const User = require('../models/User');
 
-// @route     GET api/profile/me
-// @desc      Get current users deck
+// @route     GET api/deck/me
+// @desc      Get all user decks
 // @access    private
 router.get('/me', auth, async (req, res) => {
 	try {
@@ -15,6 +15,24 @@ router.get('/me', auth, async (req, res) => {
 			return res.status(404).json({ message: 'deck for user not found' });
 		}
 		res.status(200).json(deck);
+	} catch (error) {
+		console.log(error.message);
+		res.status(500).send('server errror');
+	}
+});
+
+// @route     GET api/deck/:id
+// @desc      Get deck by deck id
+// @access    private
+router.get('/:id', auth, async (req, res) => {
+	try {
+		let oneDeck = await Deck.findById(req.params.id);
+		if (!oneDeck) {
+			return res
+				.status(404)
+				.json({ message: 'cannot find deck with that id' });
+		}
+		res.status(200).json(oneDeck);
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server errror');

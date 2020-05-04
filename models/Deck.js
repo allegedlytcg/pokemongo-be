@@ -9,6 +9,10 @@ const DeckSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	active: {
+		type: Boolean,
+		default: false,
+	},
 	cards: [
 		{
 			id: String,
@@ -52,5 +56,10 @@ const DeckSchema = new mongoose.Schema({
 		},
 	],
 });
+
+DeckSchema.path('cards').validate(function (cards) {
+	if (cards.length > 60) return false;
+	return true;
+}, 'decks must me be 60 cards or less');
 
 module.exports = Deck = mongoose.model('deck', DeckSchema);
