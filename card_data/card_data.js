@@ -3332,23 +3332,6 @@ const cardData = [
 		imageUrlHiRes: 'https://images.pokemontcg.io/base1/89_hires.png',
 	},
 	{
-		id: 'base1-90',
-		name: 'Super Potion',
-		imageUrl: 'https://images.pokemontcg.io/base1/90.png',
-		subtype: '',
-		supertype: 'Trainer',
-		number: '90',
-		artist: 'Keiji Kinebuchi',
-		rarity: 'Uncommon',
-		series: 'Base',
-		set: 'Base',
-		setCode: 'base1',
-		text: [
-			'Discard 1 Energy card attached to 1 of your own Pokémon in order to remove up to 4 damage counters from that Pokémon.',
-		],
-		imageUrlHiRes: 'https://images.pokemontcg.io/base1/90_hires.png',
-	},
-	{
 		id: 'base1-91',
 		name: 'Bill',
 		imageUrl: 'https://images.pokemontcg.io/base1/91.png',

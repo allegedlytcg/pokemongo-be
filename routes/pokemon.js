@@ -1,7 +1,12 @@
 const pokemon = require('pokemontcgsdk'); // <--------https://github.com/PokemonTCG/pokemon-tcg-sdk-javascript
 const router = require('express').Router();
-const cardData = require('../data');
-// console.log(cardData);
+const cardData = require('../card_data/card_data');
+const overgrowth = require('../card_data/starter_decks/overgrowth');
+const zap = require('../card_data/starter_decks/zap');
+const brushfire = require('../card_data/starter_decks/brushfire');
+const blackout = require('../card_data/starter_decks/blackout');
+const powerreserve = require('../card_data/starter_decks/powerreserve');
+const waterblast = require('../card_data/starter_decks/waterblast');
 
 // @route     GET api/v1/pokemon
 // @desc      Get all cards
@@ -62,12 +67,9 @@ router.get('/fire', (req, res) => {
 // @access    public
 router.get('/psychic', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
+	for (let i = 0; i < cardData.length; i++)
 		if (cardData[i].types) pokemon.push(cardData[i]);
-	}
-
 	let psychic = pokemon.filter((psychic) => psychic.types[0] === 'Psychic');
-
 	res.status(200).json(psychic);
 });
 
@@ -150,5 +152,15 @@ router.get('/energy', (req, res) => {
 	}
 	res.status(200).json(energyCards);
 });
+
+// @route     GET api/v1/pokemon/:deckname
+// @desc      get starter deck by name
+// @access    public
+router.get('/overgrowth', (req, res) => res.status(200).json(overgrowth));
+router.get('/zap', (req, res) => res.status(200).json(zap));
+router.get('/brushfire', (req, res) => res.status(200).json(brushfire));
+router.get('/blackout', (req, res) => res.status(200).json(blackout));
+router.get('/powerreserve', (req, res) => res.status(200).json(powerreserve));
+router.get('/waterblast', (req, res) => res.status(200).json(waterblast));
 
 module.exports = router;
