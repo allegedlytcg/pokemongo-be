@@ -143,7 +143,8 @@ router.get('/trainer', (req, res) => {
 router.get('/energy', (req, res) => {
 	let energyCards = [];
 	for (let i = 0; i < allPokemon.length; i++)
-		if (allPokemon[i].supertype === 'Energy') allPokemon.push(cardData[i]);
+		if (allPokemon[i].supertype === 'Energy')
+			energyCards.push(allPokemon[i]);
 	res.status(200).json(energyCards);
 });
 
