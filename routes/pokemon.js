@@ -43,7 +43,8 @@ router.get('/', async (req, res) => {
 router.get('/grass', (req, res) => {
 	let pokemon = [];
 	for (let i = 0; i < allPokemon.length; i++) {
-		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
+		if (allPokemon[i].types || allPokemon[i].name === 'Grass Energy')
+			pokemon.push(allPokemon[i]);
 	}
 	let grass = pokemon.filter((grass) => grass.types[0] === 'Grass');
 	res.status(200).json(grass);
