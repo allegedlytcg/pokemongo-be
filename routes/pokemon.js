@@ -45,8 +45,12 @@ router.get('/grass', (req, res) => {
 	for (let i = 0; i < allPokemon.length; i++)
 		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	let grass = pokemon.filter((grass) => grass.types[0] === 'Grass');
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			grass.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Psychic Energy') grass.push(allPokemon[i]);
 		if (allPokemon[i].name === 'Grass Energy') grass.push(allPokemon[i]);
+	}
 	res.status(200).json(grass);
 });
 
@@ -58,8 +62,11 @@ router.get('/fire', (req, res) => {
 	for (let i = 0; i < allPokemon.length; i++)
 		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	let fire = pokemon.filter((fire) => fire.types[0] === 'Fire');
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
 		if (allPokemon[i].name === 'Fire Energy') fire.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			fire.push(allPokemon[i]);
+	}
 	res.status(200).json(fire);
 });
 
@@ -71,9 +78,12 @@ router.get('/psychic', (req, res) => {
 	for (let i = 0; i < allPokemon.length; i++)
 		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	let psychic = pokemon.filter((psychic) => psychic.types[0] === 'Psychic');
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
 		if (allPokemon[i].name === 'Psychic Energy')
 			psychic.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			psychic.push(allPokemon[i]);
+	}
 	res.status(200).json(psychic);
 });
 
@@ -86,8 +96,12 @@ router.get('/water', (req, res) => {
 		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
 	let water = pokemon.filter((water) => water.types[0] === 'Water');
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
 		if (allPokemon[i].name === 'Water Energy') water.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			water.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Psychic Energy') water.push(allPokemon[i]);
+	}
 	res.status(200).json(water);
 });
 
@@ -119,9 +133,12 @@ router.get('/fighting', (req, res) => {
 	let fighting = pokemon.filter(
 		(fighting) => fighting.types[0] === 'Fighting',
 	);
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
 		if (allPokemon[i].name === 'Fighting Energy')
 			fighting.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			fighting.push(allPokemon[i]);
+	}
 	res.status(200).json(fighting);
 });
 
@@ -136,9 +153,12 @@ router.get('/lightning', (req, res) => {
 	let lightning = pokemon.filter(
 		(lightning) => lightning.types[0] === 'Lightning',
 	);
-	for (let i = 0; i < allPokemon.length; i++)
+	for (let i = 0; i < allPokemon.length; i++) {
 		if (allPokemon[i].name === 'Lightning Energy')
 			lightning.push(allPokemon[i]);
+		if (allPokemon[i].name === 'Double Colorless Energy')
+			lightning.push(allPokemon[i]);
+	}
 	res.status(200).json(lightning);
 });
 
