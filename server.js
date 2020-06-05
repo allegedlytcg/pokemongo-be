@@ -13,14 +13,15 @@ const app = express();
 // console.log(cors);
 // init middleware
 
-var corsOptions = {
-	origin: '*', // change to deployed frontend link later
+const corsOptions = {
+	origin: '*', // for sure change to deployed frontend link later
 	methods: 'GET, POST, PUT, DELETE',
 };
 
 app.use(cors(corsOptions));
 
 app.use(express.json({ extended: false }));
+
 // connect database
 dbConnect();
 

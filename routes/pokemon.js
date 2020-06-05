@@ -1,6 +1,7 @@
-const pokemon = require('pokemontcgsdk'); // <--------https://github.com/PokemonTCG/pokemon-tcg-sdk-javascript
+// const pokemon = require('pokemontcgsdk'); // <--------https://github.com/PokemonTCG/pokemon-tcg-sdk-javascript
+const { MongoClient } = require('mongodb');
 const router = require('express').Router();
-const cardData = require('../card_data/card_data');
+// const cardData = require('../card_data/card_data');
 const overgrowth = require('../card_data/starter_decks/overgrowth');
 const zap = require('../card_data/starter_decks/zap');
 const brushfire = require('../card_data/starter_decks/brushfire');
@@ -8,26 +9,28 @@ const blackout = require('../card_data/starter_decks/blackout');
 const powerreserve = require('../card_data/starter_decks/powerreserve');
 const waterblast = require('../card_data/starter_decks/waterblast');
 
+let allPokemon; // variable we set equal to the pokemon collection on the mongo database
+
+MongoClient.connect(
+	process.env.MONGO_DB,
+	{ useUnifiedTopology: true },
+	async (err, db) => {
+		if (err) throw err;
+		let pokemonDB = db.db('test');
+		allPokemon = await pokemonDB.collection('pokemon').find().toArray();
+		db.close();
+	},
+);
+
+MongoClient;
+
 // @route     GET api/v1/pokemon
 // @desc      Get all cards
 // @access    public
 router.get('/', async (req, res) => {
 	try {
-		// let base1Pokemon = await pokemon.card.where({
-		// 	setCode: 'base1',
-		// });
-		// let base2Pokemon = await pokemon.card.where({
-		// 	setCode: 'base2',
-		// });
-		// let allPokemon = base1Pokemon.concat(base2Pokemon);
-		// // console.log(allPokemon);
-		// if (!allPokemon) {
-		// 	res.status(400).send('error getting pokemon');
-		// }
-		// res.status(200).json(allPokemon);
-
-		// since the api has been funky lately we are gonna send some hardcoded data
-		res.status(200).json(cardData);
+		// i have now inserted the api data in my database so we'll try to hit it that way
+		res.status(200).send(allPokemon);
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server error');
@@ -39,12 +42,10 @@ router.get('/', async (req, res) => {
 // @access    public
 router.get('/grass', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
-
 	let grass = pokemon.filter((grass) => grass.types[0] === 'Grass');
-
 	res.status(200).json(grass);
 });
 
@@ -53,12 +54,10 @@ router.get('/grass', (req, res) => {
 // @access    public
 router.get('/fire', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
-
 	let fire = pokemon.filter((fire) => fire.types[0] === 'Fire');
-
 	res.status(200).json(fire);
 });
 
@@ -67,8 +66,8 @@ router.get('/fire', (req, res) => {
 // @access    public
 router.get('/psychic', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++)
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++)
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	let psychic = pokemon.filter((psychic) => psychic.types[0] === 'Psychic');
 	res.status(200).json(psychic);
 });
@@ -78,11 +77,10 @@ router.get('/psychic', (req, res) => {
 // @access    public
 router.get('/water', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
 	let water = pokemon.filter((water) => water.types[0] === 'Water');
-
 	res.status(200).json(water);
 });
 
@@ -91,13 +89,12 @@ router.get('/water', (req, res) => {
 // @access    public
 router.get('/colorless', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
 	let colorless = pokemon.filter(
 		(colorless) => colorless.types[0] === 'Colorless',
 	);
-
 	res.status(200).json(colorless);
 });
 
@@ -106,13 +103,12 @@ router.get('/colorless', (req, res) => {
 // @access    public
 router.get('/fighting', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
+	for (let i = 0; i < allPokemon.length; i++) {
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
 	}
 	let fighting = pokemon.filter(
 		(fighting) => fighting.types[0] === 'Fighting',
 	);
-
 	res.status(200).json(fighting);
 });
 
@@ -121,13 +117,12 @@ router.get('/fighting', (req, res) => {
 // @access    public
 router.get('/lightning', (req, res) => {
 	let pokemon = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].types) pokemon.push(cardData[i]);
-	}
+	for (let i = 0; i < allPokemon.length; i++)
+		if (allPokemon[i].types) pokemon.push(allPokemon[i]);
+
 	let lightning = pokemon.filter(
 		(lightning) => lightning.types[0] === 'Lightning',
 	);
-
 	res.status(200).json(lightning);
 });
 
@@ -136,9 +131,9 @@ router.get('/lightning', (req, res) => {
 // @access    public
 router.get('/trainer', (req, res) => {
 	let trainerCards = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].supertype === 'Trainer') trainerCards.push(cardData[i]);
-	}
+	for (let i = 0; i < allPokemon.length; i++)
+		if (allPokemon[i].supertype === 'Trainer')
+			trainerCards.push(allPokemon[i]);
 	res.status(200).json(trainerCards);
 });
 
@@ -147,9 +142,8 @@ router.get('/trainer', (req, res) => {
 // @access    public
 router.get('/energy', (req, res) => {
 	let energyCards = [];
-	for (let i = 0; i < cardData.length; i++) {
-		if (cardData[i].supertype === 'Energy') energyCards.push(cardData[i]);
-	}
+	for (let i = 0; i < allPokemon.length; i++)
+		if (allPokemon[i].supertype === 'Energy') allPokemon.push(cardData[i]);
 	res.status(200).json(energyCards);
 });
 
