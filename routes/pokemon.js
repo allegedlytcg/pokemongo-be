@@ -1,15 +1,15 @@
 // const pokemon = require('pokemontcgsdk'); // <--------https://github.com/PokemonTCG/pokemon-tcg-sdk-javascript
 const { MongoClient } = require('mongodb');
 const router = require('express').Router();
-// const cardData = require('../card_data/card_data');
-const overgrowth = require('../card_data/starter_decks/overgrowth');
-const zap = require('../card_data/starter_decks/zap');
-const brushfire = require('../card_data/starter_decks/brushfire');
-const blackout = require('../card_data/starter_decks/blackout');
-const powerreserve = require('../card_data/starter_decks/powerreserve');
-const waterblast = require('../card_data/starter_decks/waterblast');
 
 let allPokemon; // variable we set equal to the pokemon collection on the mongo database
+// starter deck variables
+let blackout;
+let waterblast;
+let brushfire;
+let overgrowth;
+let powerreserve;
+let zap;
 
 MongoClient.connect(
 	process.env.MONGO_DB,
@@ -18,6 +18,15 @@ MongoClient.connect(
 		if (err) throw err;
 		let pokemonDB = db.db('test');
 		allPokemon = await pokemonDB.collection('pokemon').find().toArray();
+		blackout = await pokemonDB.collection('blackout').find().toArray();
+		waterblast = await pokemonDB.collection('waterblast').find().toArray();
+		brushfire = await pokemonDB.collection('brushfire').find().toArray();
+		overgrowth = await pokemonDB.collection('overgrowth').find().toArray();
+		zap = await pokemonDB.collection('zap').find().toArray();
+		powerreserve = await pokemonDB
+			.collection('powerreserve')
+			.find()
+			.toArray();
 		db.close();
 	},
 );
