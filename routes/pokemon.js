@@ -31,7 +31,6 @@ MongoClient.connect(
 	},
 );
 
-MongoClient;
 
 // @route     GET api/v1/pokemon
 // @desc      Get all cards

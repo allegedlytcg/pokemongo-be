@@ -8,6 +8,7 @@ const DeckSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: true,
+		minlength: 4,
 	},
 	active: {
 		type: Boolean,
