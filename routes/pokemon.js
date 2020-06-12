@@ -31,7 +31,6 @@ MongoClient.connect(
 	},
 );
 
-
 // @route     GET api/v1/pokemon
 // @desc      Get all cards
 // @access    public
@@ -125,8 +124,7 @@ router.get('/colorless', (req, res) => {
 		(colorless) => colorless.types[0] === 'Colorless',
 	);
 	for (let i = 0; i < allPokemon.length; i++)
-		if (allPokemon[i].name === 'Double Colorless Energy')
-			colorless.push(allPokemon[i]);
+		if (allPokemon[i].supertype === 'Energy') colorless.push(allPokemon[i]);
 	res.status(200).json(colorless);
 });
 
