@@ -9,6 +9,7 @@ const DeckSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 		minlength: 4,
+		maxLength: 42,
 	},
 	active: {
 		type: Boolean,
