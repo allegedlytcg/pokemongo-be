@@ -60,8 +60,8 @@ const DeckSchema = new mongoose.Schema({
 });
 
 DeckSchema.path('cards').validate(function (cards) {
-	if (cards.length > 60) return false;
+	if (cards.length > 60 || cards.length === 0) return false;
 	return true;
-}, 'decks must me be 60 cards or less');
+}, 'decks must have at least one card and sixty maximum');
 
 module.exports = Deck = mongoose.model('deck', DeckSchema);
