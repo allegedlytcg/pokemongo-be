@@ -76,17 +76,22 @@ router.delete('/:id', auth, async (req, res) => {
 // @desc      edit deck by id
 // @access    private
 router.put('/:id', auth, async (req, res) => {
-	try {
-		let deck = await Deck.findOneAndUpdate(
-			{ _id: req.params.id },
-			req.body,
-			{ new: true },
-		);
+	let check = req.body.cards;
+	if (check.length) {
+		try {
+			let deck = await Deck.findOneAndUpdate(
+				{ _id: req.params.id },
+				req.body,
+				{ new: true },
+			);
 
-		res.status(201).json(deck);
-	} catch (error) {
-		console.log(error.message);
-		res.status(500).send('server errror');
+			res.status(201).json(deck);
+		} catch (error) {
+			console.log(error.message);
+			res.status(500).send('server errror');
+		}
+	} else {
+		res.status(500).send('servor error');
 	}
 });
 
