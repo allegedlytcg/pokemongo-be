@@ -9,6 +9,7 @@ const deckRoutes = require('./routes/deck');
 const PokemonRoutes = require('./routes/pokemon');
 // initalize express
 const app = express();
+const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
 // init middleware
@@ -28,6 +29,7 @@ dbConnect();
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/deck', deckRoutes);
 app.use('/api/v1/pokemon', PokemonRoutes);
+app.use('/api/v1/socketTest', socketTest);
 
 const PORT = process.env.PORT || 6000;
 
