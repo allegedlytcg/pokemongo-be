@@ -4,6 +4,7 @@ require('dotenv').config();
 module.exports = function (req, res, next) {
 	// get token from header
 	const token = req.header('authorization');
+	console.log(token)
 
 	// check if no token
 	if (!token) {
