@@ -15,8 +15,9 @@ const socketTest = require('./routes/socketTest');
 // init middleware
 
 const corsOptions = {
-	origin: '*', // for sure change to deployed frontend link later
+	origin: ['http://localhost:4200', 'http://localhost:3000'], // for sure change to deployed frontend link later
 	methods: 'GET, POST, PUT, DELETE',
+	credentials: true
 };
 
 app.use(cors(corsOptions));
