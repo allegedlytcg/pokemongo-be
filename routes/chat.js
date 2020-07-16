@@ -21,9 +21,10 @@ router.get("/", async (req, res) => {
     id = req.user.id;
 
     let user = await User.findOne({ _id: id });
-    console.log(user.name);
     io.on("connect", (socket) => {
-      socket.broadcast.emit("user", user.name);
+      console.log(user.name);
+      socket.emit('user', user.name);
+
     })
 
     res.status(200).json({message: "you did it!"});
