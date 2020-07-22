@@ -3,6 +3,7 @@ require("dotenv").config();
 const cors = require("cors");
 // database connection file
 const dbConnect = require("./dbConnect");
+const sockets = require("./routes/sockets")
 // route files
 const userRoutes = require("./routes/user");
 const deckRoutes = require("./routes/deck");
@@ -29,19 +30,12 @@ dbConnect();
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/deck", deckRoutes);
 app.use("/api/v1/pokemon", PokemonRoutes);
-app.use("/api/v1/chat", chatRoutes);
+// app.use("/api/v1/chat", chatRoutes);
 
 const PORT = process.env.PORT || 6000;
-
 server = app.listen(PORT, () => {
   console.log(`App listening on port ${PORT}!`);
 });
 
-const io = require("socket.io")(
-  server,
+sockets.startSocketServer(server);
 
-  // 	{
-  //   transports: ["websocket", "polling"],
-  // }
-);
-app.set("io", io);

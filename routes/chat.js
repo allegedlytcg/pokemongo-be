@@ -3,10 +3,10 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 const User = require("../models/User");
-
 const auth = require("../middleware/auth");
+const io = require("./sockets")
 
-
+console.log(io);
 router.get("/", async (req, res) => {
   const token = req.header("authorization");
 
@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
   }
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const io = req.app.get("io");
+    // const io = req.app.get("io");
     req.user = decoded.user;
     id = req.user.id;
 
@@ -33,5 +33,9 @@ router.get("/", async (req, res) => {
     res.status(401).json({ message: "token not valid" });
   }
 });
+
+// io.on("msg", (data) => {
+//   socket.broadcast.emit('msg', data )
+// })
 
 module.exports = router;
