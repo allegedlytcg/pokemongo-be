@@ -18,39 +18,69 @@ Socketio.on("connection", socket => {
 
     socket.on("join_room", room =>{
         console.log("allegedly joining a room identified by the passed string..." + room);
-        let allRooms = Socketio.sockets.adapter.rooms.sockets;
-        console.log("logging all rooms")
-        console.log(allRooms);
          
         // let rooms = Object.keys(socket.rooms);
         // console.log(rooms); // [ <socket.id>, 'room 237' ]
 
-        console.log("now logging clients rooms..." + Object.keys(socket.rooms));
-        let potentialExistingRoom = Socketio.sockets.adapter.rooms[room];
-        if (potentialExistingRoom == undefined){
-            console.log("room doesn't exist");
-            socket.join(room);
-
-        }
+        // console.log("now logging clients rooms..." + Object.keys(socket.rooms));
 
 
-        else if(potentialExistingRoom.sockets.length == 0){
-            socket.join(room);//room that socket/user wants to join
-        }
-        else if(potentialExistingRoom.sockets.length ==1){
-            socket.join(room);
-            console.log("1 client already in room");
-            let random = "testController " + Math.random()*100%3;
-            Socketio.to(room).emit('controller', random);
+        let thisRoom = Socketio.sockets.adapter.rooms[room];
+ // todo check if client is in that room
+        if (typeof thisRoom !== 'undefined'){
+            
+
+            if(thisRoom.length == 0){
+                console.log("no clients in that room, or is undefined creating room now");
+                socket.join(room);//room that socket/user wants to join
+            }
+
+            else if(thisRoom.length == 1){
+                console.log("joining 2nd client");
+                socket.join(room)
+            }
+            else if(thisRoom.length ==2){
+                console.log("full room");
+            }
+            // clientsSockets = clients.sockets;
+            // numClients = (typeof clientsSockets !== 'undefined') ? Object.keys(clients).length: 0;
+            // for (var clientId in clientsSockets ){
+            //     //socket of each client in the room    
+            //     var clientSocket = Socketio.sockets.connected[clientId];
+            //     console.log(clientSocket);
+            // }
+            
         }
         else{
-            console.log("max clients in room");
+            console.log("room was undefined, joining and creating new room" + room);
+            socket.join(room);
+        }    
+    });
+//TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
+    socket.on("disconnect", (room) =>{
+
+
+        let thisRoom = Socketio.sockets.adapter.rooms[room];
+ // todo check if client is in that room
+        if (typeof thisRoom !== 'undefined'){
+
+            socket.leave(room);
+            if (thisRoom.length == 0){
+                Socketio.emit('lobbyUpdate', room){
+                    //remove the roomname from all client lobby list
+                }
+            }
+
         }
-    
+        else{
+            console.log("an issue where the room wasn't found occured")
+        }
     });
     
 
     //now listening for custom events fromc lient
+    //TODO CHANGE FRONT-END TO PASS STATE RATHER THAN GLOBAL STATE OF POSITION HERE
+    //TODO CHANGE THIS METHOD TO TAKE AN ADDITIONAL ARGUMENT FROM FRONT END
     socket.on("move", (data, room) =>{
         //message, room
         let rooms = Object.keys(socket.rooms);
@@ -58,7 +88,7 @@ Socketio.on("connection", socket => {
         console.log("something happening");
         console.log("direction passed is" + data);
         console.log("room passed is" + room);
-        //TODO figure out why its not emitting position to particular room
+
         switch(data) {
             case "left":
                 console.log("found left request, emitting to room")
