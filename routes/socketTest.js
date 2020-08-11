@@ -57,25 +57,25 @@ Socketio.on("connection", socket => {
         }    
     });
 //TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
-    socket.on("disconnect", (room) =>{
+//     socket.on("disconnect", (room) =>{
 
 
-        let thisRoom = Socketio.sockets.adapter.rooms[room];
- // todo check if client is in that room
-        if (typeof thisRoom !== 'undefined'){
+//         let thisRoom = Socketio.sockets.adapter.rooms[room];
+//  // todo check if client is in that room
+//         if (typeof thisRoom !== 'undefined'){
 
-            socket.leave(room);
-            if (thisRoom.length == 0){
-                Socketio.emit('lobbyUpdate', room){
-                    //remove the roomname from all client lobby list
-                }
-            }
+//             socket.leave(room);
+//             if (thisRoom.length == 0){
+//                 Socketio.emit('lobbyUpdate', room){
+//                     //remove the roomname from all client lobby list
+//                 }
+//             }
 
-        }
-        else{
-            console.log("an issue where the room wasn't found occured")
-        }
-    });
+//         }
+//         else{
+//             console.log("an issue where the room wasn't found occured")
+//         }
+//     });
     
 
     //now listening for custom events fromc lient
