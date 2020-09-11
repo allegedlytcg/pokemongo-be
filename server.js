@@ -18,7 +18,7 @@ const socketTest = require('./routes/socketTest');
 let cors = function(req, res, next) {
   var whitelist = [
     'http://localhost:4200',
-    '*',
+    'https://allegedlytcg.com',
   ];
   let origin = req.headers.origin;
   if (whitelist.indexOf(origin) > -1) {
