@@ -1,6 +1,6 @@
 const express = require("express");
 require("dotenv").config();
-const cors = require("cors");
+// const cors = require("cors");
 // database connection file
 const dbConnect = require("./dbConnect");
 // route files
@@ -15,13 +15,30 @@ const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
 // init middleware
+let cors = function(req, res, next) {
+  var whitelist = [
+    'http://localhost:4200',
+    '*',
+  ];
+  let origin = req.headers.origin;
+  if (whitelist.indexOf(origin) > -1) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  next();
+}
+app.use(cors);
 
-const corsOptions = {
-  origin: "*", // TODO for sure change to deployed frontend link later
-  methods: "GET, POST, PUT, DELETE",
-};
 
-app.use(cors(corsOptions));
+
+// const corsOptions = {
+//   origin: "http://localhost:4200", // TODO for sure change to deployed frontend link later
+//   methods: "GET, POST, PUT, DELETE",
+// };
+
+// app.use(cors(corsOptions));
 
 app.use(express.json({ extended: false }));
 

@@ -13,12 +13,12 @@ Socketio.on("connection", socket => {
     console.log('made socket connection');//each individualclient will have a socket with the server
     console.log(socket.id);//everytime a diff computer connects, a new id will be added
     //when a new client connects, send position information
-    socket.emit("position", position);
+    // socket.emit("position", position);
 
 
     socket.on("join_room", room =>{
         console.log("allegedly joining a room identified by the passed string..." + room);
-         
+
         // let rooms = Object.keys(socket.rooms);
         // console.log(rooms); // [ <socket.id>, 'room 237' ]
 
@@ -54,6 +54,11 @@ Socketio.on("connection", socket => {
         else{
             console.log("room was undefined, joining and creating new room" + room);
             socket.join(room);
+            roomMap[room] =  {x: 200, y:200};
+            //when a new client connects, send position information
+            position = roomMap[room];
+            console.log("position sent is " + position);
+            Socketio.to(room).emit("position", position);
         }    
     });
 //TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
@@ -88,6 +93,7 @@ Socketio.on("connection", socket => {
         console.log("something happening");
         console.log("direction passed is" + data);
         console.log("room passed is" + room);
+        let position = roomMap[room];
 
         switch(data) {
             case "left":
@@ -122,10 +128,10 @@ router.get('/jesus', auth, (req, res) => {
     res.send("Hello World");
 
 })
-var position = {
-    x: 200,
-    y: 200
-};
+
+
+var roomMap = {};
+
 
 
 module.exports = router;
