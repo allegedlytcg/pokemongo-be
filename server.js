@@ -19,6 +19,7 @@ let cors = function (req, res, next) {
 	var whitelist = [
 		'http://localhost:4200',
 		'https://allegedlytcg.com',
+		'http://localhost:3000',
 		process.env.KEY_IP,
 	];
 	let origin = req.headers.origin;
