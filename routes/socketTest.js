@@ -18,14 +18,21 @@ Socketio.on("connection", socket => {
 
     socket.on("join_room", room =>{
         console.log("allegedly joining a room identified by the passed string..." + room);
+        let tempRoom = room; //whats ultimately sent back to client based on circumstances
+        let rooms = Object.keys(socket.rooms);
+        let thisRoom = Socketio.sockets.adapter.rooms[room];
+        console.log(rooms); // [ <socket.id>, 'room 237' ]
+        // if (rooms.length > 0){
+        //     console.log("client already in a room, one allowed per socket");
+        //     tempRoom = null;
 
+        // }
         // let rooms = Object.keys(socket.rooms);
         // console.log(rooms); // [ <socket.id>, 'room 237' ]
 
         // console.log("now logging clients rooms..." + Object.keys(socket.rooms));
 
 
-        let thisRoom = Socketio.sockets.adapter.rooms[room];
  // todo check if client is in that room
         if (typeof thisRoom !== 'undefined'){
             
@@ -41,6 +48,11 @@ Socketio.on("connection", socket => {
             }
             else if(thisRoom.length ==2){
                 console.log("full room");
+                console.log("here's a list of the connected clients:")
+                let room = io.sockets.adapter.rooms['my_room'];
+                console.log(room[0]);
+                console.log(room[1]);
+                tempRoom = null;
             }
             // clientsSockets = clients.sockets;
             // numClients = (typeof clientsSockets !== 'undefined') ? Object.keys(clients).length: 0;
@@ -59,7 +71,8 @@ Socketio.on("connection", socket => {
             position = roomMap[room];
             console.log("position sent is " + position);
             Socketio.to(room).emit("position", position);
-        }    
+        }
+        socket.emit('joinResp',tempRoom);  //sends confirmation to client by returning the room name, or null if the room was full/client already in room
     });
 //TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
 //     socket.on("disconnect", (room) =>{
