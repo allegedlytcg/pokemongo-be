@@ -37,7 +37,10 @@ const socketTest = require('./routes/socketTest');
 // app.use(cors());
 
 const corsOptions = {
-	origin: 'http://localhost:4200' || process.env.KEY_IP,
+	origin:
+		'http://localhost:4200' ||
+		process.env.KEY_IP ||
+		'http://localhost:3000',
 	methods: 'GET, POST, PUT, DELETE',
 };
 
