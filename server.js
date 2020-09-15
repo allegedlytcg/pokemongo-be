@@ -25,10 +25,13 @@ let cors = function (req, res, next) {
 	let origin = req.headers.origin;
 	if (whitelist.indexOf(origin) > -1) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
+		res.setHeader('Access-Control-Allow-Credentials', true);
+		res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+		res.setHeader(
+			'Access-Control-Allow-Headers',
+			'Content-Type,Authorization',
+		);
 	}
-	res.setHeader('Access-Control-Allow-Credentials', true);
-	res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-	res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 	next();
 };
 app.use(cors());
