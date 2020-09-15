@@ -20,8 +20,7 @@ const corsOptions = {};
 let cors = function (req, res, next) {
 	var whitelist = [
 		'http://localhost:4200',
-		'https://allegedlytcg.com',
-		'http://localhost:3000',
+		'http://allegedlytcg.com',
 		process.env.KEY_IP,
 	];
 	let origin = req.headers.origin;
@@ -34,13 +33,6 @@ let cors = function (req, res, next) {
 	next();
 };
 app.use(cors);
-
-// const corsOptions = {
-//   origin: "http://localhost:4200", // TODO for sure change to deployed frontend link later
-//   methods: "GET, POST, PUT, DELETE",
-// };
-
-// app.use(cors(corsOptions));
 
 app.use(express.json({ extended: false }));
 
