@@ -15,33 +15,32 @@ const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
 // init middleware
-// let cors = function (req, res, next) {
-// 	var whitelist = [
-// 		'http://localhost:4200',
-// 		'https://allegedlytcg.com',
-// 		'http://localhost:3000',
-// 		process.env.KEY_IP,
-// 	];
-// 	let origin = req.headers.origin;
-// 	if (whitelist.indexOf(origin) > -1) {
-// 		res.setHeader('Access-Control-Allow-Origin', origin);
-// 		res.setHeader('Access-Control-Allow-Credentials', true);
-// 		res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-// 		res.setHeader(
-// 			'Access-Control-Allow-Headers',
-// 			'Content-Type,Authorization',
-// 		);
-// 	}
-// 	next();
-// };
-// app.use(cors());
+const corsOptions = {};
 
-const corsOptions = {
-	origin: 'http://localhost:3000',
-	methods: 'GET, POST, PUT, DELETE',
+let cors = function (req, res, next) {
+	var whitelist = [
+		'http://localhost:4200',
+		'https://allegedlytcg.com',
+		'http://localhost:3000',
+		process.env.KEY_IP,
+	];
+	let origin = req.headers.origin;
+	if (whitelist.indexOf(origin) > -1) {
+		res.setHeader('Access-Control-Allow-Origin', origin);
+	}
+	res.setHeader('Access-Control-Allow-Credentials', true);
+	res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+	next();
 };
+app.use(cors);
 
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "http://localhost:4200", // TODO for sure change to deployed frontend link later
+//   methods: "GET, POST, PUT, DELETE",
+// };
+
+// app.use(cors(corsOptions));
 
 app.use(express.json({ extended: false }));
 
