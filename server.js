@@ -18,6 +18,7 @@ const socketTest = require('./routes/socketTest');
 let cors = function(req, res, next) {
   var whitelist = [
     'http://localhost:4200',
+    'http://localhost:3000',
     'https://allegedlytcg.com',
     'http://allegedlytcg.com',
   ];

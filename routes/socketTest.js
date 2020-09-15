@@ -22,18 +22,8 @@ Socketio.on("connection", socket => {
         let rooms = Object.keys(socket.rooms);
         let thisRoom = Socketio.sockets.adapter.rooms[room];
         console.log(rooms); // [ <socket.id>, 'room 237' ]
-        // if (rooms.length > 0){
-        //     console.log("client already in a room, one allowed per socket");
-        //     tempRoom = null;
-
-        // }
-        // let rooms = Object.keys(socket.rooms);
-        // console.log(rooms); // [ <socket.id>, 'room 237' ]
-
-        // console.log("now logging clients rooms..." + Object.keys(socket.rooms));
 
 
- // todo check if client is in that room
         if (typeof thisRoom !== 'undefined'){
             
 
