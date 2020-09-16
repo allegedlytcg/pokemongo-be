@@ -9,7 +9,7 @@ const User = require('../models/User');
 // @desc      Get all user decks
 // @access    private
 router.get('/me', auth, async (req, res) => {
-	console.log(req);
+	// console.log(req);
 	try {
 		let deck = await Deck.find({ user: req.user.id });
 		if (!deck) {
