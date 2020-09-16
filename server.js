@@ -7,7 +7,7 @@ const dbConnect = require('./dbConnect');
 const userRoutes = require('./routes/user');
 const deckRoutes = require('./routes/deck');
 const PokemonRoutes = require('./routes/pokemon');
-const RoomChat = require('./routes/RoomChat');
+// const RoomChat = require('./routes/RoomChat');
 const chatRoutes = require('./routes/chat');
 // initalize express
 const app = express();
@@ -44,7 +44,7 @@ app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/deck', deckRoutes);
 app.use('/api/v1/pokemon', PokemonRoutes);
 app.use('/api/v1/socketTest', socketTest);
-app.use('/api/v1/RoomChat', RoomChat);
+// app.use('/api/v1/RoomChat', RoomChat);
 app.use('/api/v1/chat', chatRoutes);
 
 const PORT = process.env.PORT || 6000;
