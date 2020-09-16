@@ -87,8 +87,8 @@ io.on('connection', (socket) => {
 				console.log('full room');
 				console.log("here's a list of the connected clients:");
 				let room = io.sockets.adapter.rooms['my_room'];
-				console.log(room[0]);
-				console.log(room[1]);
+				// console.log(room[0]);
+				// console.log(room[1]);
 				tempRoom = null;
 			}
 			// clientsSockets = clients.sockets;
@@ -111,6 +111,21 @@ io.on('connection', (socket) => {
 		}
 		socket.emit('joinResp', tempRoom); //sends confirmation to client by returning the room name, or null if the room was full/client already in room
 	});
+
+	socket.on("leave_room", room=>{
+
+        
+        //how do they leave?
+        //need their room(s)
+        //emit a message indicating that the 'other' user left
+        Socketio.to(room).emit("gtfo", "boot");
+        disconnectRoom(room);
+    
+        
+
+
+
+    })
 	//TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
 	//     socket.on("disconnect", (room) =>{
 
@@ -169,5 +184,11 @@ io.on('connection', (socket) => {
 	
 
 	});
+
+	function disconnectRoom(room, namespace = '/') {
+		Socketio.of(namespace).in(room).clients((err, clients) => {
+		   clients.forEach(clientId => Socketio.sockets.connected[clientId].disconnect());
+		});
+	 }
 
 	server2.listen(PORT);
