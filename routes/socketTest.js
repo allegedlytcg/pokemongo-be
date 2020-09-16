@@ -3,9 +3,9 @@ const auth = require('../middleware/auth');
 const Express = require("express")();
 const Http = require("http").Server(Express);
 const Socketio = require("socket.io")(Http);
-
-Http.listen(3005, () => {
-    console.log("Listening at :3005...");
+const PORT = process.env.PORT || 6000;
+Http.listen(PORT, () => {
+    console.log("Listening at :" + PORT);
 });
 
 
