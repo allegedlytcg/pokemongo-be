@@ -1,4 +1,5 @@
-const express = require('express');
+const thingbeforeapp = require('express');
+const express = thingbeforeapp();
 require('dotenv').config();
 // const cors = require("cors");
 // database connection file
@@ -10,9 +11,9 @@ const PokemonRoutes = require('./routes/pokemon');
 // const RoomChat = require('./routes/RoomChat');
 // const chatRoutes = require('./routes/chat');
 // initalize express
-const app = express();
 
-const socketTest = require('./routes/socketTest');
+
+// const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
 // init middleware
@@ -33,27 +34,28 @@ let cors = function (req, res, next) {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 	next();
 };
-app.use(cors);
+express.use(cors);
 
-app.use(express.json({ extended: false }));
+express.use(thingbeforeapp.json({ extended: false }));
 
 // connect database
 dbConnect();
 
-app.use('/api/v1/user', userRoutes);
-app.use('/api/v1/deck', deckRoutes);
-app.use('/api/v1/pokemon', PokemonRoutes);
-// app.use('/api/v1/socketTest', socketTest);
-// app.use('/api/v1/RoomChat', RoomChat);
-// app.use('/api/v1/chat', chatRoutes);
+express.use('/api/v1/user', userRoutes);
+express.use('/api/v1/deck', deckRoutes);
+express.use('/api/v1/pokemon', PokemonRoutes);
+// express.use('/api/v1/socketTest', socketTest);
+// express.use('/api/v1/RoomChat', RoomChat);
+// express.use('/api/v1/chat', chatRoutes);
 
 const PORT = process.env.PORT || 6000;
 
-server = app.listen(PORT, () => {
-	console.log(`App listening on port ${PORT}!`);
-});
-
-const io = require('socket.io')(server);
+// const server = express.listen(PORT, () => {
+// 	console.log(`express listening on port ${PORT}!`);
+// });
+// const app = require('express')();
+const server2 = require('http').createServer(express);
+const io = require('socket.io')(server2);
 // const io = require('socket.io')(server);
 io.on('connection', (socket) => {
 	console.log('made socket connection'); //each individualclient will have a socket with the server
@@ -135,7 +137,7 @@ io.on('connection', (socket) => {
 		//message, room
 		let rooms = Object.keys(socket.rooms);
 		console.log(rooms); // [ <socket.id>, 'room 237' ]
-		console.log('something happening');
+		console.log('something hexpressening');
 		console.log('direction passed is' + data);
 		console.log('room passed is' + room);
 		let position = roomMap[room];
@@ -160,4 +162,11 @@ io.on('connection', (socket) => {
 				break;
 		}
 	});
-});
+
+
+
+	
+
+	});
+
+	server2.listen(PORT);
