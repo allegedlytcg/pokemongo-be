@@ -57,6 +57,7 @@ const PORT = process.env.PORT || 6000;
 const server2 = require('http').createServer(express);
 const io = require('socket.io')(server2);
 // const io = require('socket.io')(server);
+let roomMap = {};// holds All of the active rooms of the server
 io.on('connection', (socket) => {
 	console.log('made socket connection'); //each individualclient will have a socket with the server
 	console.log(socket.id); //everytime a diff computer connects, a new id will be added
