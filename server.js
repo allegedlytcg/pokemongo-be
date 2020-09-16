@@ -21,6 +21,7 @@ let cors = function(req, res, next) {
     'http://localhost:3000',
     'https://allegedlytcg.com',
     'http://allegedlytcg.com',
+    'http://allegedlytcg.s3-website.us-east-2.amazonaws.com',
   ];
   let origin = req.headers.origin;
   if (whitelist.indexOf(origin) > -1) {

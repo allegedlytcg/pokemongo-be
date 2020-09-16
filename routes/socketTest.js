@@ -9,6 +9,10 @@ Http.listen(3005, () => {
 });
 
 
+let roomMap = {};// holds All of the active rooms of the server
+
+
+// Provides response for ANY socket attempting to make a connection
 Socketio.on("connection", socket => {
     console.log('made socket connection');//each individualclient will have a socket with the server
     console.log(socket.id);//everytime a diff computer connects, a new id will be added
@@ -64,7 +68,27 @@ Socketio.on("connection", socket => {
         }
         socket.emit('joinResp',tempRoom);  //sends confirmation to client by returning the room name, or null if the room was full/client already in room
     });
+
+
+    // should be emitted from front-end based on if ANY player leaves the room, remove all players
+    socket.on("leave_room", room=>{
+
+        
+        //how do they leave?
+        //need their room(s)
+        //emit a message indicating that the 'other' user left
+        Socketio.to(room).emit("gtfo", "boot");
+        disconnectRoom(room);
+    
+        
+
+
+
+    })
 //TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
+
+
+
 //     socket.on("disconnect", (room) =>{
 
 
@@ -87,8 +111,6 @@ Socketio.on("connection", socket => {
     
 
     //now listening for custom events fromc lient
-    //TODO CHANGE FRONT-END TO PASS STATE RATHER THAN GLOBAL STATE OF POSITION HERE
-    //TODO CHANGE THIS METHOD TO TAKE AN ADDITIONAL ARGUMENT FROM FRONT END
     socket.on("move", (data, room) =>{
         //message, room
         let rooms = Object.keys(socket.rooms);
@@ -133,7 +155,12 @@ router.get('/jesus', auth, (req, res) => {
 })
 
 
-var roomMap = {};
+function disconnectRoom(room, namespace = '/') {
+    Socketio.of(namespace).in(room).clients((err, clients) => {
+       clients.forEach(clientId => Socketio.sockets.connected[clientId].disconnect());
+    });
+ }
+
 
 
 
