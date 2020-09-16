@@ -118,7 +118,7 @@ io.on('connection', (socket) => {
         //how do they leave?
         //need their room(s)
         //emit a message indicating that the 'other' user left
-        Socketio.to(room).emit("gtfo", "boot");
+        io.to(room).emit("gtfo", "boot");
         disconnectRoom(room);
     
         
@@ -186,8 +186,8 @@ io.on('connection', (socket) => {
 	});
 
 	function disconnectRoom(room, namespace = '/') {
-		Socketio.of(namespace).in(room).clients((err, clients) => {
-		   clients.forEach(clientId => Socketio.sockets.connected[clientId].disconnect());
+		io.of(namespace).in(room).clients((err, clients) => {
+		   clients.forEach(clientId => io.sockets.connected[clientId].disconnect());
 		});
 	 }
 
