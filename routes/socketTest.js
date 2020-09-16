@@ -147,12 +147,6 @@ Socketio.on("connection", socket => {
 
 
 
-router.get('/jesus', auth, (req, res) => {
-   
-    console.log(req);
-    res.send("Hello World");
-
-})
 
 
 function disconnectRoom(room, namespace = '/') {
