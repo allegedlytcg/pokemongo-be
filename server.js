@@ -11,26 +11,27 @@ const RoomChat = require('./routes/RoomChat');
 const chatRoutes = require('./routes/chat');
 // initalize express
 const app = express();
+
 const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
 // init middleware
-let cors = function(req, res, next) {
-  var whitelist = [
-    'http://localhost:4200',
-    'http://localhost:3000',
-    'https://allegedlytcg.com',
-    'http://allegedlytcg.com',
-  ];
-  let origin = req.headers.origin;
-  if (whitelist.indexOf(origin) > -1) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
-  next();
-}
+let cors = function (req, res, next) {
+	var whitelist = [
+		'http://localhost:4200',
+		'http://localhost:3000',
+		'https://allegedlytcg.com',
+		'http://allegedlytcg.com',
+	];
+	let origin = req.headers.origin;
+	if (whitelist.indexOf(origin) > -1) {
+		res.setHeader('Access-Control-Allow-Origin', origin);
+	}
+	res.setHeader('Access-Control-Allow-Credentials', true);
+	res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+	res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+	next();
+};
 app.use(cors);
 
 app.use(express.json({ extended: false }));
@@ -50,12 +51,11 @@ const PORT = process.env.PORT || 6000;
 server = app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}!`);
 });
+// const io = require('socket.io')(server);
+// io.on('connection', (socket) => {
+// 	// console.log('Client connected');
+// 	socket.on('disconnect', () => console.log('Client disconnected'));
+// });
 
-const io = require('socket.io')(
-	server,
-
-	// 	{
-	//   transports: ["websocket", "polling"],
-	// }
-);
-app.set('io', io);
+module.exports = server;
+// app.set('io', io);
