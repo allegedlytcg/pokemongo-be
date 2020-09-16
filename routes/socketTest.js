@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const auth = require('../middleware/auth');
-<<<<<<< HEAD
 const server = require('../server');
 
 // console.log(io);
@@ -117,7 +116,6 @@ router.get('/jesus', auth, (req, res) => {
 	console.log(req);
 	res.send('Hello World');
 });
-=======
 const Express = require("express")();
 const Http = require("http").Server(Express);
 const Socketio = require("socket.io")(Http);
@@ -272,7 +270,6 @@ function disconnectRoom(room, namespace = '/') {
        clients.forEach(clientId => Socketio.sockets.connected[clientId].disconnect());
     });
  }
->>>>>>> 469b50f45cf7a9525079cca497bcf8170df82eb9
 
 
 module.exports = router;
