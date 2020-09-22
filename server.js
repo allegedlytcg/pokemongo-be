@@ -21,7 +21,7 @@ let cors = function (req, res, next) {
 	var whitelist = [
 		'http://localhost:4200',
 		'http://localhost:3000',
-		'https://www.allegedlytcg.com'
+		'https://www.allegedlytcg.com',
 		'http://allegedlytcg.com',
 		'http://allegedlytcg.s3-website.us-east-2.amazonaws.com',
 	];
