@@ -12,7 +12,6 @@ const PokemonRoutes = require('./routes/pokemon');
 // const chatRoutes = require('./routes/chat');
 // initalize express
 
-
 // const socketTest = require('./routes/socketTest');
 
 // console.log(cors);
@@ -23,6 +22,7 @@ let cors = function (req, res, next) {
 		'http://localhost:3000',
 		'https://www.allegedlytcg.com',
 		'http://allegedlytcg.com',
+		'https://allegedlytcg.com',
 		'http://allegedlytcg.s3-website.us-east-2.amazonaws.com',
 	];
 	let origin = req.headers.origin;
@@ -57,7 +57,7 @@ const PORT = process.env.PORT || 6000;
 const server2 = require('http').createServer(express);
 const io = require('socket.io')(server2);
 // const io = require('socket.io')(server);
-let roomMap = {};// holds All of the active rooms of the server
+let roomMap = {}; // holds All of the active rooms of the server
 io.on('connection', (socket) => {
 	console.log('made socket connection'); //each individualclient will have a socket with the server
 	console.log(socket.id); //everytime a diff computer connects, a new id will be added
@@ -112,20 +112,13 @@ io.on('connection', (socket) => {
 		socket.emit('joinResp', tempRoom); //sends confirmation to client by returning the room name, or null if the room was full/client already in room
 	});
 
-	socket.on("leave_room", room=>{
-
-        
-        //how do they leave?
-        //need their room(s)
-        //emit a message indicating that the 'other' user left
-        io.to(room).emit("gtfo", "boot");
-        disconnectRoom(room);
-    
-        
-
-
-
-    })
+	socket.on('leave_room', (room) => {
+		//how do they leave?
+		//need their room(s)
+		//emit a message indicating that the 'other' user left
+		io.to(room).emit('gtfo', 'boot');
+		disconnectRoom(room);
+	});
 	//TODO CHANGE THIS TO BOOKMARKED CONNECT/DISCONNECT METHO
 	//     socket.on("disconnect", (room) =>{
 
@@ -178,17 +171,16 @@ io.on('connection', (socket) => {
 				break;
 		}
 	});
+});
 
-
-
-	
-
-	});
-
-	function disconnectRoom(room, namespace = '/') {
-		io.of(namespace).in(room).clients((err, clients) => {
-		   clients.forEach(clientId => io.sockets.connected[clientId].disconnect());
+function disconnectRoom(room, namespace = '/') {
+	io.of(namespace)
+		.in(room)
+		.clients((err, clients) => {
+			clients.forEach((clientId) =>
+				io.sockets.connected[clientId].disconnect(),
+			);
 		});
-	 }
+}
 
-	server2.listen(PORT);
+server2.listen(PORT);
