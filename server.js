@@ -1,5 +1,6 @@
 const thingbeforeapp = require('express');
 const express = thingbeforeapp();
+const helmet = require('helmet');
 require('dotenv').config();
 // const cors = require("cors");
 // database connection file
@@ -35,6 +36,8 @@ let cors = function (req, res, next) {
 	next();
 };
 express.use(cors);
+
+express.use(helmet());
 
 express.use(thingbeforeapp.json({ extended: false }));
 
