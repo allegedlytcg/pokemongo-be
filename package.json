@@ -28,7 +28,7 @@
 		"killport": "^1.0.1",
 		"mongodb": "^3.5.8",
 		"mongoose": "^5.9.10",
-		"socket.io": "^2.3.0"
+		"socket.io": "^2.4.0"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.4"
