@@ -25,6 +25,7 @@ let cors = function (req, res, next) {
 		'http://allegedlytcg.com',
 		'https://allegedlytcg.com',
 		'http://allegedlytcg.s3-website.us-east-2.amazonaws.com',
+		'https://pr-49.d36zl7upiy9z6s.amplifyapp.com',
 	];
 	let origin = req.headers.origin;
 	if (whitelist.indexOf(origin) > -1) {
@@ -57,8 +58,8 @@ const PORT = process.env.PORT || 6000;
 // 	console.log(`express listening on port ${PORT}!`);
 // });
 // const app = require('express')();
-const server2 = require('http').createServer(express);
-const io = require('socket.io')(server2);
+const server = require('http').createServer(express);
+const io = require('socket.io')(server);
 // const io = require('socket.io')(server);
 let roomMap = {}; // holds All of the active rooms of the server
 io.on('connection', (socket) => {
@@ -90,8 +91,8 @@ io.on('connection', (socket) => {
 				console.log('full room');
 				console.log("here's a list of the connected clients:");
 				let room = io.sockets.adapter.rooms['my_room'];
-				// console.log(room[0]);
-				// console.log(room[1]);
+				//`` console.log(room[0]);
+				// console.log(room[1]);``
 				tempRoom = null;
 			}
 			// clientsSockets = clients.sockets;
@@ -186,4 +187,4 @@ function disconnectRoom(room, namespace = '/') {
 		});
 }
 
-server2.listen(PORT);
+server.listen(PORT, () => console.log(`listening on ${PORT}`));
