@@ -57,7 +57,6 @@ router.post('/register', async (req, res) => {
 // @access    public
 router.post('/login', async (req, res) => {
 	const { name, password } = req.body;
-	// console.log(name);
 	try {
 		// check if user exists
 		let user = await User.findOne({ name });
@@ -67,7 +66,6 @@ router.post('/login', async (req, res) => {
 
 		// check if user's enter password = hashed password in database
 		const isMatch = await bcrypt.compareSync(password, user.password);
-
 		if (!isMatch) {
 			return res.status(400).send('invalid credentials');
 		}
@@ -78,17 +76,21 @@ router.post('/login', async (req, res) => {
 			},
 		};
 
-		jwt.sign(
-			payload,
-			process.env.JWT_SECRET,
-			{
-				expiresIn: 360000,
+		const userJwt = jwt.sign(payload, process.env.JWT_SECRET, {
+			expiresIn: 360000,
+		});
+
+		req.session = {
+			jwt: userJwt,
+			currentUser: {
+				username: name,
+				id: user.id,
 			},
-			(err, token) => {
-				if (err) throw err;
-				res.status(201).json({ name, token });
-			},
-		);
+		};
+		res.status(200).send({
+			username: name,
+			id: user.id,
+		});
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server errror');
