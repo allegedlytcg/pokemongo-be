@@ -76,21 +76,17 @@ router.post('/login', async (req, res) => {
 			},
 		};
 
-		const userJwt = jwt.sign(payload, process.env.JWT_SECRET, {
-			expiresIn: 360000,
-		});
-
-		req.session = {
-			jwt: userJwt,
-			currentUser: {
-				username: name,
-				id: user.id,
+		jwt.sign(
+			payload,
+			process.env.JWT_SECRET,
+			{
+				expiresIn: 360000,
 			},
-		};
-		res.status(200).send({
-			username: name,
-			id: user.id,
-		});
+			(err, token) => {
+				if (err) throw err;
+				res.status(201).json({ name, token });
+			},
+		);
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server errror');
