@@ -57,7 +57,6 @@ router.post('/register', async (req, res) => {
 // @access    public
 router.post('/login', async (req, res) => {
 	const { name, password } = req.body;
-	// console.log(name);
 	try {
 		// check if user exists
 		let user = await User.findOne({ name });
@@ -67,7 +66,6 @@ router.post('/login', async (req, res) => {
 
 		// check if user's enter password = hashed password in database
 		const isMatch = await bcrypt.compareSync(password, user.password);
-
 		if (!isMatch) {
 			return res.status(400).send('invalid credentials');
 		}
@@ -89,7 +87,6 @@ router.post('/login', async (req, res) => {
 				res.status(201).json({ name, token });
 			},
 		);
-		// this is a comment
 	} catch (error) {
 		console.log(error.message);
 		res.status(500).send('server errror');

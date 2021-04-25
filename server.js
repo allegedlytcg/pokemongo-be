@@ -1,26 +1,22 @@
-const thingbeforeapp = require('express');
-const express = thingbeforeapp();
+const express = require('express');
+const app = express();
 const helmet = require('helmet');
+const cookieSession = require('cookie-session');
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 require('dotenv').config();
-// const cors = require("cors");
-// database connection file
+
 const dbConnect = require('./dbConnect');
-// route files
+
 const userRoutes = require('./routes/user');
 const deckRoutes = require('./routes/deck');
 const PokemonRoutes = require('./routes/pokemon');
-// const RoomChat = require('./routes/RoomChat');
-// const chatRoutes = require('./routes/chat');
-// initalize express
 
-// const socketTest = require('./routes/socketTest');
-
-// console.log(cors);
-// init middleware
-let cors = function (req, res, next) {
+const cors = (req, res, next) => {
 	var whitelist = [
 		'http://localhost:4200',
 		'http://localhost:3000',
+		'http://localhost:8080',
 		'https://www.allegedlytcg.com',
 		'http://allegedlytcg.com',
 		'https://allegedlytcg.com',
@@ -37,37 +33,30 @@ let cors = function (req, res, next) {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
 	next();
 };
-express.use(cors);
+app.use(cors);
+app.use(express.json());
+app.use(
+	cookieSession({
+		signed: false,
+		// secure: process.env.NODE_ENV === 'test' ? false : true,
+	}),
+);
 
-express.use(helmet());
-
-express.use(thingbeforeapp.json({ extended: false }));
+app.use(helmet());
 
 // connect database
 dbConnect();
 
-express.use('/api/v1/user', userRoutes);
-express.use('/api/v1/deck', deckRoutes);
-express.use('/api/v1/pokemon', PokemonRoutes);
-// express.use('/api/v1/socketTest', socketTest);
-// express.use('/api/v1/RoomChat', RoomChat);
-// express.use('/api/v1/chat', chatRoutes);
+app.use('/api/v1/user', userRoutes);
+app.use('/api/v1/deck', deckRoutes);
+app.use('/api/v1/pokemon', PokemonRoutes);
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 6969;
 
-// const server = express.listen(PORT, () => {
-// 	console.log(`express listening on port ${PORT}!`);
-// });
-// const app = require('express')();
-const server = require('http').createServer(express);
-const io = require('socket.io')(server);
-// const io = require('socket.io')(server);
 let roomMap = {}; // holds All of the active rooms of the server
 io.on('connection', (socket) => {
 	console.log('made socket connection'); //each individualclient will have a socket with the server
 	console.log(socket.id); //everytime a diff computer connects, a new id will be added
-	//when a new client connects, send position information
-	// socket.emit("position", position);
 
 	socket.on('join_room', (room) => {
 		console.log(
@@ -96,13 +85,6 @@ io.on('connection', (socket) => {
 				// console.log(room[1]);``
 				tempRoom = null;
 			}
-			// clientsSockets = clients.sockets;
-			// numClients = (typeof clientsSockets !== 'undefined') ? Object.keys(clients).length: 0;
-			// for (var clientId in clientsSockets ){
-			//     //socket of each client in the room
-			//     var clientSocket = io.sockets.connected[clientId];
-			//     console.log(clientSocket);
-			// }
 		} else {
 			console.log(
 				'room was undefined, joining and creating new room' + room,
@@ -145,37 +127,6 @@ io.on('connection', (socket) => {
 	//     });
 
 	//now listening for custom events fromc lient
-	//TODO CHANGE FRONT-END TO PASS STATE RATHER THAN GLOBAL STATE OF POSITION HERE
-	//TODO CHANGE THIS METHOD TO TAKE AN ADDITIONAL ARGUMENT FROM FRONT END
-	socket.on('move', (data, room) => {
-		//message, room
-		let rooms = Object.keys(socket.rooms);
-		console.log(rooms); // [ <socket.id>, 'room 237' ]
-		console.log('something hexpressening');
-		console.log('direction passed is' + data);
-		console.log('room passed is' + room);
-		let position = roomMap[room];
-
-		switch (data) {
-			case 'left':
-				console.log('found left request, emitting to room');
-				position.x -= 5;
-				io.to(room).emit('position', position);
-				break;
-			case 'right':
-				position.x += 5;
-				io.to(room).emit('position', position);
-				break;
-			case 'up':
-				position.y -= 5;
-				io.to(room).emit('position', position);
-				break;
-			case 'down':
-				position.y += 5;
-				io.to(room).emit('position', position);
-				break;
-		}
-	});
 });
 
 function disconnectRoom(room, namespace = '/') {
